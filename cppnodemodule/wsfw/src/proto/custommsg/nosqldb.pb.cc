@@ -68,11 +68,14 @@ void protobuf_AssignDesc_nosqldb_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_users, _internal_metadata_),
       -1);
   db_res_company_descriptor_ = file->message_type(1);
-  static const int db_res_company_offsets_[4] = {
+  static const int db_res_company_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, uuidcompanyid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, channel_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, companyname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, email_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, phone_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, write_date_),
   };
   db_res_company_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -86,11 +89,35 @@ void protobuf_AssignDesc_nosqldb_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_company, _internal_metadata_),
       -1);
   db_res_partner_descriptor_ = file->message_type(2);
-  static const int db_res_partner_offsets_[4] = {
+  static const int db_res_partner_offsets_[28] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, uuidpartner_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, channel_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, partnername_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, create_date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, image_small_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, image_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, street_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, city_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, display_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, zip_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, title_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, supplier_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, email_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, is_company_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, website_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, customer_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, street2_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, fax_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, employee_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, write_date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, active_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, mobile_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, phone_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, birthdate_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, notify_email_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, color_),
   };
   db_res_partner_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -104,16 +131,34 @@ void protobuf_AssignDesc_nosqldb_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_res_partner, _internal_metadata_),
       -1);
   db_crm_lead_descriptor_ = file->message_type(3);
-  static const int db_crm_lead_offsets_[9] = {
+  static const int db_crm_lead_offsets_[27] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, uuidleadid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, channel_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, uuiduserid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, uuidpartnerid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, uuidcompanyid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, leadname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, createdate_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, partnername_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, street_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, partner_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, contact_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, mobile_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, phone_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, title_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, street2_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, zip_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, fax_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, email_cc_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, priority_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, message_last_post_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, create_date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, date_closed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, date_deadline_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, color_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, active_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, description_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, title_action_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, probability_),
   };
   db_crm_lead_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -127,12 +172,24 @@ void protobuf_AssignDesc_nosqldb_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_lead, _internal_metadata_),
       -1);
   db_crm_phonecall_descriptor_ = file->message_type(4);
-  static const int db_crm_phonecall_offsets_[5] = {
+  static const int db_crm_phonecall_offsets_[17] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, uuidphonecallid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, channel_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, uuiduserid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, uuidpartner_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, date_closed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, create_date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, priority_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, state_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, description_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, partner_mobile_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, write_date_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, date_open_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, partner_phone_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(db_crm_phonecall, email_from_),
   };
   db_crm_phonecall_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -201,20 +258,46 @@ void protobuf_AddDesc_nosqldb_2eproto() {
     "ser\022\017\n\007channel\030\003 \003(\t\022\025\n\ruuidcompanyid\030\004 "
     "\001(\t\022\020\n\010realname\030\013 \001(\t\022\023\n\013phonenumber\030\014 \001"
     "(\t\022\024\n\014emailaddress\030\r \001(\t\022\026\n\016hashedpasswo"
-    "rd\030\016 \001(\t\"h\n\016db_res_company\022\025\n\ruuidcompan"
-    "yid\030\001 \002(\t\022\031\n\004type\030\002 \002(\t:\013res_company\022\017\n\007"
-    "channel\030\003 \003(\t\022\023\n\013companyname\030\013 \001(\t\"f\n\016db"
-    "_res_partner\022\023\n\013uuidpartner\030\001 \002(\t\022\031\n\004typ"
-    "e\030\002 \002(\t:\013res_partner\022\017\n\007channel\030\003 \003(\t\022\023\n"
-    "\013partnername\030\013 \001(\t\"\300\001\n\013db_crm_lead\022\022\n\nuu"
-    "idleadid\030\001 \002(\t\022\026\n\004type\030\002 \002(\t:\010crm_lead\022\017"
-    "\n\007channel\030\003 \003(\t\022\022\n\nuuiduserid\030\004 \002(\t\022\025\n\ru"
-    "uidcompanyid\030\005 \001(\t\022\020\n\010leadname\030\n \001(\t\022\022\n\n"
-    "createdate\030\013 \001(\t\022\023\n\013partnername\030\014 \001(\t\022\016\n"
-    "\006street\030\021 \001(\t\"\202\001\n\020db_crm_phonecall\022\027\n\017uu"
-    "idphonecallid\030\001 \002(\t\022\033\n\004type\030\002 \002(\t:\rcrm_p"
-    "honecall\022\017\n\007channel\030\003 \003(\t\022\022\n\nuuiduserid\030"
-    "\004 \002(\t\022\023\n\013uuidpartner\030\005 \001(\t", 746);
+    "rd\030\016 \001(\t\"\223\001\n\016db_res_company\022\025\n\ruuidcompa"
+    "nyid\030\001 \002(\t\022\031\n\004type\030\002 \002(\t:\013res_company\022\017\n"
+    "\007channel\030\003 \003(\t\022\014\n\004name\030\013 \001(\t\022\r\n\005email\030\014 "
+    "\001(\t\022\r\n\005phone\030\r \001(\t\022\022\n\nwrite_date\030\016 \001(\t\"\371"
+    "\003\n\016db_res_partner\022\023\n\013uuidpartner\030\001 \002(\t\022\031"
+    "\n\004type\030\002 \002(\t:\013res_partner\022\017\n\007channel\030\003 \003"
+    "(\t\022\014\n\004name\030\013 \001(\t\022\023\n\013create_date\030\014 \001(\t\022\023\n"
+    "\013image_small\030\r \001(\t\022\r\n\005image\030\016 \001(\t\022\014\n\004dat"
+    "e\030\017 \001(\t\022\016\n\006street\030\020 \001(\t\022\014\n\004city\030\021 \001(\t\022\024\n"
+    "\014display_name\030\022 \001(\t\022\013\n\003zip\030\023 \001(\t\022\r\n\005titl"
+    "e\030\024 \001(\005\022\020\n\010supplier\030\025 \001(\010\022\r\n\005email\030\026 \001(\t"
+    "\022\022\n\nis_company\030\027 \001(\010\022\017\n\007website\030\030 \001(\t\022\020\n"
+    "\010customer\030\031 \001(\010\022\017\n\007street2\030\032 \001(\t\022\013\n\003fax\030"
+    "\033 \001(\t\022\020\n\010employee\030\034 \001(\010\022\022\n\nwrite_date\030\035 "
+    "\001(\t\022\016\n\006active\030\036 \001(\010\022\016\n\006mobile\030\037 \001(\t\022\r\n\005p"
+    "hone\030  \001(\t\022\021\n\tbirthdate\030! \001(\t\022\024\n\014notify_"
+    "email\030\" \001(\t\022\r\n\005color\030# \001(\005\"\222\004\n\013db_crm_le"
+    "ad\022\022\n\nuuidleadid\030\001 \002(\t\022\026\n\004type\030\002 \002(\t:\010cr"
+    "m_lead\022\017\n\007channel\030\003 \003(\t\022\022\n\nuuiduserid\030\004 "
+    "\002(\t\022\025\n\ruuidpartnerid\030\005 \002(\t\022\025\n\ruuidcompan"
+    "yid\030\006 \001(\t\022\014\n\004name\030\n \001(\t\022\022\n\ncreatedate\030\013 "
+    "\001(\t\022\024\n\014partner_name\030\014 \001(\t\022\024\n\014contact_nam"
+    "e\030\r \001(\t\022\016\n\006mobile\030\016 \001(\t\022\r\n\005phone\030\017 \001(\t\022\r"
+    "\n\005title\030\020 \001(\t\022\017\n\007street2\030\021 \001(\t\022\013\n\003zip\030\022 "
+    "\001(\t\022\013\n\003fax\030\023 \001(\t\022\020\n\010email_cc\030\024 \001(\t\022\020\n\010pr"
+    "iority\030\025 \001(\005\022\031\n\021message_last_post\030\026 \001(\t\022"
+    "\023\n\013create_date\030\027 \001(\t\022\023\n\013date_closed\030\030 \001("
+    "\t\022\025\n\rdate_deadline\030\031 \001(\t\022\r\n\005color\030\032 \001(\005\022"
+    "\016\n\006active\030\033 \001(\010\022\023\n\013description\030\034 \001(\t\022\024\n\014"
+    "title_action\030\035 \001(\t\022\023\n\013probability\030\036 \001(\001\""
+    "\350\002\n\020db_crm_phonecall\022\027\n\017uuidphonecallid\030"
+    "\001 \002(\t\022\033\n\004type\030\002 \002(\t:\rcrm_phonecall\022\017\n\007ch"
+    "annel\030\003 \003(\t\022\022\n\nuuiduserid\030\004 \002(\t\022\023\n\013uuidp"
+    "artner\030\005 \001(\t\022\023\n\013date_closed\030\013 \001(\t\022\023\n\013cre"
+    "ate_date\030\014 \001(\t\022\014\n\004date\030\r \001(\t\022\020\n\010priority"
+    "\030\016 \001(\005\022\r\n\005state\030\017 \001(\t\022\023\n\013description\030\020 \001"
+    "(\t\022\014\n\004name\030\021 \001(\t\022\026\n\016partner_mobile\030\022 \001(\t"
+    "\022\022\n\nwrite_date\030\023 \001(\t\022\021\n\tdate_open\030\024 \001(\t\022"
+    "\025\n\rpartner_phone\030\025 \001(\t\022\022\n\nemail_from\030\026 \001"
+    "(\t", 1762);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "nosqldb.proto", &protobuf_RegisterTypes);
   db_res_users::_default_type_ =
@@ -924,7 +1007,10 @@ void db_res_users::InternalSwap(db_res_users* other) {
 const int db_res_company::kUuidcompanyidFieldNumber;
 const int db_res_company::kTypeFieldNumber;
 const int db_res_company::kChannelFieldNumber;
-const int db_res_company::kCompanynameFieldNumber;
+const int db_res_company::kNameFieldNumber;
+const int db_res_company::kEmailFieldNumber;
+const int db_res_company::kPhoneFieldNumber;
+const int db_res_company::kWriteDateFieldNumber;
 #endif  // !_MSC_VER
 
 db_res_company::db_res_company()
@@ -949,7 +1035,10 @@ void db_res_company::SharedCtor() {
   _cached_size_ = 0;
   uuidcompanyid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.UnsafeSetDefault(_default_type_);
-  companyname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  write_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -961,7 +1050,10 @@ db_res_company::~db_res_company() {
 void db_res_company::SharedDtor() {
   uuidcompanyid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.DestroyNoArena(_default_type_);
-  companyname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  write_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -992,15 +1084,24 @@ db_res_company* db_res_company::New(::google::protobuf::Arena* arena) const {
 }
 
 void db_res_company::Clear() {
-  if (_has_bits_[0 / 32] & 11) {
+  if (_has_bits_[0 / 32] & 123) {
     if (has_uuidcompanyid()) {
       uuidcompanyid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
     if (has_type()) {
       type_.ClearToDefaultNoArena(_default_type_);
     }
-    if (has_companyname()) {
-      companyname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    if (has_name()) {
+      name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_email()) {
+      email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_phone()) {
+      phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_write_date()) {
+      write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
   }
   channel_.Clear();
@@ -1068,20 +1169,71 @@ bool db_res_company::MergePartialFromCodedStream(
           goto handle_unusual;
         }
         if (input->ExpectTag(26)) goto parse_channel;
-        if (input->ExpectTag(90)) goto parse_companyname;
+        if (input->ExpectTag(90)) goto parse_name;
         break;
       }
 
-      // optional string companyname = 11;
+      // optional string name = 11;
       case 11: {
         if (tag == 90) {
-         parse_companyname:
+         parse_name:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_companyname()));
+                input, this->mutable_name()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->companyname().data(), this->companyname().length(),
+            this->name().data(), this->name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "xkcrm.db_res_company.companyname");
+            "xkcrm.db_res_company.name");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(98)) goto parse_email;
+        break;
+      }
+
+      // optional string email = 12;
+      case 12: {
+        if (tag == 98) {
+         parse_email:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_email()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->email().data(), this->email().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_company.email");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(106)) goto parse_phone;
+        break;
+      }
+
+      // optional string phone = 13;
+      case 13: {
+        if (tag == 106) {
+         parse_phone:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_phone()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->phone().data(), this->phone().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_company.phone");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(114)) goto parse_write_date;
+        break;
+      }
+
+      // optional string write_date = 14;
+      case 14: {
+        if (tag == 114) {
+         parse_write_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_write_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->write_date().data(), this->write_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_company.write_date");
         } else {
           goto handle_unusual;
         }
@@ -1144,14 +1296,44 @@ void db_res_company::SerializeWithCachedSizes(
       3, this->channel(i), output);
   }
 
-  // optional string companyname = 11;
-  if (has_companyname()) {
+  // optional string name = 11;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->companyname().data(), this->companyname().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_res_company.companyname");
+      "xkcrm.db_res_company.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      11, this->companyname(), output);
+      11, this->name(), output);
+  }
+
+  // optional string email = 12;
+  if (has_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email().data(), this->email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.email");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->email(), output);
+  }
+
+  // optional string phone = 13;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.phone");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->phone(), output);
+  }
+
+  // optional string write_date = 14;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.write_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->write_date(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1196,15 +1378,48 @@ void db_res_company::SerializeWithCachedSizes(
       WriteStringToArray(3, this->channel(i), target);
   }
 
-  // optional string companyname = 11;
-  if (has_companyname()) {
+  // optional string name = 11;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->companyname().data(), this->companyname().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_res_company.companyname");
+      "xkcrm.db_res_company.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        11, this->companyname(), target);
+        11, this->name(), target);
+  }
+
+  // optional string email = 12;
+  if (has_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email().data(), this->email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.email");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->email(), target);
+  }
+
+  // optional string phone = 13;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.phone");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->phone(), target);
+  }
+
+  // optional string write_date = 14;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_company.write_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->write_date(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1251,13 +1466,36 @@ int db_res_company::ByteSize() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string companyname = 11;
-  if (has_companyname()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->companyname());
-  }
+  if (_has_bits_[3 / 32] & 120) {
+    // optional string name = 11;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
 
+    // optional string email = 12;
+    if (has_email()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->email());
+    }
+
+    // optional string phone = 13;
+    if (has_phone()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->phone());
+    }
+
+    // optional string write_date = 14;
+    if (has_write_date()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->write_date());
+    }
+
+  }
   // repeated string channel = 3;
   total_size += 1 * this->channel_size();
   for (int i = 0; i < this->channel_size(); i++) {
@@ -1300,9 +1538,21 @@ void db_res_company::MergeFrom(const db_res_company& from) {
       set_has_type();
       type_.AssignWithDefault(_default_type_, from.type_);
     }
-    if (from.has_companyname()) {
-      set_has_companyname();
-      companyname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.companyname_);
+    if (from.has_name()) {
+      set_has_name();
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    }
+    if (from.has_email()) {
+      set_has_email();
+      email_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.email_);
+    }
+    if (from.has_phone()) {
+      set_has_phone();
+      phone_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.phone_);
+    }
+    if (from.has_write_date()) {
+      set_has_write_date();
+      write_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.write_date_);
     }
   }
   if (from._internal_metadata_.have_unknown_fields()) {
@@ -1336,7 +1586,10 @@ void db_res_company::InternalSwap(db_res_company* other) {
   uuidcompanyid_.Swap(&other->uuidcompanyid_);
   type_.Swap(&other->type_);
   channel_.UnsafeArenaSwap(&other->channel_);
-  companyname_.Swap(&other->companyname_);
+  name_.Swap(&other->name_);
+  email_.Swap(&other->email_);
+  phone_.Swap(&other->phone_);
+  write_date_.Swap(&other->write_date_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1358,7 +1611,31 @@ void db_res_company::InternalSwap(db_res_company* other) {
 const int db_res_partner::kUuidpartnerFieldNumber;
 const int db_res_partner::kTypeFieldNumber;
 const int db_res_partner::kChannelFieldNumber;
-const int db_res_partner::kPartnernameFieldNumber;
+const int db_res_partner::kNameFieldNumber;
+const int db_res_partner::kCreateDateFieldNumber;
+const int db_res_partner::kImageSmallFieldNumber;
+const int db_res_partner::kImageFieldNumber;
+const int db_res_partner::kDateFieldNumber;
+const int db_res_partner::kStreetFieldNumber;
+const int db_res_partner::kCityFieldNumber;
+const int db_res_partner::kDisplayNameFieldNumber;
+const int db_res_partner::kZipFieldNumber;
+const int db_res_partner::kTitleFieldNumber;
+const int db_res_partner::kSupplierFieldNumber;
+const int db_res_partner::kEmailFieldNumber;
+const int db_res_partner::kIsCompanyFieldNumber;
+const int db_res_partner::kWebsiteFieldNumber;
+const int db_res_partner::kCustomerFieldNumber;
+const int db_res_partner::kStreet2FieldNumber;
+const int db_res_partner::kFaxFieldNumber;
+const int db_res_partner::kEmployeeFieldNumber;
+const int db_res_partner::kWriteDateFieldNumber;
+const int db_res_partner::kActiveFieldNumber;
+const int db_res_partner::kMobileFieldNumber;
+const int db_res_partner::kPhoneFieldNumber;
+const int db_res_partner::kBirthdateFieldNumber;
+const int db_res_partner::kNotifyEmailFieldNumber;
+const int db_res_partner::kColorFieldNumber;
 #endif  // !_MSC_VER
 
 db_res_partner::db_res_partner()
@@ -1383,7 +1660,31 @@ void db_res_partner::SharedCtor() {
   _cached_size_ = 0;
   uuidpartner_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.UnsafeSetDefault(_default_type_);
-  partnername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_small_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  street_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  city_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  display_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  zip_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  title_ = 0;
+  supplier_ = false;
+  email_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  is_company_ = false;
+  website_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  customer_ = false;
+  street2_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fax_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  employee_ = false;
+  write_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  active_ = false;
+  mobile_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  birthdate_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  notify_email_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  color_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -1395,7 +1696,24 @@ db_res_partner::~db_res_partner() {
 void db_res_partner::SharedDtor() {
   uuidpartner_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.DestroyNoArena(_default_type_);
-  partnername_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_small_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  street_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  city_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  display_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  zip_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  website_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  street2_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fax_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  write_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mobile_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  birthdate_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  notify_email_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -1426,17 +1744,92 @@ db_res_partner* db_res_partner::New(::google::protobuf::Arena* arena) const {
 }
 
 void db_res_partner::Clear() {
-  if (_has_bits_[0 / 32] & 11) {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<db_res_partner*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 251) {
     if (has_uuidpartner()) {
       uuidpartner_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
     if (has_type()) {
       type_.ClearToDefaultNoArena(_default_type_);
     }
-    if (has_partnername()) {
-      partnername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    if (has_name()) {
+      name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_create_date()) {
+      create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_image_small()) {
+      image_small_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_image()) {
+      image_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_date()) {
+      date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
   }
+  if (_has_bits_[8 / 32] & 65280) {
+    ZR_(title_, is_company_);
+    if (has_street()) {
+      street_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_city()) {
+      city_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_display_name()) {
+      display_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_zip()) {
+      zip_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_email()) {
+      email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+  }
+  if (_has_bits_[16 / 32] & 16711680) {
+    ZR_(customer_, employee_);
+    if (has_website()) {
+      website_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_street2()) {
+      street2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_fax()) {
+      fax_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_write_date()) {
+      write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    active_ = false;
+    if (has_mobile()) {
+      mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+  }
+  if (_has_bits_[24 / 32] & 251658240) {
+    if (has_phone()) {
+      phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_birthdate()) {
+      birthdate_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_notify_email()) {
+      notify_email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    color_ = 0;
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   channel_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1450,7 +1843,7 @@ bool db_res_partner::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:xkcrm.db_res_partner)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -1502,20 +1895,414 @@ bool db_res_partner::MergePartialFromCodedStream(
           goto handle_unusual;
         }
         if (input->ExpectTag(26)) goto parse_channel;
-        if (input->ExpectTag(90)) goto parse_partnername;
+        if (input->ExpectTag(90)) goto parse_name;
         break;
       }
 
-      // optional string partnername = 11;
+      // optional string name = 11;
       case 11: {
         if (tag == 90) {
-         parse_partnername:
+         parse_name:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_partnername()));
+                input, this->mutable_name()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->partnername().data(), this->partnername().length(),
+            this->name().data(), this->name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "xkcrm.db_res_partner.partnername");
+            "xkcrm.db_res_partner.name");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(98)) goto parse_create_date;
+        break;
+      }
+
+      // optional string create_date = 12;
+      case 12: {
+        if (tag == 98) {
+         parse_create_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_create_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->create_date().data(), this->create_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.create_date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(106)) goto parse_image_small;
+        break;
+      }
+
+      // optional string image_small = 13;
+      case 13: {
+        if (tag == 106) {
+         parse_image_small:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_image_small()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->image_small().data(), this->image_small().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.image_small");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(114)) goto parse_image;
+        break;
+      }
+
+      // optional string image = 14;
+      case 14: {
+        if (tag == 114) {
+         parse_image:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_image()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->image().data(), this->image().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.image");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(122)) goto parse_date;
+        break;
+      }
+
+      // optional string date = 15;
+      case 15: {
+        if (tag == 122) {
+         parse_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date().data(), this->date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(130)) goto parse_street;
+        break;
+      }
+
+      // optional string street = 16;
+      case 16: {
+        if (tag == 130) {
+         parse_street:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_street()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->street().data(), this->street().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.street");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(138)) goto parse_city;
+        break;
+      }
+
+      // optional string city = 17;
+      case 17: {
+        if (tag == 138) {
+         parse_city:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_city()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->city().data(), this->city().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.city");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(146)) goto parse_display_name;
+        break;
+      }
+
+      // optional string display_name = 18;
+      case 18: {
+        if (tag == 146) {
+         parse_display_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_display_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->display_name().data(), this->display_name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.display_name");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(154)) goto parse_zip;
+        break;
+      }
+
+      // optional string zip = 19;
+      case 19: {
+        if (tag == 154) {
+         parse_zip:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_zip()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->zip().data(), this->zip().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.zip");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(160)) goto parse_title;
+        break;
+      }
+
+      // optional int32 title = 20;
+      case 20: {
+        if (tag == 160) {
+         parse_title:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &title_)));
+          set_has_title();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(168)) goto parse_supplier;
+        break;
+      }
+
+      // optional bool supplier = 21;
+      case 21: {
+        if (tag == 168) {
+         parse_supplier:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &supplier_)));
+          set_has_supplier();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(178)) goto parse_email;
+        break;
+      }
+
+      // optional string email = 22;
+      case 22: {
+        if (tag == 178) {
+         parse_email:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_email()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->email().data(), this->email().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.email");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(184)) goto parse_is_company;
+        break;
+      }
+
+      // optional bool is_company = 23;
+      case 23: {
+        if (tag == 184) {
+         parse_is_company:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_company_)));
+          set_has_is_company();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(194)) goto parse_website;
+        break;
+      }
+
+      // optional string website = 24;
+      case 24: {
+        if (tag == 194) {
+         parse_website:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_website()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->website().data(), this->website().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.website");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(200)) goto parse_customer;
+        break;
+      }
+
+      // optional bool customer = 25;
+      case 25: {
+        if (tag == 200) {
+         parse_customer:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &customer_)));
+          set_has_customer();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(210)) goto parse_street2;
+        break;
+      }
+
+      // optional string street2 = 26;
+      case 26: {
+        if (tag == 210) {
+         parse_street2:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_street2()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->street2().data(), this->street2().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.street2");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(218)) goto parse_fax;
+        break;
+      }
+
+      // optional string fax = 27;
+      case 27: {
+        if (tag == 218) {
+         parse_fax:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fax()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->fax().data(), this->fax().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.fax");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(224)) goto parse_employee;
+        break;
+      }
+
+      // optional bool employee = 28;
+      case 28: {
+        if (tag == 224) {
+         parse_employee:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &employee_)));
+          set_has_employee();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(234)) goto parse_write_date;
+        break;
+      }
+
+      // optional string write_date = 29;
+      case 29: {
+        if (tag == 234) {
+         parse_write_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_write_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->write_date().data(), this->write_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.write_date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(240)) goto parse_active;
+        break;
+      }
+
+      // optional bool active = 30;
+      case 30: {
+        if (tag == 240) {
+         parse_active:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &active_)));
+          set_has_active();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(250)) goto parse_mobile;
+        break;
+      }
+
+      // optional string mobile = 31;
+      case 31: {
+        if (tag == 250) {
+         parse_mobile:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_mobile()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->mobile().data(), this->mobile().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.mobile");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(258)) goto parse_phone;
+        break;
+      }
+
+      // optional string phone = 32;
+      case 32: {
+        if (tag == 258) {
+         parse_phone:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_phone()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->phone().data(), this->phone().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.phone");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(266)) goto parse_birthdate;
+        break;
+      }
+
+      // optional string birthdate = 33;
+      case 33: {
+        if (tag == 266) {
+         parse_birthdate:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_birthdate()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->birthdate().data(), this->birthdate().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.birthdate");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(274)) goto parse_notify_email;
+        break;
+      }
+
+      // optional string notify_email = 34;
+      case 34: {
+        if (tag == 274) {
+         parse_notify_email:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_notify_email()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->notify_email().data(), this->notify_email().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_res_partner.notify_email");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(280)) goto parse_color;
+        break;
+      }
+
+      // optional int32 color = 35;
+      case 35: {
+        if (tag == 280) {
+         parse_color:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &color_)));
+          set_has_color();
         } else {
           goto handle_unusual;
         }
@@ -1578,14 +2365,219 @@ void db_res_partner::SerializeWithCachedSizes(
       3, this->channel(i), output);
   }
 
-  // optional string partnername = 11;
-  if (has_partnername()) {
+  // optional string name = 11;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->partnername().data(), this->partnername().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_res_partner.partnername");
+      "xkcrm.db_res_partner.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      11, this->partnername(), output);
+      11, this->name(), output);
+  }
+
+  // optional string create_date = 12;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.create_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->create_date(), output);
+  }
+
+  // optional string image_small = 13;
+  if (has_image_small()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->image_small().data(), this->image_small().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.image_small");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->image_small(), output);
+  }
+
+  // optional string image = 14;
+  if (has_image()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->image().data(), this->image().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.image");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->image(), output);
+  }
+
+  // optional string date = 15;
+  if (has_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date().data(), this->date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->date(), output);
+  }
+
+  // optional string street = 16;
+  if (has_street()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street().data(), this->street().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.street");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->street(), output);
+  }
+
+  // optional string city = 17;
+  if (has_city()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->city().data(), this->city().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.city");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      17, this->city(), output);
+  }
+
+  // optional string display_name = 18;
+  if (has_display_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->display_name().data(), this->display_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.display_name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      18, this->display_name(), output);
+  }
+
+  // optional string zip = 19;
+  if (has_zip()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->zip().data(), this->zip().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.zip");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      19, this->zip(), output);
+  }
+
+  // optional int32 title = 20;
+  if (has_title()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(20, this->title(), output);
+  }
+
+  // optional bool supplier = 21;
+  if (has_supplier()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(21, this->supplier(), output);
+  }
+
+  // optional string email = 22;
+  if (has_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email().data(), this->email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.email");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      22, this->email(), output);
+  }
+
+  // optional bool is_company = 23;
+  if (has_is_company()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(23, this->is_company(), output);
+  }
+
+  // optional string website = 24;
+  if (has_website()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->website().data(), this->website().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.website");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      24, this->website(), output);
+  }
+
+  // optional bool customer = 25;
+  if (has_customer()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(25, this->customer(), output);
+  }
+
+  // optional string street2 = 26;
+  if (has_street2()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street2().data(), this->street2().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.street2");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      26, this->street2(), output);
+  }
+
+  // optional string fax = 27;
+  if (has_fax()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fax().data(), this->fax().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.fax");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      27, this->fax(), output);
+  }
+
+  // optional bool employee = 28;
+  if (has_employee()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(28, this->employee(), output);
+  }
+
+  // optional string write_date = 29;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.write_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      29, this->write_date(), output);
+  }
+
+  // optional bool active = 30;
+  if (has_active()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(30, this->active(), output);
+  }
+
+  // optional string mobile = 31;
+  if (has_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->mobile().data(), this->mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.mobile");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      31, this->mobile(), output);
+  }
+
+  // optional string phone = 32;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.phone");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      32, this->phone(), output);
+  }
+
+  // optional string birthdate = 33;
+  if (has_birthdate()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->birthdate().data(), this->birthdate().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.birthdate");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      33, this->birthdate(), output);
+  }
+
+  // optional string notify_email = 34;
+  if (has_notify_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->notify_email().data(), this->notify_email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.notify_email");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      34, this->notify_email(), output);
+  }
+
+  // optional int32 color = 35;
+  if (has_color()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(35, this->color(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1630,15 +2622,237 @@ void db_res_partner::SerializeWithCachedSizes(
       WriteStringToArray(3, this->channel(i), target);
   }
 
-  // optional string partnername = 11;
-  if (has_partnername()) {
+  // optional string name = 11;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->partnername().data(), this->partnername().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_res_partner.partnername");
+      "xkcrm.db_res_partner.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        11, this->partnername(), target);
+        11, this->name(), target);
+  }
+
+  // optional string create_date = 12;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.create_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->create_date(), target);
+  }
+
+  // optional string image_small = 13;
+  if (has_image_small()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->image_small().data(), this->image_small().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.image_small");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->image_small(), target);
+  }
+
+  // optional string image = 14;
+  if (has_image()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->image().data(), this->image().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.image");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->image(), target);
+  }
+
+  // optional string date = 15;
+  if (has_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date().data(), this->date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->date(), target);
+  }
+
+  // optional string street = 16;
+  if (has_street()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street().data(), this->street().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.street");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->street(), target);
+  }
+
+  // optional string city = 17;
+  if (has_city()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->city().data(), this->city().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.city");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        17, this->city(), target);
+  }
+
+  // optional string display_name = 18;
+  if (has_display_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->display_name().data(), this->display_name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.display_name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        18, this->display_name(), target);
+  }
+
+  // optional string zip = 19;
+  if (has_zip()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->zip().data(), this->zip().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.zip");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        19, this->zip(), target);
+  }
+
+  // optional int32 title = 20;
+  if (has_title()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(20, this->title(), target);
+  }
+
+  // optional bool supplier = 21;
+  if (has_supplier()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(21, this->supplier(), target);
+  }
+
+  // optional string email = 22;
+  if (has_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email().data(), this->email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.email");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        22, this->email(), target);
+  }
+
+  // optional bool is_company = 23;
+  if (has_is_company()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(23, this->is_company(), target);
+  }
+
+  // optional string website = 24;
+  if (has_website()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->website().data(), this->website().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.website");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        24, this->website(), target);
+  }
+
+  // optional bool customer = 25;
+  if (has_customer()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(25, this->customer(), target);
+  }
+
+  // optional string street2 = 26;
+  if (has_street2()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street2().data(), this->street2().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.street2");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        26, this->street2(), target);
+  }
+
+  // optional string fax = 27;
+  if (has_fax()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fax().data(), this->fax().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.fax");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        27, this->fax(), target);
+  }
+
+  // optional bool employee = 28;
+  if (has_employee()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(28, this->employee(), target);
+  }
+
+  // optional string write_date = 29;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.write_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        29, this->write_date(), target);
+  }
+
+  // optional bool active = 30;
+  if (has_active()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(30, this->active(), target);
+  }
+
+  // optional string mobile = 31;
+  if (has_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->mobile().data(), this->mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.mobile");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        31, this->mobile(), target);
+  }
+
+  // optional string phone = 32;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.phone");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        32, this->phone(), target);
+  }
+
+  // optional string birthdate = 33;
+  if (has_birthdate()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->birthdate().data(), this->birthdate().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.birthdate");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        33, this->birthdate(), target);
+  }
+
+  // optional string notify_email = 34;
+  if (has_notify_email()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->notify_email().data(), this->notify_email().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_res_partner.notify_email");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        34, this->notify_email(), target);
+  }
+
+  // optional int32 color = 35;
+  if (has_color()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(35, this->color(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1685,13 +2899,179 @@ int db_res_partner::ByteSize() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string partnername = 11;
-  if (has_partnername()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->partnername());
-  }
+  if (_has_bits_[3 / 32] & 248) {
+    // optional string name = 11;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
 
+    // optional string create_date = 12;
+    if (has_create_date()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->create_date());
+    }
+
+    // optional string image_small = 13;
+    if (has_image_small()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->image_small());
+    }
+
+    // optional string image = 14;
+    if (has_image()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->image());
+    }
+
+    // optional string date = 15;
+    if (has_date()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date());
+    }
+
+  }
+  if (_has_bits_[8 / 32] & 65280) {
+    // optional string street = 16;
+    if (has_street()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->street());
+    }
+
+    // optional string city = 17;
+    if (has_city()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->city());
+    }
+
+    // optional string display_name = 18;
+    if (has_display_name()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->display_name());
+    }
+
+    // optional string zip = 19;
+    if (has_zip()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->zip());
+    }
+
+    // optional int32 title = 20;
+    if (has_title()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->title());
+    }
+
+    // optional bool supplier = 21;
+    if (has_supplier()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string email = 22;
+    if (has_email()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->email());
+    }
+
+    // optional bool is_company = 23;
+    if (has_is_company()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[16 / 32] & 16711680) {
+    // optional string website = 24;
+    if (has_website()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->website());
+    }
+
+    // optional bool customer = 25;
+    if (has_customer()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string street2 = 26;
+    if (has_street2()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->street2());
+    }
+
+    // optional string fax = 27;
+    if (has_fax()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->fax());
+    }
+
+    // optional bool employee = 28;
+    if (has_employee()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string write_date = 29;
+    if (has_write_date()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->write_date());
+    }
+
+    // optional bool active = 30;
+    if (has_active()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string mobile = 31;
+    if (has_mobile()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->mobile());
+    }
+
+  }
+  if (_has_bits_[24 / 32] & 251658240) {
+    // optional string phone = 32;
+    if (has_phone()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->phone());
+    }
+
+    // optional string birthdate = 33;
+    if (has_birthdate()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->birthdate());
+    }
+
+    // optional string notify_email = 34;
+    if (has_notify_email()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->notify_email());
+    }
+
+    // optional int32 color = 35;
+    if (has_color()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->color());
+    }
+
+  }
   // repeated string channel = 3;
   total_size += 1 * this->channel_size();
   for (int i = 0; i < this->channel_size(); i++) {
@@ -1734,9 +3114,104 @@ void db_res_partner::MergeFrom(const db_res_partner& from) {
       set_has_type();
       type_.AssignWithDefault(_default_type_, from.type_);
     }
-    if (from.has_partnername()) {
-      set_has_partnername();
-      partnername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.partnername_);
+    if (from.has_name()) {
+      set_has_name();
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    }
+    if (from.has_create_date()) {
+      set_has_create_date();
+      create_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.create_date_);
+    }
+    if (from.has_image_small()) {
+      set_has_image_small();
+      image_small_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_small_);
+    }
+    if (from.has_image()) {
+      set_has_image();
+      image_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.image_);
+    }
+    if (from.has_date()) {
+      set_has_date();
+      date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_);
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_street()) {
+      set_has_street();
+      street_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.street_);
+    }
+    if (from.has_city()) {
+      set_has_city();
+      city_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.city_);
+    }
+    if (from.has_display_name()) {
+      set_has_display_name();
+      display_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.display_name_);
+    }
+    if (from.has_zip()) {
+      set_has_zip();
+      zip_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.zip_);
+    }
+    if (from.has_title()) {
+      set_title(from.title());
+    }
+    if (from.has_supplier()) {
+      set_supplier(from.supplier());
+    }
+    if (from.has_email()) {
+      set_has_email();
+      email_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.email_);
+    }
+    if (from.has_is_company()) {
+      set_is_company(from.is_company());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_website()) {
+      set_has_website();
+      website_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.website_);
+    }
+    if (from.has_customer()) {
+      set_customer(from.customer());
+    }
+    if (from.has_street2()) {
+      set_has_street2();
+      street2_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.street2_);
+    }
+    if (from.has_fax()) {
+      set_has_fax();
+      fax_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.fax_);
+    }
+    if (from.has_employee()) {
+      set_employee(from.employee());
+    }
+    if (from.has_write_date()) {
+      set_has_write_date();
+      write_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.write_date_);
+    }
+    if (from.has_active()) {
+      set_active(from.active());
+    }
+    if (from.has_mobile()) {
+      set_has_mobile();
+      mobile_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mobile_);
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_phone()) {
+      set_has_phone();
+      phone_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.phone_);
+    }
+    if (from.has_birthdate()) {
+      set_has_birthdate();
+      birthdate_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.birthdate_);
+    }
+    if (from.has_notify_email()) {
+      set_has_notify_email();
+      notify_email_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.notify_email_);
+    }
+    if (from.has_color()) {
+      set_color(from.color());
     }
   }
   if (from._internal_metadata_.have_unknown_fields()) {
@@ -1770,7 +3245,31 @@ void db_res_partner::InternalSwap(db_res_partner* other) {
   uuidpartner_.Swap(&other->uuidpartner_);
   type_.Swap(&other->type_);
   channel_.UnsafeArenaSwap(&other->channel_);
-  partnername_.Swap(&other->partnername_);
+  name_.Swap(&other->name_);
+  create_date_.Swap(&other->create_date_);
+  image_small_.Swap(&other->image_small_);
+  image_.Swap(&other->image_);
+  date_.Swap(&other->date_);
+  street_.Swap(&other->street_);
+  city_.Swap(&other->city_);
+  display_name_.Swap(&other->display_name_);
+  zip_.Swap(&other->zip_);
+  std::swap(title_, other->title_);
+  std::swap(supplier_, other->supplier_);
+  email_.Swap(&other->email_);
+  std::swap(is_company_, other->is_company_);
+  website_.Swap(&other->website_);
+  std::swap(customer_, other->customer_);
+  street2_.Swap(&other->street2_);
+  fax_.Swap(&other->fax_);
+  std::swap(employee_, other->employee_);
+  write_date_.Swap(&other->write_date_);
+  std::swap(active_, other->active_);
+  mobile_.Swap(&other->mobile_);
+  phone_.Swap(&other->phone_);
+  birthdate_.Swap(&other->birthdate_);
+  notify_email_.Swap(&other->notify_email_);
+  std::swap(color_, other->color_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1793,11 +3292,29 @@ const int db_crm_lead::kUuidleadidFieldNumber;
 const int db_crm_lead::kTypeFieldNumber;
 const int db_crm_lead::kChannelFieldNumber;
 const int db_crm_lead::kUuiduseridFieldNumber;
+const int db_crm_lead::kUuidpartneridFieldNumber;
 const int db_crm_lead::kUuidcompanyidFieldNumber;
-const int db_crm_lead::kLeadnameFieldNumber;
+const int db_crm_lead::kNameFieldNumber;
 const int db_crm_lead::kCreatedateFieldNumber;
-const int db_crm_lead::kPartnernameFieldNumber;
-const int db_crm_lead::kStreetFieldNumber;
+const int db_crm_lead::kPartnerNameFieldNumber;
+const int db_crm_lead::kContactNameFieldNumber;
+const int db_crm_lead::kMobileFieldNumber;
+const int db_crm_lead::kPhoneFieldNumber;
+const int db_crm_lead::kTitleFieldNumber;
+const int db_crm_lead::kStreet2FieldNumber;
+const int db_crm_lead::kZipFieldNumber;
+const int db_crm_lead::kFaxFieldNumber;
+const int db_crm_lead::kEmailCcFieldNumber;
+const int db_crm_lead::kPriorityFieldNumber;
+const int db_crm_lead::kMessageLastPostFieldNumber;
+const int db_crm_lead::kCreateDateFieldNumber;
+const int db_crm_lead::kDateClosedFieldNumber;
+const int db_crm_lead::kDateDeadlineFieldNumber;
+const int db_crm_lead::kColorFieldNumber;
+const int db_crm_lead::kActiveFieldNumber;
+const int db_crm_lead::kDescriptionFieldNumber;
+const int db_crm_lead::kTitleActionFieldNumber;
+const int db_crm_lead::kProbabilityFieldNumber;
 #endif  // !_MSC_VER
 
 db_crm_lead::db_crm_lead()
@@ -1823,11 +3340,29 @@ void db_crm_lead::SharedCtor() {
   uuidleadid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.UnsafeSetDefault(_default_type_);
   uuiduserid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  uuidpartnerid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   uuidcompanyid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  leadname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   createdate_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  partnername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  street_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  contact_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mobile_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  street2_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  zip_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fax_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_cc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  priority_ = 0;
+  message_last_post_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_closed_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_deadline_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  color_ = 0;
+  active_ = false;
+  description_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  title_action_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  probability_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -1840,11 +3375,25 @@ void db_crm_lead::SharedDtor() {
   uuidleadid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   type_.DestroyNoArena(_default_type_);
   uuiduserid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  uuidpartnerid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   uuidcompanyid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  leadname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   createdate_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  partnername_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  street_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  contact_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mobile_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  phone_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  street2_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  zip_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fax_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_cc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_last_post_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_closed_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_deadline_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  description_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  title_action_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -1875,6 +3424,16 @@ db_crm_lead* db_crm_lead::New(::google::protobuf::Arena* arena) const {
 }
 
 void db_crm_lead::Clear() {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<db_crm_lead*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
   if (_has_bits_[0 / 32] & 251) {
     if (has_uuidleadid()) {
       uuidleadid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1885,22 +3444,77 @@ void db_crm_lead::Clear() {
     if (has_uuiduserid()) {
       uuiduserid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
+    if (has_uuidpartnerid()) {
+      uuidpartnerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
     if (has_uuidcompanyid()) {
       uuidcompanyid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
-    if (has_leadname()) {
-      leadname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    if (has_name()) {
+      name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
     if (has_createdate()) {
       createdate_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
-    if (has_partnername()) {
-      partnername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  if (_has_bits_[8 / 32] & 65280) {
+    if (has_partner_name()) {
+      partner_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_contact_name()) {
+      contact_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_mobile()) {
+      mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_phone()) {
+      phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_title()) {
+      title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_street2()) {
+      street2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_zip()) {
+      zip_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_fax()) {
+      fax_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
   }
-  if (has_street()) {
-    street_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (_has_bits_[16 / 32] & 16711680) {
+    ZR_(priority_, color_);
+    if (has_email_cc()) {
+      email_cc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_message_last_post()) {
+      message_last_post_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_create_date()) {
+      create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_date_closed()) {
+      date_closed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_date_deadline()) {
+      date_deadline_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    active_ = false;
   }
+  if (_has_bits_[24 / 32] & 117440512) {
+    if (has_description()) {
+      description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_title_action()) {
+      title_action_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    probability_ = 0;
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   channel_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1983,13 +3597,30 @@ bool db_crm_lead::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_uuidcompanyid;
+        if (input->ExpectTag(42)) goto parse_uuidpartnerid;
         break;
       }
 
-      // optional string uuidcompanyid = 5;
+      // required string uuidpartnerid = 5;
       case 5: {
         if (tag == 42) {
+         parse_uuidpartnerid:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_uuidpartnerid()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->uuidpartnerid().data(), this->uuidpartnerid().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.uuidpartnerid");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_uuidcompanyid;
+        break;
+      }
+
+      // optional string uuidcompanyid = 6;
+      case 6: {
+        if (tag == 50) {
          parse_uuidcompanyid:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_uuidcompanyid()));
@@ -2000,20 +3631,20 @@ bool db_crm_lead::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(82)) goto parse_leadname;
+        if (input->ExpectTag(82)) goto parse_name;
         break;
       }
 
-      // optional string leadname = 10;
+      // optional string name = 10;
       case 10: {
         if (tag == 82) {
-         parse_leadname:
+         parse_name:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_leadname()));
+                input, this->mutable_name()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->leadname().data(), this->leadname().length(),
+            this->name().data(), this->name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "xkcrm.db_crm_lead.leadname");
+            "xkcrm.db_crm_lead.name");
         } else {
           goto handle_unusual;
         }
@@ -2034,37 +3665,318 @@ bool db_crm_lead::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(98)) goto parse_partnername;
+        if (input->ExpectTag(98)) goto parse_partner_name;
         break;
       }
 
-      // optional string partnername = 12;
+      // optional string partner_name = 12;
       case 12: {
         if (tag == 98) {
-         parse_partnername:
+         parse_partner_name:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_partnername()));
+                input, this->mutable_partner_name()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->partnername().data(), this->partnername().length(),
+            this->partner_name().data(), this->partner_name().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "xkcrm.db_crm_lead.partnername");
+            "xkcrm.db_crm_lead.partner_name");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(138)) goto parse_street;
+        if (input->ExpectTag(106)) goto parse_contact_name;
         break;
       }
 
-      // optional string street = 17;
+      // optional string contact_name = 13;
+      case 13: {
+        if (tag == 106) {
+         parse_contact_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_contact_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->contact_name().data(), this->contact_name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.contact_name");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(114)) goto parse_mobile;
+        break;
+      }
+
+      // optional string mobile = 14;
+      case 14: {
+        if (tag == 114) {
+         parse_mobile:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_mobile()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->mobile().data(), this->mobile().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.mobile");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(122)) goto parse_phone;
+        break;
+      }
+
+      // optional string phone = 15;
+      case 15: {
+        if (tag == 122) {
+         parse_phone:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_phone()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->phone().data(), this->phone().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.phone");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(130)) goto parse_title;
+        break;
+      }
+
+      // optional string title = 16;
+      case 16: {
+        if (tag == 130) {
+         parse_title:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_title()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->title().data(), this->title().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.title");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(138)) goto parse_street2;
+        break;
+      }
+
+      // optional string street2 = 17;
       case 17: {
         if (tag == 138) {
-         parse_street:
+         parse_street2:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_street()));
+                input, this->mutable_street2()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->street().data(), this->street().length(),
+            this->street2().data(), this->street2().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "xkcrm.db_crm_lead.street");
+            "xkcrm.db_crm_lead.street2");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(146)) goto parse_zip;
+        break;
+      }
+
+      // optional string zip = 18;
+      case 18: {
+        if (tag == 146) {
+         parse_zip:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_zip()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->zip().data(), this->zip().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.zip");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(154)) goto parse_fax;
+        break;
+      }
+
+      // optional string fax = 19;
+      case 19: {
+        if (tag == 154) {
+         parse_fax:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fax()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->fax().data(), this->fax().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.fax");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(162)) goto parse_email_cc;
+        break;
+      }
+
+      // optional string email_cc = 20;
+      case 20: {
+        if (tag == 162) {
+         parse_email_cc:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_email_cc()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->email_cc().data(), this->email_cc().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.email_cc");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(168)) goto parse_priority;
+        break;
+      }
+
+      // optional int32 priority = 21;
+      case 21: {
+        if (tag == 168) {
+         parse_priority:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &priority_)));
+          set_has_priority();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(178)) goto parse_message_last_post;
+        break;
+      }
+
+      // optional string message_last_post = 22;
+      case 22: {
+        if (tag == 178) {
+         parse_message_last_post:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_message_last_post()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->message_last_post().data(), this->message_last_post().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.message_last_post");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(186)) goto parse_create_date;
+        break;
+      }
+
+      // optional string create_date = 23;
+      case 23: {
+        if (tag == 186) {
+         parse_create_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_create_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->create_date().data(), this->create_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.create_date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(194)) goto parse_date_closed;
+        break;
+      }
+
+      // optional string date_closed = 24;
+      case 24: {
+        if (tag == 194) {
+         parse_date_closed:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date_closed()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date_closed().data(), this->date_closed().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.date_closed");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(202)) goto parse_date_deadline;
+        break;
+      }
+
+      // optional string date_deadline = 25;
+      case 25: {
+        if (tag == 202) {
+         parse_date_deadline:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date_deadline()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date_deadline().data(), this->date_deadline().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.date_deadline");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(208)) goto parse_color;
+        break;
+      }
+
+      // optional int32 color = 26;
+      case 26: {
+        if (tag == 208) {
+         parse_color:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &color_)));
+          set_has_color();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(216)) goto parse_active;
+        break;
+      }
+
+      // optional bool active = 27;
+      case 27: {
+        if (tag == 216) {
+         parse_active:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &active_)));
+          set_has_active();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(226)) goto parse_description;
+        break;
+      }
+
+      // optional string description = 28;
+      case 28: {
+        if (tag == 226) {
+         parse_description:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_description()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->description().data(), this->description().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.description");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(234)) goto parse_title_action;
+        break;
+      }
+
+      // optional string title_action = 29;
+      case 29: {
+        if (tag == 234) {
+         parse_title_action:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_title_action()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->title_action().data(), this->title_action().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_lead.title_action");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(241)) goto parse_probability;
+        break;
+      }
+
+      // optional double probability = 30;
+      case 30: {
+        if (tag == 241) {
+         parse_probability:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &probability_)));
+          set_has_probability();
         } else {
           goto handle_unusual;
         }
@@ -2137,24 +4049,34 @@ void db_crm_lead::SerializeWithCachedSizes(
       4, this->uuiduserid(), output);
   }
 
-  // optional string uuidcompanyid = 5;
+  // required string uuidpartnerid = 5;
+  if (has_uuidpartnerid()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->uuidpartnerid().data(), this->uuidpartnerid().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.uuidpartnerid");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->uuidpartnerid(), output);
+  }
+
+  // optional string uuidcompanyid = 6;
   if (has_uuidcompanyid()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuidcompanyid().data(), this->uuidcompanyid().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
       "xkcrm.db_crm_lead.uuidcompanyid");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->uuidcompanyid(), output);
+      6, this->uuidcompanyid(), output);
   }
 
-  // optional string leadname = 10;
-  if (has_leadname()) {
+  // optional string name = 10;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->leadname().data(), this->leadname().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.leadname");
+      "xkcrm.db_crm_lead.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      10, this->leadname(), output);
+      10, this->name(), output);
   }
 
   // optional string createdate = 11;
@@ -2167,24 +4089,174 @@ void db_crm_lead::SerializeWithCachedSizes(
       11, this->createdate(), output);
   }
 
-  // optional string partnername = 12;
-  if (has_partnername()) {
+  // optional string partner_name = 12;
+  if (has_partner_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->partnername().data(), this->partnername().length(),
+      this->partner_name().data(), this->partner_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.partnername");
+      "xkcrm.db_crm_lead.partner_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      12, this->partnername(), output);
+      12, this->partner_name(), output);
   }
 
-  // optional string street = 17;
-  if (has_street()) {
+  // optional string contact_name = 13;
+  if (has_contact_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->street().data(), this->street().length(),
+      this->contact_name().data(), this->contact_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.street");
+      "xkcrm.db_crm_lead.contact_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      17, this->street(), output);
+      13, this->contact_name(), output);
+  }
+
+  // optional string mobile = 14;
+  if (has_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->mobile().data(), this->mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.mobile");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->mobile(), output);
+  }
+
+  // optional string phone = 15;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.phone");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->phone(), output);
+  }
+
+  // optional string title = 16;
+  if (has_title()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->title().data(), this->title().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.title");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->title(), output);
+  }
+
+  // optional string street2 = 17;
+  if (has_street2()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street2().data(), this->street2().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.street2");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      17, this->street2(), output);
+  }
+
+  // optional string zip = 18;
+  if (has_zip()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->zip().data(), this->zip().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.zip");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      18, this->zip(), output);
+  }
+
+  // optional string fax = 19;
+  if (has_fax()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fax().data(), this->fax().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.fax");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      19, this->fax(), output);
+  }
+
+  // optional string email_cc = 20;
+  if (has_email_cc()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email_cc().data(), this->email_cc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.email_cc");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      20, this->email_cc(), output);
+  }
+
+  // optional int32 priority = 21;
+  if (has_priority()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->priority(), output);
+  }
+
+  // optional string message_last_post = 22;
+  if (has_message_last_post()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->message_last_post().data(), this->message_last_post().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.message_last_post");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      22, this->message_last_post(), output);
+  }
+
+  // optional string create_date = 23;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.create_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      23, this->create_date(), output);
+  }
+
+  // optional string date_closed = 24;
+  if (has_date_closed()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_closed().data(), this->date_closed().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.date_closed");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      24, this->date_closed(), output);
+  }
+
+  // optional string date_deadline = 25;
+  if (has_date_deadline()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_deadline().data(), this->date_deadline().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.date_deadline");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      25, this->date_deadline(), output);
+  }
+
+  // optional int32 color = 26;
+  if (has_color()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(26, this->color(), output);
+  }
+
+  // optional bool active = 27;
+  if (has_active()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(27, this->active(), output);
+  }
+
+  // optional string description = 28;
+  if (has_description()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->description().data(), this->description().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.description");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      28, this->description(), output);
+  }
+
+  // optional string title_action = 29;
+  if (has_title_action()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->title_action().data(), this->title_action().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.title_action");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      29, this->title_action(), output);
+  }
+
+  // optional double probability = 30;
+  if (has_probability()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(30, this->probability(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2240,7 +4312,18 @@ void db_crm_lead::SerializeWithCachedSizes(
         4, this->uuiduserid(), target);
   }
 
-  // optional string uuidcompanyid = 5;
+  // required string uuidpartnerid = 5;
+  if (has_uuidpartnerid()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->uuidpartnerid().data(), this->uuidpartnerid().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.uuidpartnerid");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->uuidpartnerid(), target);
+  }
+
+  // optional string uuidcompanyid = 6;
   if (has_uuidcompanyid()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuidcompanyid().data(), this->uuidcompanyid().length(),
@@ -2248,18 +4331,18 @@ void db_crm_lead::SerializeWithCachedSizes(
       "xkcrm.db_crm_lead.uuidcompanyid");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->uuidcompanyid(), target);
+        6, this->uuidcompanyid(), target);
   }
 
-  // optional string leadname = 10;
-  if (has_leadname()) {
+  // optional string name = 10;
+  if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->leadname().data(), this->leadname().length(),
+      this->name().data(), this->name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.leadname");
+      "xkcrm.db_crm_lead.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        10, this->leadname(), target);
+        10, this->name(), target);
   }
 
   // optional string createdate = 11;
@@ -2273,26 +4356,189 @@ void db_crm_lead::SerializeWithCachedSizes(
         11, this->createdate(), target);
   }
 
-  // optional string partnername = 12;
-  if (has_partnername()) {
+  // optional string partner_name = 12;
+  if (has_partner_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->partnername().data(), this->partnername().length(),
+      this->partner_name().data(), this->partner_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.partnername");
+      "xkcrm.db_crm_lead.partner_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        12, this->partnername(), target);
+        12, this->partner_name(), target);
   }
 
-  // optional string street = 17;
-  if (has_street()) {
+  // optional string contact_name = 13;
+  if (has_contact_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->street().data(), this->street().length(),
+      this->contact_name().data(), this->contact_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "xkcrm.db_crm_lead.street");
+      "xkcrm.db_crm_lead.contact_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        17, this->street(), target);
+        13, this->contact_name(), target);
+  }
+
+  // optional string mobile = 14;
+  if (has_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->mobile().data(), this->mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.mobile");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->mobile(), target);
+  }
+
+  // optional string phone = 15;
+  if (has_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->phone().data(), this->phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.phone");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->phone(), target);
+  }
+
+  // optional string title = 16;
+  if (has_title()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->title().data(), this->title().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.title");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->title(), target);
+  }
+
+  // optional string street2 = 17;
+  if (has_street2()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->street2().data(), this->street2().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.street2");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        17, this->street2(), target);
+  }
+
+  // optional string zip = 18;
+  if (has_zip()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->zip().data(), this->zip().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.zip");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        18, this->zip(), target);
+  }
+
+  // optional string fax = 19;
+  if (has_fax()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fax().data(), this->fax().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.fax");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        19, this->fax(), target);
+  }
+
+  // optional string email_cc = 20;
+  if (has_email_cc()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email_cc().data(), this->email_cc().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.email_cc");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        20, this->email_cc(), target);
+  }
+
+  // optional int32 priority = 21;
+  if (has_priority()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->priority(), target);
+  }
+
+  // optional string message_last_post = 22;
+  if (has_message_last_post()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->message_last_post().data(), this->message_last_post().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.message_last_post");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        22, this->message_last_post(), target);
+  }
+
+  // optional string create_date = 23;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.create_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        23, this->create_date(), target);
+  }
+
+  // optional string date_closed = 24;
+  if (has_date_closed()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_closed().data(), this->date_closed().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.date_closed");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        24, this->date_closed(), target);
+  }
+
+  // optional string date_deadline = 25;
+  if (has_date_deadline()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_deadline().data(), this->date_deadline().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.date_deadline");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        25, this->date_deadline(), target);
+  }
+
+  // optional int32 color = 26;
+  if (has_color()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(26, this->color(), target);
+  }
+
+  // optional bool active = 27;
+  if (has_active()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(27, this->active(), target);
+  }
+
+  // optional string description = 28;
+  if (has_description()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->description().data(), this->description().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.description");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        28, this->description(), target);
+  }
+
+  // optional string title_action = 29;
+  if (has_title_action()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->title_action().data(), this->title_action().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_lead.title_action");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        29, this->title_action(), target);
+  }
+
+  // optional double probability = 30;
+  if (has_probability()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(30, this->probability(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2327,12 +4573,19 @@ int db_crm_lead::RequiredFieldsByteSizeFallback() const {
         this->uuiduserid());
   }
 
+  if (has_uuidpartnerid()) {
+    // required string uuidpartnerid = 5;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->uuidpartnerid());
+  }
+
   return total_size;
 }
 int db_crm_lead::ByteSize() const {
   int total_size = 0;
 
-  if (((_has_bits_[0] & 0x0000000b) ^ 0x0000000b) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x0000001b) ^ 0x0000001b) == 0) {  // All required fields are present.
     // required string uuidleadid = 1;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -2348,22 +4601,27 @@ int db_crm_lead::ByteSize() const {
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->uuiduserid());
 
+    // required string uuidpartnerid = 5;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->uuidpartnerid());
+
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  if (_has_bits_[4 / 32] & 240) {
-    // optional string uuidcompanyid = 5;
+  if (_has_bits_[5 / 32] & 224) {
+    // optional string uuidcompanyid = 6;
     if (has_uuidcompanyid()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->uuidcompanyid());
     }
 
-    // optional string leadname = 10;
-    if (has_leadname()) {
+    // optional string name = 10;
+    if (has_name()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->leadname());
+          this->name());
     }
 
     // optional string createdate = 11;
@@ -2373,21 +4631,142 @@ int db_crm_lead::ByteSize() const {
           this->createdate());
     }
 
-    // optional string partnername = 12;
-    if (has_partnername()) {
+  }
+  if (_has_bits_[8 / 32] & 65280) {
+    // optional string partner_name = 12;
+    if (has_partner_name()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->partnername());
+          this->partner_name());
+    }
+
+    // optional string contact_name = 13;
+    if (has_contact_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->contact_name());
+    }
+
+    // optional string mobile = 14;
+    if (has_mobile()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->mobile());
+    }
+
+    // optional string phone = 15;
+    if (has_phone()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->phone());
+    }
+
+    // optional string title = 16;
+    if (has_title()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->title());
+    }
+
+    // optional string street2 = 17;
+    if (has_street2()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->street2());
+    }
+
+    // optional string zip = 18;
+    if (has_zip()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->zip());
+    }
+
+    // optional string fax = 19;
+    if (has_fax()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->fax());
     }
 
   }
-  // optional string street = 17;
-  if (has_street()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->street());
-  }
+  if (_has_bits_[16 / 32] & 16711680) {
+    // optional string email_cc = 20;
+    if (has_email_cc()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->email_cc());
+    }
 
+    // optional int32 priority = 21;
+    if (has_priority()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->priority());
+    }
+
+    // optional string message_last_post = 22;
+    if (has_message_last_post()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->message_last_post());
+    }
+
+    // optional string create_date = 23;
+    if (has_create_date()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->create_date());
+    }
+
+    // optional string date_closed = 24;
+    if (has_date_closed()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date_closed());
+    }
+
+    // optional string date_deadline = 25;
+    if (has_date_deadline()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date_deadline());
+    }
+
+    // optional int32 color = 26;
+    if (has_color()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->color());
+    }
+
+    // optional bool active = 27;
+    if (has_active()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[24 / 32] & 117440512) {
+    // optional string description = 28;
+    if (has_description()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->description());
+    }
+
+    // optional string title_action = 29;
+    if (has_title_action()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->title_action());
+    }
+
+    // optional double probability = 30;
+    if (has_probability()) {
+      total_size += 2 + 8;
+    }
+
+  }
   // repeated string channel = 3;
   total_size += 1 * this->channel_size();
   for (int i = 0; i < this->channel_size(); i++) {
@@ -2434,27 +4813,99 @@ void db_crm_lead::MergeFrom(const db_crm_lead& from) {
       set_has_uuiduserid();
       uuiduserid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuiduserid_);
     }
+    if (from.has_uuidpartnerid()) {
+      set_has_uuidpartnerid();
+      uuidpartnerid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuidpartnerid_);
+    }
     if (from.has_uuidcompanyid()) {
       set_has_uuidcompanyid();
       uuidcompanyid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuidcompanyid_);
     }
-    if (from.has_leadname()) {
-      set_has_leadname();
-      leadname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.leadname_);
+    if (from.has_name()) {
+      set_has_name();
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
     }
     if (from.has_createdate()) {
       set_has_createdate();
       createdate_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.createdate_);
     }
-    if (from.has_partnername()) {
-      set_has_partnername();
-      partnername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.partnername_);
-    }
   }
   if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    if (from.has_street()) {
-      set_has_street();
-      street_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.street_);
+    if (from.has_partner_name()) {
+      set_has_partner_name();
+      partner_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.partner_name_);
+    }
+    if (from.has_contact_name()) {
+      set_has_contact_name();
+      contact_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.contact_name_);
+    }
+    if (from.has_mobile()) {
+      set_has_mobile();
+      mobile_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mobile_);
+    }
+    if (from.has_phone()) {
+      set_has_phone();
+      phone_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.phone_);
+    }
+    if (from.has_title()) {
+      set_has_title();
+      title_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.title_);
+    }
+    if (from.has_street2()) {
+      set_has_street2();
+      street2_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.street2_);
+    }
+    if (from.has_zip()) {
+      set_has_zip();
+      zip_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.zip_);
+    }
+    if (from.has_fax()) {
+      set_has_fax();
+      fax_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.fax_);
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_email_cc()) {
+      set_has_email_cc();
+      email_cc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.email_cc_);
+    }
+    if (from.has_priority()) {
+      set_priority(from.priority());
+    }
+    if (from.has_message_last_post()) {
+      set_has_message_last_post();
+      message_last_post_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.message_last_post_);
+    }
+    if (from.has_create_date()) {
+      set_has_create_date();
+      create_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.create_date_);
+    }
+    if (from.has_date_closed()) {
+      set_has_date_closed();
+      date_closed_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_closed_);
+    }
+    if (from.has_date_deadline()) {
+      set_has_date_deadline();
+      date_deadline_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_deadline_);
+    }
+    if (from.has_color()) {
+      set_color(from.color());
+    }
+    if (from.has_active()) {
+      set_active(from.active());
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_description()) {
+      set_has_description();
+      description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
+    }
+    if (from.has_title_action()) {
+      set_has_title_action();
+      title_action_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.title_action_);
+    }
+    if (from.has_probability()) {
+      set_probability(from.probability());
     }
   }
   if (from._internal_metadata_.have_unknown_fields()) {
@@ -2475,7 +4926,7 @@ void db_crm_lead::CopyFrom(const db_crm_lead& from) {
 }
 
 bool db_crm_lead::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000000b) != 0x0000000b) return false;
+  if ((_has_bits_[0] & 0x0000001b) != 0x0000001b) return false;
 
   return true;
 }
@@ -2489,11 +4940,29 @@ void db_crm_lead::InternalSwap(db_crm_lead* other) {
   type_.Swap(&other->type_);
   channel_.UnsafeArenaSwap(&other->channel_);
   uuiduserid_.Swap(&other->uuiduserid_);
+  uuidpartnerid_.Swap(&other->uuidpartnerid_);
   uuidcompanyid_.Swap(&other->uuidcompanyid_);
-  leadname_.Swap(&other->leadname_);
+  name_.Swap(&other->name_);
   createdate_.Swap(&other->createdate_);
-  partnername_.Swap(&other->partnername_);
-  street_.Swap(&other->street_);
+  partner_name_.Swap(&other->partner_name_);
+  contact_name_.Swap(&other->contact_name_);
+  mobile_.Swap(&other->mobile_);
+  phone_.Swap(&other->phone_);
+  title_.Swap(&other->title_);
+  street2_.Swap(&other->street2_);
+  zip_.Swap(&other->zip_);
+  fax_.Swap(&other->fax_);
+  email_cc_.Swap(&other->email_cc_);
+  std::swap(priority_, other->priority_);
+  message_last_post_.Swap(&other->message_last_post_);
+  create_date_.Swap(&other->create_date_);
+  date_closed_.Swap(&other->date_closed_);
+  date_deadline_.Swap(&other->date_deadline_);
+  std::swap(color_, other->color_);
+  std::swap(active_, other->active_);
+  description_.Swap(&other->description_);
+  title_action_.Swap(&other->title_action_);
+  std::swap(probability_, other->probability_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -2517,6 +4986,18 @@ const int db_crm_phonecall::kTypeFieldNumber;
 const int db_crm_phonecall::kChannelFieldNumber;
 const int db_crm_phonecall::kUuiduseridFieldNumber;
 const int db_crm_phonecall::kUuidpartnerFieldNumber;
+const int db_crm_phonecall::kDateClosedFieldNumber;
+const int db_crm_phonecall::kCreateDateFieldNumber;
+const int db_crm_phonecall::kDateFieldNumber;
+const int db_crm_phonecall::kPriorityFieldNumber;
+const int db_crm_phonecall::kStateFieldNumber;
+const int db_crm_phonecall::kDescriptionFieldNumber;
+const int db_crm_phonecall::kNameFieldNumber;
+const int db_crm_phonecall::kPartnerMobileFieldNumber;
+const int db_crm_phonecall::kWriteDateFieldNumber;
+const int db_crm_phonecall::kDateOpenFieldNumber;
+const int db_crm_phonecall::kPartnerPhoneFieldNumber;
+const int db_crm_phonecall::kEmailFromFieldNumber;
 #endif  // !_MSC_VER
 
 db_crm_phonecall::db_crm_phonecall()
@@ -2543,6 +5024,18 @@ void db_crm_phonecall::SharedCtor() {
   type_.UnsafeSetDefault(_default_type_);
   uuiduserid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   uuidpartner_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_closed_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  priority_ = 0;
+  state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  description_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_mobile_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  write_date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_open_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_phone_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_from_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -2556,6 +5049,17 @@ void db_crm_phonecall::SharedDtor() {
   type_.DestroyNoArena(_default_type_);
   uuiduserid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   uuidpartner_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_closed_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  create_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  description_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_mobile_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  write_date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  date_open_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  partner_phone_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  email_from_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -2586,7 +5090,7 @@ db_crm_phonecall* db_crm_phonecall::New(::google::protobuf::Arena* arena) const 
 }
 
 void db_crm_phonecall::Clear() {
-  if (_has_bits_[0 / 32] & 27) {
+  if (_has_bits_[0 / 32] & 251) {
     if (has_uuidphonecallid()) {
       uuidphonecallid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
@@ -2599,6 +5103,42 @@ void db_crm_phonecall::Clear() {
     if (has_uuidpartner()) {
       uuidpartner_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
     }
+    if (has_date_closed()) {
+      date_closed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_create_date()) {
+      create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_date()) {
+      date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+  }
+  if (_has_bits_[8 / 32] & 65280) {
+    priority_ = 0;
+    if (has_state()) {
+      state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_description()) {
+      description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_name()) {
+      name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_partner_mobile()) {
+      partner_mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_write_date()) {
+      write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_date_open()) {
+      date_open_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+    if (has_partner_phone()) {
+      partner_phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    }
+  }
+  if (has_email_from()) {
+    email_from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   channel_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -2613,7 +5153,7 @@ bool db_crm_phonecall::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:xkcrm.db_crm_phonecall)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -2699,6 +5239,208 @@ bool db_crm_phonecall::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(90)) goto parse_date_closed;
+        break;
+      }
+
+      // optional string date_closed = 11;
+      case 11: {
+        if (tag == 90) {
+         parse_date_closed:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date_closed()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date_closed().data(), this->date_closed().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.date_closed");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(98)) goto parse_create_date;
+        break;
+      }
+
+      // optional string create_date = 12;
+      case 12: {
+        if (tag == 98) {
+         parse_create_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_create_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->create_date().data(), this->create_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.create_date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(106)) goto parse_date;
+        break;
+      }
+
+      // optional string date = 13;
+      case 13: {
+        if (tag == 106) {
+         parse_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date().data(), this->date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(112)) goto parse_priority;
+        break;
+      }
+
+      // optional int32 priority = 14;
+      case 14: {
+        if (tag == 112) {
+         parse_priority:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &priority_)));
+          set_has_priority();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(122)) goto parse_state;
+        break;
+      }
+
+      // optional string state = 15;
+      case 15: {
+        if (tag == 122) {
+         parse_state:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_state()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->state().data(), this->state().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.state");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(130)) goto parse_description;
+        break;
+      }
+
+      // optional string description = 16;
+      case 16: {
+        if (tag == 130) {
+         parse_description:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_description()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->description().data(), this->description().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.description");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(138)) goto parse_name;
+        break;
+      }
+
+      // optional string name = 17;
+      case 17: {
+        if (tag == 138) {
+         parse_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.name");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(146)) goto parse_partner_mobile;
+        break;
+      }
+
+      // optional string partner_mobile = 18;
+      case 18: {
+        if (tag == 146) {
+         parse_partner_mobile:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_partner_mobile()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->partner_mobile().data(), this->partner_mobile().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.partner_mobile");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(154)) goto parse_write_date;
+        break;
+      }
+
+      // optional string write_date = 19;
+      case 19: {
+        if (tag == 154) {
+         parse_write_date:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_write_date()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->write_date().data(), this->write_date().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.write_date");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(162)) goto parse_date_open;
+        break;
+      }
+
+      // optional string date_open = 20;
+      case 20: {
+        if (tag == 162) {
+         parse_date_open:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_date_open()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->date_open().data(), this->date_open().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.date_open");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(170)) goto parse_partner_phone;
+        break;
+      }
+
+      // optional string partner_phone = 21;
+      case 21: {
+        if (tag == 170) {
+         parse_partner_phone:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_partner_phone()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->partner_phone().data(), this->partner_phone().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.partner_phone");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(178)) goto parse_email_from;
+        break;
+      }
+
+      // optional string email_from = 22;
+      case 22: {
+        if (tag == 178) {
+         parse_email_from:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_email_from()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->email_from().data(), this->email_from().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "xkcrm.db_crm_phonecall.email_from");
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -2778,6 +5520,121 @@ void db_crm_phonecall::SerializeWithCachedSizes(
       5, this->uuidpartner(), output);
   }
 
+  // optional string date_closed = 11;
+  if (has_date_closed()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_closed().data(), this->date_closed().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date_closed");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      11, this->date_closed(), output);
+  }
+
+  // optional string create_date = 12;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.create_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->create_date(), output);
+  }
+
+  // optional string date = 13;
+  if (has_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date().data(), this->date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->date(), output);
+  }
+
+  // optional int32 priority = 14;
+  if (has_priority()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->priority(), output);
+  }
+
+  // optional string state = 15;
+  if (has_state()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->state().data(), this->state().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.state");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->state(), output);
+  }
+
+  // optional string description = 16;
+  if (has_description()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->description().data(), this->description().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.description");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->description(), output);
+  }
+
+  // optional string name = 17;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      17, this->name(), output);
+  }
+
+  // optional string partner_mobile = 18;
+  if (has_partner_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->partner_mobile().data(), this->partner_mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.partner_mobile");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      18, this->partner_mobile(), output);
+  }
+
+  // optional string write_date = 19;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.write_date");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      19, this->write_date(), output);
+  }
+
+  // optional string date_open = 20;
+  if (has_date_open()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_open().data(), this->date_open().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date_open");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      20, this->date_open(), output);
+  }
+
+  // optional string partner_phone = 21;
+  if (has_partner_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->partner_phone().data(), this->partner_phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.partner_phone");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      21, this->partner_phone(), output);
+  }
+
+  // optional string email_from = 22;
+  if (has_email_from()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email_from().data(), this->email_from().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.email_from");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      22, this->email_from(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -2842,6 +5699,132 @@ void db_crm_phonecall::SerializeWithCachedSizes(
         5, this->uuidpartner(), target);
   }
 
+  // optional string date_closed = 11;
+  if (has_date_closed()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_closed().data(), this->date_closed().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date_closed");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        11, this->date_closed(), target);
+  }
+
+  // optional string create_date = 12;
+  if (has_create_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->create_date().data(), this->create_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.create_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->create_date(), target);
+  }
+
+  // optional string date = 13;
+  if (has_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date().data(), this->date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->date(), target);
+  }
+
+  // optional int32 priority = 14;
+  if (has_priority()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->priority(), target);
+  }
+
+  // optional string state = 15;
+  if (has_state()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->state().data(), this->state().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.state");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->state(), target);
+  }
+
+  // optional string description = 16;
+  if (has_description()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->description().data(), this->description().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.description");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->description(), target);
+  }
+
+  // optional string name = 17;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        17, this->name(), target);
+  }
+
+  // optional string partner_mobile = 18;
+  if (has_partner_mobile()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->partner_mobile().data(), this->partner_mobile().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.partner_mobile");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        18, this->partner_mobile(), target);
+  }
+
+  // optional string write_date = 19;
+  if (has_write_date()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->write_date().data(), this->write_date().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.write_date");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        19, this->write_date(), target);
+  }
+
+  // optional string date_open = 20;
+  if (has_date_open()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->date_open().data(), this->date_open().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.date_open");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        20, this->date_open(), target);
+  }
+
+  // optional string partner_phone = 21;
+  if (has_partner_phone()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->partner_phone().data(), this->partner_phone().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.partner_phone");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        21, this->partner_phone(), target);
+  }
+
+  // optional string email_from = 22;
+  if (has_email_from()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->email_from().data(), this->email_from().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "xkcrm.db_crm_phonecall.email_from");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        22, this->email_from(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -2898,11 +5881,99 @@ int db_crm_phonecall::ByteSize() const {
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional string uuidpartner = 5;
-  if (has_uuidpartner()) {
-    total_size += 1 +
+  if (_has_bits_[4 / 32] & 240) {
+    // optional string uuidpartner = 5;
+    if (has_uuidpartner()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->uuidpartner());
+    }
+
+    // optional string date_closed = 11;
+    if (has_date_closed()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date_closed());
+    }
+
+    // optional string create_date = 12;
+    if (has_create_date()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->create_date());
+    }
+
+    // optional string date = 13;
+    if (has_date()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date());
+    }
+
+  }
+  if (_has_bits_[8 / 32] & 65280) {
+    // optional int32 priority = 14;
+    if (has_priority()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->priority());
+    }
+
+    // optional string state = 15;
+    if (has_state()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->state());
+    }
+
+    // optional string description = 16;
+    if (has_description()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->description());
+    }
+
+    // optional string name = 17;
+    if (has_name()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
+
+    // optional string partner_mobile = 18;
+    if (has_partner_mobile()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->partner_mobile());
+    }
+
+    // optional string write_date = 19;
+    if (has_write_date()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->write_date());
+    }
+
+    // optional string date_open = 20;
+    if (has_date_open()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->date_open());
+    }
+
+    // optional string partner_phone = 21;
+    if (has_partner_phone()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->partner_phone());
+    }
+
+  }
+  // optional string email_from = 22;
+  if (has_email_from()) {
+    total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->uuidpartner());
+        this->email_from());
   }
 
   // repeated string channel = 3;
@@ -2955,6 +6026,57 @@ void db_crm_phonecall::MergeFrom(const db_crm_phonecall& from) {
       set_has_uuidpartner();
       uuidpartner_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuidpartner_);
     }
+    if (from.has_date_closed()) {
+      set_has_date_closed();
+      date_closed_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_closed_);
+    }
+    if (from.has_create_date()) {
+      set_has_create_date();
+      create_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.create_date_);
+    }
+    if (from.has_date()) {
+      set_has_date();
+      date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_);
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_priority()) {
+      set_priority(from.priority());
+    }
+    if (from.has_state()) {
+      set_has_state();
+      state_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.state_);
+    }
+    if (from.has_description()) {
+      set_has_description();
+      description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
+    }
+    if (from.has_name()) {
+      set_has_name();
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    }
+    if (from.has_partner_mobile()) {
+      set_has_partner_mobile();
+      partner_mobile_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.partner_mobile_);
+    }
+    if (from.has_write_date()) {
+      set_has_write_date();
+      write_date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.write_date_);
+    }
+    if (from.has_date_open()) {
+      set_has_date_open();
+      date_open_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_open_);
+    }
+    if (from.has_partner_phone()) {
+      set_has_partner_phone();
+      partner_phone_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.partner_phone_);
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_email_from()) {
+      set_has_email_from();
+      email_from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.email_from_);
+    }
   }
   if (from._internal_metadata_.have_unknown_fields()) {
     mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -2989,6 +6111,18 @@ void db_crm_phonecall::InternalSwap(db_crm_phonecall* other) {
   channel_.UnsafeArenaSwap(&other->channel_);
   uuiduserid_.Swap(&other->uuiduserid_);
   uuidpartner_.Swap(&other->uuidpartner_);
+  date_closed_.Swap(&other->date_closed_);
+  create_date_.Swap(&other->create_date_);
+  date_.Swap(&other->date_);
+  std::swap(priority_, other->priority_);
+  state_.Swap(&other->state_);
+  description_.Swap(&other->description_);
+  name_.Swap(&other->name_);
+  partner_mobile_.Swap(&other->partner_mobile_);
+  write_date_.Swap(&other->write_date_);
+  date_open_.Swap(&other->date_open_);
+  partner_phone_.Swap(&other->partner_phone_);
+  email_from_.Swap(&other->email_from_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);

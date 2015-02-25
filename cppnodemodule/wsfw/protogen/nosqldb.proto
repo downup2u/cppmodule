@@ -16,14 +16,42 @@ message db_res_company{
 	required string uuidcompanyid = 1;
 	required string type = 2 [default = "res_company"];
 	repeated string channel = 3;
-	optional string companyname = 11;
+	optional string name = 11;
+	optional string email = 12;
+	optional string phone = 13;
+	optional string write_date = 14;
+	
 };
 
 message db_res_partner{
 	required string uuidpartner = 1;
 	required string type = 2 [default = "res_partner"];
 	repeated string channel = 3;
-	optional string partnername = 11;
+	optional string name = 11;
+	optional string create_date = 12;
+	optional string image_small = 13;
+	optional string image = 14;
+	optional string date = 15;
+	optional string street = 16;
+	optional string city = 17;
+	optional string display_name = 18;
+	optional string zip = 19;
+	optional int32 title = 20;
+	optional bool supplier = 21;
+	optional string email = 22;
+	optional bool is_company = 23;
+	optional string website = 24;
+	optional bool customer = 25;
+	optional string street2 = 26;
+	optional string fax = 27;
+	optional bool employee = 28;
+	optional string write_date = 29;
+	optional bool active = 30;
+	optional string mobile = 31;
+	optional string phone = 32;
+	optional string birthdate = 33;
+	optional string notify_email = 34;
+	optional int32 color = 35;
 };
 
 message db_crm_lead{
@@ -31,11 +59,29 @@ message db_crm_lead{
 	required string type = 2[default = "crm_lead"];//crm_opportunity
 	repeated string channel = 3;
 	required string uuiduserid = 4;
-	optional string uuidcompanyid = 5;
-	optional string leadname = 10;
+	required string uuidpartnerid = 5;
+	optional string uuidcompanyid = 6;
+	optional string name = 10;
 	optional string createdate = 11;
-	optional string partnername = 12;
-	optional string street = 17;
+	optional string partner_name = 12;
+	optional string contact_name = 13;
+	optional string mobile = 14;
+	optional string phone = 15;
+	optional string title = 16;
+	optional string street2 = 17;
+	optional string zip = 18;
+	optional string fax = 19;
+	optional string email_cc = 20;
+	optional int32 priority = 21;
+	optional string message_last_post = 22;
+	optional string create_date = 23;
+	optional string date_closed = 24;
+	optional string date_deadline = 25;
+	optional int32 color = 26;
+	optional bool active = 27;
+	optional string description = 28;
+	optional string title_action = 29;
+	optional double probability = 30;
 };
 
 message db_crm_phonecall{
@@ -44,5 +90,17 @@ message db_crm_phonecall{
 	repeated string channel = 3;
 	required string uuiduserid = 4;
 	optional string uuidpartner = 5;
+	optional string date_closed = 11;
+	optional string create_date = 12;
+	optional string date = 13;
+	optional int32 priority = 14;
+	optional string state = 15;
+	optional string description = 16;
+	optional string name = 17;
+	optional string partner_mobile = 18;
+	optional string write_date = 19;
+	optional string date_open = 20;
+	optional string partner_phone = 21;
+	optional string email_from = 22;
 };
 

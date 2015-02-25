@@ -353,17 +353,53 @@ class db_res_company : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& channel() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_channel();
 
-  // optional string companyname = 11;
-  inline bool has_companyname() const;
-  inline void clear_companyname();
-  static const int kCompanynameFieldNumber = 11;
-  inline const ::std::string& companyname() const;
-  inline void set_companyname(const ::std::string& value);
-  inline void set_companyname(const char* value);
-  inline void set_companyname(const char* value, size_t size);
-  inline ::std::string* mutable_companyname();
-  inline ::std::string* release_companyname();
-  inline void set_allocated_companyname(::std::string* companyname);
+  // optional string name = 11;
+  inline bool has_name() const;
+  inline void clear_name();
+  static const int kNameFieldNumber = 11;
+  inline const ::std::string& name() const;
+  inline void set_name(const ::std::string& value);
+  inline void set_name(const char* value);
+  inline void set_name(const char* value, size_t size);
+  inline ::std::string* mutable_name();
+  inline ::std::string* release_name();
+  inline void set_allocated_name(::std::string* name);
+
+  // optional string email = 12;
+  inline bool has_email() const;
+  inline void clear_email();
+  static const int kEmailFieldNumber = 12;
+  inline const ::std::string& email() const;
+  inline void set_email(const ::std::string& value);
+  inline void set_email(const char* value);
+  inline void set_email(const char* value, size_t size);
+  inline ::std::string* mutable_email();
+  inline ::std::string* release_email();
+  inline void set_allocated_email(::std::string* email);
+
+  // optional string phone = 13;
+  inline bool has_phone() const;
+  inline void clear_phone();
+  static const int kPhoneFieldNumber = 13;
+  inline const ::std::string& phone() const;
+  inline void set_phone(const ::std::string& value);
+  inline void set_phone(const char* value);
+  inline void set_phone(const char* value, size_t size);
+  inline ::std::string* mutable_phone();
+  inline ::std::string* release_phone();
+  inline void set_allocated_phone(::std::string* phone);
+
+  // optional string write_date = 14;
+  inline bool has_write_date() const;
+  inline void clear_write_date();
+  static const int kWriteDateFieldNumber = 14;
+  inline const ::std::string& write_date() const;
+  inline void set_write_date(const ::std::string& value);
+  inline void set_write_date(const char* value);
+  inline void set_write_date(const char* value, size_t size);
+  inline ::std::string* mutable_write_date();
+  inline ::std::string* release_write_date();
+  inline void set_allocated_write_date(::std::string* write_date);
 
   // @@protoc_insertion_point(class_scope:xkcrm.db_res_company)
  private:
@@ -371,8 +407,14 @@ class db_res_company : public ::google::protobuf::Message {
   inline void clear_has_uuidcompanyid();
   inline void set_has_type();
   inline void clear_has_type();
-  inline void set_has_companyname();
-  inline void clear_has_companyname();
+  inline void set_has_name();
+  inline void clear_has_name();
+  inline void set_has_email();
+  inline void clear_has_email();
+  inline void set_has_phone();
+  inline void clear_has_phone();
+  inline void set_has_write_date();
+  inline void clear_has_write_date();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -384,7 +426,10 @@ class db_res_company : public ::google::protobuf::Message {
   static ::std::string* _default_type_;
   ::google::protobuf::internal::ArenaStringPtr type_;
   ::google::protobuf::RepeatedPtrField< ::std::string> channel_;
-  ::google::protobuf::internal::ArenaStringPtr companyname_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr email_;
+  ::google::protobuf::internal::ArenaStringPtr phone_;
+  ::google::protobuf::internal::ArenaStringPtr write_date_;
   friend void  protobuf_AddDesc_nosqldb_2eproto();
   friend void protobuf_AssignDesc_nosqldb_2eproto();
   friend void protobuf_ShutdownFile_nosqldb_2eproto();
@@ -498,17 +543,270 @@ class db_res_partner : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& channel() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_channel();
 
-  // optional string partnername = 11;
-  inline bool has_partnername() const;
-  inline void clear_partnername();
-  static const int kPartnernameFieldNumber = 11;
-  inline const ::std::string& partnername() const;
-  inline void set_partnername(const ::std::string& value);
-  inline void set_partnername(const char* value);
-  inline void set_partnername(const char* value, size_t size);
-  inline ::std::string* mutable_partnername();
-  inline ::std::string* release_partnername();
-  inline void set_allocated_partnername(::std::string* partnername);
+  // optional string name = 11;
+  inline bool has_name() const;
+  inline void clear_name();
+  static const int kNameFieldNumber = 11;
+  inline const ::std::string& name() const;
+  inline void set_name(const ::std::string& value);
+  inline void set_name(const char* value);
+  inline void set_name(const char* value, size_t size);
+  inline ::std::string* mutable_name();
+  inline ::std::string* release_name();
+  inline void set_allocated_name(::std::string* name);
+
+  // optional string create_date = 12;
+  inline bool has_create_date() const;
+  inline void clear_create_date();
+  static const int kCreateDateFieldNumber = 12;
+  inline const ::std::string& create_date() const;
+  inline void set_create_date(const ::std::string& value);
+  inline void set_create_date(const char* value);
+  inline void set_create_date(const char* value, size_t size);
+  inline ::std::string* mutable_create_date();
+  inline ::std::string* release_create_date();
+  inline void set_allocated_create_date(::std::string* create_date);
+
+  // optional string image_small = 13;
+  inline bool has_image_small() const;
+  inline void clear_image_small();
+  static const int kImageSmallFieldNumber = 13;
+  inline const ::std::string& image_small() const;
+  inline void set_image_small(const ::std::string& value);
+  inline void set_image_small(const char* value);
+  inline void set_image_small(const char* value, size_t size);
+  inline ::std::string* mutable_image_small();
+  inline ::std::string* release_image_small();
+  inline void set_allocated_image_small(::std::string* image_small);
+
+  // optional string image = 14;
+  inline bool has_image() const;
+  inline void clear_image();
+  static const int kImageFieldNumber = 14;
+  inline const ::std::string& image() const;
+  inline void set_image(const ::std::string& value);
+  inline void set_image(const char* value);
+  inline void set_image(const char* value, size_t size);
+  inline ::std::string* mutable_image();
+  inline ::std::string* release_image();
+  inline void set_allocated_image(::std::string* image);
+
+  // optional string date = 15;
+  inline bool has_date() const;
+  inline void clear_date();
+  static const int kDateFieldNumber = 15;
+  inline const ::std::string& date() const;
+  inline void set_date(const ::std::string& value);
+  inline void set_date(const char* value);
+  inline void set_date(const char* value, size_t size);
+  inline ::std::string* mutable_date();
+  inline ::std::string* release_date();
+  inline void set_allocated_date(::std::string* date);
+
+  // optional string street = 16;
+  inline bool has_street() const;
+  inline void clear_street();
+  static const int kStreetFieldNumber = 16;
+  inline const ::std::string& street() const;
+  inline void set_street(const ::std::string& value);
+  inline void set_street(const char* value);
+  inline void set_street(const char* value, size_t size);
+  inline ::std::string* mutable_street();
+  inline ::std::string* release_street();
+  inline void set_allocated_street(::std::string* street);
+
+  // optional string city = 17;
+  inline bool has_city() const;
+  inline void clear_city();
+  static const int kCityFieldNumber = 17;
+  inline const ::std::string& city() const;
+  inline void set_city(const ::std::string& value);
+  inline void set_city(const char* value);
+  inline void set_city(const char* value, size_t size);
+  inline ::std::string* mutable_city();
+  inline ::std::string* release_city();
+  inline void set_allocated_city(::std::string* city);
+
+  // optional string display_name = 18;
+  inline bool has_display_name() const;
+  inline void clear_display_name();
+  static const int kDisplayNameFieldNumber = 18;
+  inline const ::std::string& display_name() const;
+  inline void set_display_name(const ::std::string& value);
+  inline void set_display_name(const char* value);
+  inline void set_display_name(const char* value, size_t size);
+  inline ::std::string* mutable_display_name();
+  inline ::std::string* release_display_name();
+  inline void set_allocated_display_name(::std::string* display_name);
+
+  // optional string zip = 19;
+  inline bool has_zip() const;
+  inline void clear_zip();
+  static const int kZipFieldNumber = 19;
+  inline const ::std::string& zip() const;
+  inline void set_zip(const ::std::string& value);
+  inline void set_zip(const char* value);
+  inline void set_zip(const char* value, size_t size);
+  inline ::std::string* mutable_zip();
+  inline ::std::string* release_zip();
+  inline void set_allocated_zip(::std::string* zip);
+
+  // optional int32 title = 20;
+  inline bool has_title() const;
+  inline void clear_title();
+  static const int kTitleFieldNumber = 20;
+  inline ::google::protobuf::int32 title() const;
+  inline void set_title(::google::protobuf::int32 value);
+
+  // optional bool supplier = 21;
+  inline bool has_supplier() const;
+  inline void clear_supplier();
+  static const int kSupplierFieldNumber = 21;
+  inline bool supplier() const;
+  inline void set_supplier(bool value);
+
+  // optional string email = 22;
+  inline bool has_email() const;
+  inline void clear_email();
+  static const int kEmailFieldNumber = 22;
+  inline const ::std::string& email() const;
+  inline void set_email(const ::std::string& value);
+  inline void set_email(const char* value);
+  inline void set_email(const char* value, size_t size);
+  inline ::std::string* mutable_email();
+  inline ::std::string* release_email();
+  inline void set_allocated_email(::std::string* email);
+
+  // optional bool is_company = 23;
+  inline bool has_is_company() const;
+  inline void clear_is_company();
+  static const int kIsCompanyFieldNumber = 23;
+  inline bool is_company() const;
+  inline void set_is_company(bool value);
+
+  // optional string website = 24;
+  inline bool has_website() const;
+  inline void clear_website();
+  static const int kWebsiteFieldNumber = 24;
+  inline const ::std::string& website() const;
+  inline void set_website(const ::std::string& value);
+  inline void set_website(const char* value);
+  inline void set_website(const char* value, size_t size);
+  inline ::std::string* mutable_website();
+  inline ::std::string* release_website();
+  inline void set_allocated_website(::std::string* website);
+
+  // optional bool customer = 25;
+  inline bool has_customer() const;
+  inline void clear_customer();
+  static const int kCustomerFieldNumber = 25;
+  inline bool customer() const;
+  inline void set_customer(bool value);
+
+  // optional string street2 = 26;
+  inline bool has_street2() const;
+  inline void clear_street2();
+  static const int kStreet2FieldNumber = 26;
+  inline const ::std::string& street2() const;
+  inline void set_street2(const ::std::string& value);
+  inline void set_street2(const char* value);
+  inline void set_street2(const char* value, size_t size);
+  inline ::std::string* mutable_street2();
+  inline ::std::string* release_street2();
+  inline void set_allocated_street2(::std::string* street2);
+
+  // optional string fax = 27;
+  inline bool has_fax() const;
+  inline void clear_fax();
+  static const int kFaxFieldNumber = 27;
+  inline const ::std::string& fax() const;
+  inline void set_fax(const ::std::string& value);
+  inline void set_fax(const char* value);
+  inline void set_fax(const char* value, size_t size);
+  inline ::std::string* mutable_fax();
+  inline ::std::string* release_fax();
+  inline void set_allocated_fax(::std::string* fax);
+
+  // optional bool employee = 28;
+  inline bool has_employee() const;
+  inline void clear_employee();
+  static const int kEmployeeFieldNumber = 28;
+  inline bool employee() const;
+  inline void set_employee(bool value);
+
+  // optional string write_date = 29;
+  inline bool has_write_date() const;
+  inline void clear_write_date();
+  static const int kWriteDateFieldNumber = 29;
+  inline const ::std::string& write_date() const;
+  inline void set_write_date(const ::std::string& value);
+  inline void set_write_date(const char* value);
+  inline void set_write_date(const char* value, size_t size);
+  inline ::std::string* mutable_write_date();
+  inline ::std::string* release_write_date();
+  inline void set_allocated_write_date(::std::string* write_date);
+
+  // optional bool active = 30;
+  inline bool has_active() const;
+  inline void clear_active();
+  static const int kActiveFieldNumber = 30;
+  inline bool active() const;
+  inline void set_active(bool value);
+
+  // optional string mobile = 31;
+  inline bool has_mobile() const;
+  inline void clear_mobile();
+  static const int kMobileFieldNumber = 31;
+  inline const ::std::string& mobile() const;
+  inline void set_mobile(const ::std::string& value);
+  inline void set_mobile(const char* value);
+  inline void set_mobile(const char* value, size_t size);
+  inline ::std::string* mutable_mobile();
+  inline ::std::string* release_mobile();
+  inline void set_allocated_mobile(::std::string* mobile);
+
+  // optional string phone = 32;
+  inline bool has_phone() const;
+  inline void clear_phone();
+  static const int kPhoneFieldNumber = 32;
+  inline const ::std::string& phone() const;
+  inline void set_phone(const ::std::string& value);
+  inline void set_phone(const char* value);
+  inline void set_phone(const char* value, size_t size);
+  inline ::std::string* mutable_phone();
+  inline ::std::string* release_phone();
+  inline void set_allocated_phone(::std::string* phone);
+
+  // optional string birthdate = 33;
+  inline bool has_birthdate() const;
+  inline void clear_birthdate();
+  static const int kBirthdateFieldNumber = 33;
+  inline const ::std::string& birthdate() const;
+  inline void set_birthdate(const ::std::string& value);
+  inline void set_birthdate(const char* value);
+  inline void set_birthdate(const char* value, size_t size);
+  inline ::std::string* mutable_birthdate();
+  inline ::std::string* release_birthdate();
+  inline void set_allocated_birthdate(::std::string* birthdate);
+
+  // optional string notify_email = 34;
+  inline bool has_notify_email() const;
+  inline void clear_notify_email();
+  static const int kNotifyEmailFieldNumber = 34;
+  inline const ::std::string& notify_email() const;
+  inline void set_notify_email(const ::std::string& value);
+  inline void set_notify_email(const char* value);
+  inline void set_notify_email(const char* value, size_t size);
+  inline ::std::string* mutable_notify_email();
+  inline ::std::string* release_notify_email();
+  inline void set_allocated_notify_email(::std::string* notify_email);
+
+  // optional int32 color = 35;
+  inline bool has_color() const;
+  inline void clear_color();
+  static const int kColorFieldNumber = 35;
+  inline ::google::protobuf::int32 color() const;
+  inline void set_color(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:xkcrm.db_res_partner)
  private:
@@ -516,8 +814,56 @@ class db_res_partner : public ::google::protobuf::Message {
   inline void clear_has_uuidpartner();
   inline void set_has_type();
   inline void clear_has_type();
-  inline void set_has_partnername();
-  inline void clear_has_partnername();
+  inline void set_has_name();
+  inline void clear_has_name();
+  inline void set_has_create_date();
+  inline void clear_has_create_date();
+  inline void set_has_image_small();
+  inline void clear_has_image_small();
+  inline void set_has_image();
+  inline void clear_has_image();
+  inline void set_has_date();
+  inline void clear_has_date();
+  inline void set_has_street();
+  inline void clear_has_street();
+  inline void set_has_city();
+  inline void clear_has_city();
+  inline void set_has_display_name();
+  inline void clear_has_display_name();
+  inline void set_has_zip();
+  inline void clear_has_zip();
+  inline void set_has_title();
+  inline void clear_has_title();
+  inline void set_has_supplier();
+  inline void clear_has_supplier();
+  inline void set_has_email();
+  inline void clear_has_email();
+  inline void set_has_is_company();
+  inline void clear_has_is_company();
+  inline void set_has_website();
+  inline void clear_has_website();
+  inline void set_has_customer();
+  inline void clear_has_customer();
+  inline void set_has_street2();
+  inline void clear_has_street2();
+  inline void set_has_fax();
+  inline void clear_has_fax();
+  inline void set_has_employee();
+  inline void clear_has_employee();
+  inline void set_has_write_date();
+  inline void clear_has_write_date();
+  inline void set_has_active();
+  inline void clear_has_active();
+  inline void set_has_mobile();
+  inline void clear_has_mobile();
+  inline void set_has_phone();
+  inline void clear_has_phone();
+  inline void set_has_birthdate();
+  inline void clear_has_birthdate();
+  inline void set_has_notify_email();
+  inline void clear_has_notify_email();
+  inline void set_has_color();
+  inline void clear_has_color();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -529,7 +875,31 @@ class db_res_partner : public ::google::protobuf::Message {
   static ::std::string* _default_type_;
   ::google::protobuf::internal::ArenaStringPtr type_;
   ::google::protobuf::RepeatedPtrField< ::std::string> channel_;
-  ::google::protobuf::internal::ArenaStringPtr partnername_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr create_date_;
+  ::google::protobuf::internal::ArenaStringPtr image_small_;
+  ::google::protobuf::internal::ArenaStringPtr image_;
+  ::google::protobuf::internal::ArenaStringPtr date_;
+  ::google::protobuf::internal::ArenaStringPtr street_;
+  ::google::protobuf::internal::ArenaStringPtr city_;
+  ::google::protobuf::internal::ArenaStringPtr display_name_;
+  ::google::protobuf::internal::ArenaStringPtr zip_;
+  ::google::protobuf::internal::ArenaStringPtr email_;
+  ::google::protobuf::int32 title_;
+  bool supplier_;
+  bool is_company_;
+  bool customer_;
+  bool employee_;
+  ::google::protobuf::internal::ArenaStringPtr website_;
+  ::google::protobuf::internal::ArenaStringPtr street2_;
+  ::google::protobuf::internal::ArenaStringPtr fax_;
+  ::google::protobuf::internal::ArenaStringPtr write_date_;
+  ::google::protobuf::internal::ArenaStringPtr mobile_;
+  ::google::protobuf::internal::ArenaStringPtr phone_;
+  bool active_;
+  ::google::protobuf::int32 color_;
+  ::google::protobuf::internal::ArenaStringPtr birthdate_;
+  ::google::protobuf::internal::ArenaStringPtr notify_email_;
   friend void  protobuf_AddDesc_nosqldb_2eproto();
   friend void protobuf_AssignDesc_nosqldb_2eproto();
   friend void protobuf_ShutdownFile_nosqldb_2eproto();
@@ -655,10 +1025,22 @@ class db_crm_lead : public ::google::protobuf::Message {
   inline ::std::string* release_uuiduserid();
   inline void set_allocated_uuiduserid(::std::string* uuiduserid);
 
-  // optional string uuidcompanyid = 5;
+  // required string uuidpartnerid = 5;
+  inline bool has_uuidpartnerid() const;
+  inline void clear_uuidpartnerid();
+  static const int kUuidpartneridFieldNumber = 5;
+  inline const ::std::string& uuidpartnerid() const;
+  inline void set_uuidpartnerid(const ::std::string& value);
+  inline void set_uuidpartnerid(const char* value);
+  inline void set_uuidpartnerid(const char* value, size_t size);
+  inline ::std::string* mutable_uuidpartnerid();
+  inline ::std::string* release_uuidpartnerid();
+  inline void set_allocated_uuidpartnerid(::std::string* uuidpartnerid);
+
+  // optional string uuidcompanyid = 6;
   inline bool has_uuidcompanyid() const;
   inline void clear_uuidcompanyid();
-  static const int kUuidcompanyidFieldNumber = 5;
+  static const int kUuidcompanyidFieldNumber = 6;
   inline const ::std::string& uuidcompanyid() const;
   inline void set_uuidcompanyid(const ::std::string& value);
   inline void set_uuidcompanyid(const char* value);
@@ -667,17 +1049,17 @@ class db_crm_lead : public ::google::protobuf::Message {
   inline ::std::string* release_uuidcompanyid();
   inline void set_allocated_uuidcompanyid(::std::string* uuidcompanyid);
 
-  // optional string leadname = 10;
-  inline bool has_leadname() const;
-  inline void clear_leadname();
-  static const int kLeadnameFieldNumber = 10;
-  inline const ::std::string& leadname() const;
-  inline void set_leadname(const ::std::string& value);
-  inline void set_leadname(const char* value);
-  inline void set_leadname(const char* value, size_t size);
-  inline ::std::string* mutable_leadname();
-  inline ::std::string* release_leadname();
-  inline void set_allocated_leadname(::std::string* leadname);
+  // optional string name = 10;
+  inline bool has_name() const;
+  inline void clear_name();
+  static const int kNameFieldNumber = 10;
+  inline const ::std::string& name() const;
+  inline void set_name(const ::std::string& value);
+  inline void set_name(const char* value);
+  inline void set_name(const char* value, size_t size);
+  inline ::std::string* mutable_name();
+  inline ::std::string* release_name();
+  inline void set_allocated_name(::std::string* name);
 
   // optional string createdate = 11;
   inline bool has_createdate() const;
@@ -691,29 +1073,213 @@ class db_crm_lead : public ::google::protobuf::Message {
   inline ::std::string* release_createdate();
   inline void set_allocated_createdate(::std::string* createdate);
 
-  // optional string partnername = 12;
-  inline bool has_partnername() const;
-  inline void clear_partnername();
-  static const int kPartnernameFieldNumber = 12;
-  inline const ::std::string& partnername() const;
-  inline void set_partnername(const ::std::string& value);
-  inline void set_partnername(const char* value);
-  inline void set_partnername(const char* value, size_t size);
-  inline ::std::string* mutable_partnername();
-  inline ::std::string* release_partnername();
-  inline void set_allocated_partnername(::std::string* partnername);
+  // optional string partner_name = 12;
+  inline bool has_partner_name() const;
+  inline void clear_partner_name();
+  static const int kPartnerNameFieldNumber = 12;
+  inline const ::std::string& partner_name() const;
+  inline void set_partner_name(const ::std::string& value);
+  inline void set_partner_name(const char* value);
+  inline void set_partner_name(const char* value, size_t size);
+  inline ::std::string* mutable_partner_name();
+  inline ::std::string* release_partner_name();
+  inline void set_allocated_partner_name(::std::string* partner_name);
 
-  // optional string street = 17;
-  inline bool has_street() const;
-  inline void clear_street();
-  static const int kStreetFieldNumber = 17;
-  inline const ::std::string& street() const;
-  inline void set_street(const ::std::string& value);
-  inline void set_street(const char* value);
-  inline void set_street(const char* value, size_t size);
-  inline ::std::string* mutable_street();
-  inline ::std::string* release_street();
-  inline void set_allocated_street(::std::string* street);
+  // optional string contact_name = 13;
+  inline bool has_contact_name() const;
+  inline void clear_contact_name();
+  static const int kContactNameFieldNumber = 13;
+  inline const ::std::string& contact_name() const;
+  inline void set_contact_name(const ::std::string& value);
+  inline void set_contact_name(const char* value);
+  inline void set_contact_name(const char* value, size_t size);
+  inline ::std::string* mutable_contact_name();
+  inline ::std::string* release_contact_name();
+  inline void set_allocated_contact_name(::std::string* contact_name);
+
+  // optional string mobile = 14;
+  inline bool has_mobile() const;
+  inline void clear_mobile();
+  static const int kMobileFieldNumber = 14;
+  inline const ::std::string& mobile() const;
+  inline void set_mobile(const ::std::string& value);
+  inline void set_mobile(const char* value);
+  inline void set_mobile(const char* value, size_t size);
+  inline ::std::string* mutable_mobile();
+  inline ::std::string* release_mobile();
+  inline void set_allocated_mobile(::std::string* mobile);
+
+  // optional string phone = 15;
+  inline bool has_phone() const;
+  inline void clear_phone();
+  static const int kPhoneFieldNumber = 15;
+  inline const ::std::string& phone() const;
+  inline void set_phone(const ::std::string& value);
+  inline void set_phone(const char* value);
+  inline void set_phone(const char* value, size_t size);
+  inline ::std::string* mutable_phone();
+  inline ::std::string* release_phone();
+  inline void set_allocated_phone(::std::string* phone);
+
+  // optional string title = 16;
+  inline bool has_title() const;
+  inline void clear_title();
+  static const int kTitleFieldNumber = 16;
+  inline const ::std::string& title() const;
+  inline void set_title(const ::std::string& value);
+  inline void set_title(const char* value);
+  inline void set_title(const char* value, size_t size);
+  inline ::std::string* mutable_title();
+  inline ::std::string* release_title();
+  inline void set_allocated_title(::std::string* title);
+
+  // optional string street2 = 17;
+  inline bool has_street2() const;
+  inline void clear_street2();
+  static const int kStreet2FieldNumber = 17;
+  inline const ::std::string& street2() const;
+  inline void set_street2(const ::std::string& value);
+  inline void set_street2(const char* value);
+  inline void set_street2(const char* value, size_t size);
+  inline ::std::string* mutable_street2();
+  inline ::std::string* release_street2();
+  inline void set_allocated_street2(::std::string* street2);
+
+  // optional string zip = 18;
+  inline bool has_zip() const;
+  inline void clear_zip();
+  static const int kZipFieldNumber = 18;
+  inline const ::std::string& zip() const;
+  inline void set_zip(const ::std::string& value);
+  inline void set_zip(const char* value);
+  inline void set_zip(const char* value, size_t size);
+  inline ::std::string* mutable_zip();
+  inline ::std::string* release_zip();
+  inline void set_allocated_zip(::std::string* zip);
+
+  // optional string fax = 19;
+  inline bool has_fax() const;
+  inline void clear_fax();
+  static const int kFaxFieldNumber = 19;
+  inline const ::std::string& fax() const;
+  inline void set_fax(const ::std::string& value);
+  inline void set_fax(const char* value);
+  inline void set_fax(const char* value, size_t size);
+  inline ::std::string* mutable_fax();
+  inline ::std::string* release_fax();
+  inline void set_allocated_fax(::std::string* fax);
+
+  // optional string email_cc = 20;
+  inline bool has_email_cc() const;
+  inline void clear_email_cc();
+  static const int kEmailCcFieldNumber = 20;
+  inline const ::std::string& email_cc() const;
+  inline void set_email_cc(const ::std::string& value);
+  inline void set_email_cc(const char* value);
+  inline void set_email_cc(const char* value, size_t size);
+  inline ::std::string* mutable_email_cc();
+  inline ::std::string* release_email_cc();
+  inline void set_allocated_email_cc(::std::string* email_cc);
+
+  // optional int32 priority = 21;
+  inline bool has_priority() const;
+  inline void clear_priority();
+  static const int kPriorityFieldNumber = 21;
+  inline ::google::protobuf::int32 priority() const;
+  inline void set_priority(::google::protobuf::int32 value);
+
+  // optional string message_last_post = 22;
+  inline bool has_message_last_post() const;
+  inline void clear_message_last_post();
+  static const int kMessageLastPostFieldNumber = 22;
+  inline const ::std::string& message_last_post() const;
+  inline void set_message_last_post(const ::std::string& value);
+  inline void set_message_last_post(const char* value);
+  inline void set_message_last_post(const char* value, size_t size);
+  inline ::std::string* mutable_message_last_post();
+  inline ::std::string* release_message_last_post();
+  inline void set_allocated_message_last_post(::std::string* message_last_post);
+
+  // optional string create_date = 23;
+  inline bool has_create_date() const;
+  inline void clear_create_date();
+  static const int kCreateDateFieldNumber = 23;
+  inline const ::std::string& create_date() const;
+  inline void set_create_date(const ::std::string& value);
+  inline void set_create_date(const char* value);
+  inline void set_create_date(const char* value, size_t size);
+  inline ::std::string* mutable_create_date();
+  inline ::std::string* release_create_date();
+  inline void set_allocated_create_date(::std::string* create_date);
+
+  // optional string date_closed = 24;
+  inline bool has_date_closed() const;
+  inline void clear_date_closed();
+  static const int kDateClosedFieldNumber = 24;
+  inline const ::std::string& date_closed() const;
+  inline void set_date_closed(const ::std::string& value);
+  inline void set_date_closed(const char* value);
+  inline void set_date_closed(const char* value, size_t size);
+  inline ::std::string* mutable_date_closed();
+  inline ::std::string* release_date_closed();
+  inline void set_allocated_date_closed(::std::string* date_closed);
+
+  // optional string date_deadline = 25;
+  inline bool has_date_deadline() const;
+  inline void clear_date_deadline();
+  static const int kDateDeadlineFieldNumber = 25;
+  inline const ::std::string& date_deadline() const;
+  inline void set_date_deadline(const ::std::string& value);
+  inline void set_date_deadline(const char* value);
+  inline void set_date_deadline(const char* value, size_t size);
+  inline ::std::string* mutable_date_deadline();
+  inline ::std::string* release_date_deadline();
+  inline void set_allocated_date_deadline(::std::string* date_deadline);
+
+  // optional int32 color = 26;
+  inline bool has_color() const;
+  inline void clear_color();
+  static const int kColorFieldNumber = 26;
+  inline ::google::protobuf::int32 color() const;
+  inline void set_color(::google::protobuf::int32 value);
+
+  // optional bool active = 27;
+  inline bool has_active() const;
+  inline void clear_active();
+  static const int kActiveFieldNumber = 27;
+  inline bool active() const;
+  inline void set_active(bool value);
+
+  // optional string description = 28;
+  inline bool has_description() const;
+  inline void clear_description();
+  static const int kDescriptionFieldNumber = 28;
+  inline const ::std::string& description() const;
+  inline void set_description(const ::std::string& value);
+  inline void set_description(const char* value);
+  inline void set_description(const char* value, size_t size);
+  inline ::std::string* mutable_description();
+  inline ::std::string* release_description();
+  inline void set_allocated_description(::std::string* description);
+
+  // optional string title_action = 29;
+  inline bool has_title_action() const;
+  inline void clear_title_action();
+  static const int kTitleActionFieldNumber = 29;
+  inline const ::std::string& title_action() const;
+  inline void set_title_action(const ::std::string& value);
+  inline void set_title_action(const char* value);
+  inline void set_title_action(const char* value, size_t size);
+  inline ::std::string* mutable_title_action();
+  inline ::std::string* release_title_action();
+  inline void set_allocated_title_action(::std::string* title_action);
+
+  // optional double probability = 30;
+  inline bool has_probability() const;
+  inline void clear_probability();
+  static const int kProbabilityFieldNumber = 30;
+  inline double probability() const;
+  inline void set_probability(double value);
 
   // @@protoc_insertion_point(class_scope:xkcrm.db_crm_lead)
  private:
@@ -723,16 +1289,52 @@ class db_crm_lead : public ::google::protobuf::Message {
   inline void clear_has_type();
   inline void set_has_uuiduserid();
   inline void clear_has_uuiduserid();
+  inline void set_has_uuidpartnerid();
+  inline void clear_has_uuidpartnerid();
   inline void set_has_uuidcompanyid();
   inline void clear_has_uuidcompanyid();
-  inline void set_has_leadname();
-  inline void clear_has_leadname();
+  inline void set_has_name();
+  inline void clear_has_name();
   inline void set_has_createdate();
   inline void clear_has_createdate();
-  inline void set_has_partnername();
-  inline void clear_has_partnername();
-  inline void set_has_street();
-  inline void clear_has_street();
+  inline void set_has_partner_name();
+  inline void clear_has_partner_name();
+  inline void set_has_contact_name();
+  inline void clear_has_contact_name();
+  inline void set_has_mobile();
+  inline void clear_has_mobile();
+  inline void set_has_phone();
+  inline void clear_has_phone();
+  inline void set_has_title();
+  inline void clear_has_title();
+  inline void set_has_street2();
+  inline void clear_has_street2();
+  inline void set_has_zip();
+  inline void clear_has_zip();
+  inline void set_has_fax();
+  inline void clear_has_fax();
+  inline void set_has_email_cc();
+  inline void clear_has_email_cc();
+  inline void set_has_priority();
+  inline void clear_has_priority();
+  inline void set_has_message_last_post();
+  inline void clear_has_message_last_post();
+  inline void set_has_create_date();
+  inline void clear_has_create_date();
+  inline void set_has_date_closed();
+  inline void clear_has_date_closed();
+  inline void set_has_date_deadline();
+  inline void clear_has_date_deadline();
+  inline void set_has_color();
+  inline void clear_has_color();
+  inline void set_has_active();
+  inline void clear_has_active();
+  inline void set_has_description();
+  inline void clear_has_description();
+  inline void set_has_title_action();
+  inline void clear_has_title_action();
+  inline void set_has_probability();
+  inline void clear_has_probability();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -745,11 +1347,29 @@ class db_crm_lead : public ::google::protobuf::Message {
   ::google::protobuf::internal::ArenaStringPtr type_;
   ::google::protobuf::RepeatedPtrField< ::std::string> channel_;
   ::google::protobuf::internal::ArenaStringPtr uuiduserid_;
+  ::google::protobuf::internal::ArenaStringPtr uuidpartnerid_;
   ::google::protobuf::internal::ArenaStringPtr uuidcompanyid_;
-  ::google::protobuf::internal::ArenaStringPtr leadname_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
   ::google::protobuf::internal::ArenaStringPtr createdate_;
-  ::google::protobuf::internal::ArenaStringPtr partnername_;
-  ::google::protobuf::internal::ArenaStringPtr street_;
+  ::google::protobuf::internal::ArenaStringPtr partner_name_;
+  ::google::protobuf::internal::ArenaStringPtr contact_name_;
+  ::google::protobuf::internal::ArenaStringPtr mobile_;
+  ::google::protobuf::internal::ArenaStringPtr phone_;
+  ::google::protobuf::internal::ArenaStringPtr title_;
+  ::google::protobuf::internal::ArenaStringPtr street2_;
+  ::google::protobuf::internal::ArenaStringPtr zip_;
+  ::google::protobuf::internal::ArenaStringPtr fax_;
+  ::google::protobuf::internal::ArenaStringPtr email_cc_;
+  ::google::protobuf::internal::ArenaStringPtr message_last_post_;
+  ::google::protobuf::internal::ArenaStringPtr create_date_;
+  ::google::protobuf::int32 priority_;
+  ::google::protobuf::int32 color_;
+  ::google::protobuf::internal::ArenaStringPtr date_closed_;
+  ::google::protobuf::internal::ArenaStringPtr date_deadline_;
+  ::google::protobuf::internal::ArenaStringPtr description_;
+  ::google::protobuf::internal::ArenaStringPtr title_action_;
+  double probability_;
+  bool active_;
   friend void  protobuf_AddDesc_nosqldb_2eproto();
   friend void protobuf_AssignDesc_nosqldb_2eproto();
   friend void protobuf_ShutdownFile_nosqldb_2eproto();
@@ -887,6 +1507,145 @@ class db_crm_phonecall : public ::google::protobuf::Message {
   inline ::std::string* release_uuidpartner();
   inline void set_allocated_uuidpartner(::std::string* uuidpartner);
 
+  // optional string date_closed = 11;
+  inline bool has_date_closed() const;
+  inline void clear_date_closed();
+  static const int kDateClosedFieldNumber = 11;
+  inline const ::std::string& date_closed() const;
+  inline void set_date_closed(const ::std::string& value);
+  inline void set_date_closed(const char* value);
+  inline void set_date_closed(const char* value, size_t size);
+  inline ::std::string* mutable_date_closed();
+  inline ::std::string* release_date_closed();
+  inline void set_allocated_date_closed(::std::string* date_closed);
+
+  // optional string create_date = 12;
+  inline bool has_create_date() const;
+  inline void clear_create_date();
+  static const int kCreateDateFieldNumber = 12;
+  inline const ::std::string& create_date() const;
+  inline void set_create_date(const ::std::string& value);
+  inline void set_create_date(const char* value);
+  inline void set_create_date(const char* value, size_t size);
+  inline ::std::string* mutable_create_date();
+  inline ::std::string* release_create_date();
+  inline void set_allocated_create_date(::std::string* create_date);
+
+  // optional string date = 13;
+  inline bool has_date() const;
+  inline void clear_date();
+  static const int kDateFieldNumber = 13;
+  inline const ::std::string& date() const;
+  inline void set_date(const ::std::string& value);
+  inline void set_date(const char* value);
+  inline void set_date(const char* value, size_t size);
+  inline ::std::string* mutable_date();
+  inline ::std::string* release_date();
+  inline void set_allocated_date(::std::string* date);
+
+  // optional int32 priority = 14;
+  inline bool has_priority() const;
+  inline void clear_priority();
+  static const int kPriorityFieldNumber = 14;
+  inline ::google::protobuf::int32 priority() const;
+  inline void set_priority(::google::protobuf::int32 value);
+
+  // optional string state = 15;
+  inline bool has_state() const;
+  inline void clear_state();
+  static const int kStateFieldNumber = 15;
+  inline const ::std::string& state() const;
+  inline void set_state(const ::std::string& value);
+  inline void set_state(const char* value);
+  inline void set_state(const char* value, size_t size);
+  inline ::std::string* mutable_state();
+  inline ::std::string* release_state();
+  inline void set_allocated_state(::std::string* state);
+
+  // optional string description = 16;
+  inline bool has_description() const;
+  inline void clear_description();
+  static const int kDescriptionFieldNumber = 16;
+  inline const ::std::string& description() const;
+  inline void set_description(const ::std::string& value);
+  inline void set_description(const char* value);
+  inline void set_description(const char* value, size_t size);
+  inline ::std::string* mutable_description();
+  inline ::std::string* release_description();
+  inline void set_allocated_description(::std::string* description);
+
+  // optional string name = 17;
+  inline bool has_name() const;
+  inline void clear_name();
+  static const int kNameFieldNumber = 17;
+  inline const ::std::string& name() const;
+  inline void set_name(const ::std::string& value);
+  inline void set_name(const char* value);
+  inline void set_name(const char* value, size_t size);
+  inline ::std::string* mutable_name();
+  inline ::std::string* release_name();
+  inline void set_allocated_name(::std::string* name);
+
+  // optional string partner_mobile = 18;
+  inline bool has_partner_mobile() const;
+  inline void clear_partner_mobile();
+  static const int kPartnerMobileFieldNumber = 18;
+  inline const ::std::string& partner_mobile() const;
+  inline void set_partner_mobile(const ::std::string& value);
+  inline void set_partner_mobile(const char* value);
+  inline void set_partner_mobile(const char* value, size_t size);
+  inline ::std::string* mutable_partner_mobile();
+  inline ::std::string* release_partner_mobile();
+  inline void set_allocated_partner_mobile(::std::string* partner_mobile);
+
+  // optional string write_date = 19;
+  inline bool has_write_date() const;
+  inline void clear_write_date();
+  static const int kWriteDateFieldNumber = 19;
+  inline const ::std::string& write_date() const;
+  inline void set_write_date(const ::std::string& value);
+  inline void set_write_date(const char* value);
+  inline void set_write_date(const char* value, size_t size);
+  inline ::std::string* mutable_write_date();
+  inline ::std::string* release_write_date();
+  inline void set_allocated_write_date(::std::string* write_date);
+
+  // optional string date_open = 20;
+  inline bool has_date_open() const;
+  inline void clear_date_open();
+  static const int kDateOpenFieldNumber = 20;
+  inline const ::std::string& date_open() const;
+  inline void set_date_open(const ::std::string& value);
+  inline void set_date_open(const char* value);
+  inline void set_date_open(const char* value, size_t size);
+  inline ::std::string* mutable_date_open();
+  inline ::std::string* release_date_open();
+  inline void set_allocated_date_open(::std::string* date_open);
+
+  // optional string partner_phone = 21;
+  inline bool has_partner_phone() const;
+  inline void clear_partner_phone();
+  static const int kPartnerPhoneFieldNumber = 21;
+  inline const ::std::string& partner_phone() const;
+  inline void set_partner_phone(const ::std::string& value);
+  inline void set_partner_phone(const char* value);
+  inline void set_partner_phone(const char* value, size_t size);
+  inline ::std::string* mutable_partner_phone();
+  inline ::std::string* release_partner_phone();
+  inline void set_allocated_partner_phone(::std::string* partner_phone);
+
+  // optional string email_from = 22;
+  inline bool has_email_from() const;
+  inline void clear_email_from();
+  static const int kEmailFromFieldNumber = 22;
+  inline const ::std::string& email_from() const;
+  inline void set_email_from(const ::std::string& value);
+  inline void set_email_from(const char* value);
+  inline void set_email_from(const char* value, size_t size);
+  inline ::std::string* mutable_email_from();
+  inline ::std::string* release_email_from();
+  inline void set_allocated_email_from(::std::string* email_from);
+
   // @@protoc_insertion_point(class_scope:xkcrm.db_crm_phonecall)
  private:
   inline void set_has_uuidphonecallid();
@@ -897,6 +1656,30 @@ class db_crm_phonecall : public ::google::protobuf::Message {
   inline void clear_has_uuiduserid();
   inline void set_has_uuidpartner();
   inline void clear_has_uuidpartner();
+  inline void set_has_date_closed();
+  inline void clear_has_date_closed();
+  inline void set_has_create_date();
+  inline void clear_has_create_date();
+  inline void set_has_date();
+  inline void clear_has_date();
+  inline void set_has_priority();
+  inline void clear_has_priority();
+  inline void set_has_state();
+  inline void clear_has_state();
+  inline void set_has_description();
+  inline void clear_has_description();
+  inline void set_has_name();
+  inline void clear_has_name();
+  inline void set_has_partner_mobile();
+  inline void clear_has_partner_mobile();
+  inline void set_has_write_date();
+  inline void clear_has_write_date();
+  inline void set_has_date_open();
+  inline void clear_has_date_open();
+  inline void set_has_partner_phone();
+  inline void clear_has_partner_phone();
+  inline void set_has_email_from();
+  inline void clear_has_email_from();
 
   // helper for ByteSize()
   int RequiredFieldsByteSizeFallback() const;
@@ -910,6 +1693,18 @@ class db_crm_phonecall : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedPtrField< ::std::string> channel_;
   ::google::protobuf::internal::ArenaStringPtr uuiduserid_;
   ::google::protobuf::internal::ArenaStringPtr uuidpartner_;
+  ::google::protobuf::internal::ArenaStringPtr date_closed_;
+  ::google::protobuf::internal::ArenaStringPtr create_date_;
+  ::google::protobuf::internal::ArenaStringPtr date_;
+  ::google::protobuf::internal::ArenaStringPtr state_;
+  ::google::protobuf::internal::ArenaStringPtr description_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr partner_mobile_;
+  ::google::protobuf::internal::ArenaStringPtr write_date_;
+  ::google::protobuf::internal::ArenaStringPtr date_open_;
+  ::google::protobuf::internal::ArenaStringPtr partner_phone_;
+  ::google::protobuf::internal::ArenaStringPtr email_from_;
+  ::google::protobuf::int32 priority_;
   friend void  protobuf_AddDesc_nosqldb_2eproto();
   friend void protobuf_AssignDesc_nosqldb_2eproto();
   friend void protobuf_ShutdownFile_nosqldb_2eproto();
@@ -1513,57 +2308,216 @@ db_res_company::mutable_channel() {
   return &channel_;
 }
 
-// optional string companyname = 11;
-inline bool db_res_company::has_companyname() const {
+// optional string name = 11;
+inline bool db_res_company::has_name() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void db_res_company::set_has_companyname() {
+inline void db_res_company::set_has_name() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void db_res_company::clear_has_companyname() {
+inline void db_res_company::clear_has_name() {
   _has_bits_[0] &= ~0x00000008u;
 }
-inline void db_res_company::clear_companyname() {
-  companyname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_companyname();
+inline void db_res_company::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
 }
-inline const ::std::string& db_res_company::companyname() const {
-  // @@protoc_insertion_point(field_get:xkcrm.db_res_company.companyname)
-  return companyname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& db_res_company::name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_company.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_res_company::set_companyname(const ::std::string& value) {
-  set_has_companyname();
-  companyname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xkcrm.db_res_company.companyname)
+inline void db_res_company::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_company.name)
 }
-inline void db_res_company::set_companyname(const char* value) {
-  set_has_companyname();
-  companyname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_company.companyname)
+inline void db_res_company::set_name(const char* value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_company.name)
 }
-inline void db_res_company::set_companyname(const char* value, size_t size) {
-  set_has_companyname();
-  companyname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+inline void db_res_company::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_company.companyname)
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_company.name)
 }
-inline ::std::string* db_res_company::mutable_companyname() {
-  set_has_companyname();
-  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_company.companyname)
-  return companyname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_res_company::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_company.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* db_res_company::release_companyname() {
-  clear_has_companyname();
-  return companyname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_res_company::release_name() {
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_res_company::set_allocated_companyname(::std::string* companyname) {
-  if (companyname != NULL) {
-    set_has_companyname();
+inline void db_res_company::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
   } else {
-    clear_has_companyname();
+    clear_has_name();
   }
-  companyname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), companyname);
-  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_company.companyname)
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_company.name)
+}
+
+// optional string email = 12;
+inline bool db_res_company::has_email() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_res_company::set_has_email() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void db_res_company::clear_has_email() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void db_res_company::clear_email() {
+  email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_email();
+}
+inline const ::std::string& db_res_company::email() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_company.email)
+  return email_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_email(const ::std::string& value) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_company.email)
+}
+inline void db_res_company::set_email(const char* value) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_company.email)
+}
+inline void db_res_company::set_email(const char* value, size_t size) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_company.email)
+}
+inline ::std::string* db_res_company::mutable_email() {
+  set_has_email();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_company.email)
+  return email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_company::release_email() {
+  clear_has_email();
+  return email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_allocated_email(::std::string* email) {
+  if (email != NULL) {
+    set_has_email();
+  } else {
+    clear_has_email();
+  }
+  email_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), email);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_company.email)
+}
+
+// optional string phone = 13;
+inline bool db_res_company::has_phone() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_res_company::set_has_phone() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void db_res_company::clear_has_phone() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void db_res_company::clear_phone() {
+  phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_phone();
+}
+inline const ::std::string& db_res_company::phone() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_company.phone)
+  return phone_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_phone(const ::std::string& value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_company.phone)
+}
+inline void db_res_company::set_phone(const char* value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_company.phone)
+}
+inline void db_res_company::set_phone(const char* value, size_t size) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_company.phone)
+}
+inline ::std::string* db_res_company::mutable_phone() {
+  set_has_phone();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_company.phone)
+  return phone_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_company::release_phone() {
+  clear_has_phone();
+  return phone_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_allocated_phone(::std::string* phone) {
+  if (phone != NULL) {
+    set_has_phone();
+  } else {
+    clear_has_phone();
+  }
+  phone_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), phone);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_company.phone)
+}
+
+// optional string write_date = 14;
+inline bool db_res_company::has_write_date() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void db_res_company::set_has_write_date() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void db_res_company::clear_has_write_date() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void db_res_company::clear_write_date() {
+  write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_write_date();
+}
+inline const ::std::string& db_res_company::write_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_company.write_date)
+  return write_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_write_date(const ::std::string& value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_company.write_date)
+}
+inline void db_res_company::set_write_date(const char* value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_company.write_date)
+}
+inline void db_res_company::set_write_date(const char* value, size_t size) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_company.write_date)
+}
+inline ::std::string* db_res_company::mutable_write_date() {
+  set_has_write_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_company.write_date)
+  return write_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_company::release_write_date() {
+  clear_has_write_date();
+  return write_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_company::set_allocated_write_date(::std::string* write_date) {
+  if (write_date != NULL) {
+    set_has_write_date();
+  } else {
+    clear_has_write_date();
+  }
+  write_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), write_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_company.write_date)
 }
 
 // -------------------------------------------------------------------
@@ -1730,57 +2684,1126 @@ db_res_partner::mutable_channel() {
   return &channel_;
 }
 
-// optional string partnername = 11;
-inline bool db_res_partner::has_partnername() const {
+// optional string name = 11;
+inline bool db_res_partner::has_name() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void db_res_partner::set_has_partnername() {
+inline void db_res_partner::set_has_name() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void db_res_partner::clear_has_partnername() {
+inline void db_res_partner::clear_has_name() {
   _has_bits_[0] &= ~0x00000008u;
 }
-inline void db_res_partner::clear_partnername() {
-  partnername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_partnername();
+inline void db_res_partner::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
 }
-inline const ::std::string& db_res_partner::partnername() const {
-  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.partnername)
-  return partnername_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& db_res_partner::name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_res_partner::set_partnername(const ::std::string& value) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.partnername)
+inline void db_res_partner::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.name)
 }
-inline void db_res_partner::set_partnername(const char* value) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.partnername)
+inline void db_res_partner::set_name(const char* value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.name)
 }
-inline void db_res_partner::set_partnername(const char* value, size_t size) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+inline void db_res_partner::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.partnername)
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.name)
 }
-inline ::std::string* db_res_partner::mutable_partnername() {
-  set_has_partnername();
-  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.partnername)
-  return partnername_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_res_partner::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* db_res_partner::release_partnername() {
-  clear_has_partnername();
-  return partnername_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_res_partner::release_name() {
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_res_partner::set_allocated_partnername(::std::string* partnername) {
-  if (partnername != NULL) {
-    set_has_partnername();
+inline void db_res_partner::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
   } else {
-    clear_has_partnername();
+    clear_has_name();
   }
-  partnername_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), partnername);
-  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.partnername)
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.name)
+}
+
+// optional string create_date = 12;
+inline bool db_res_partner::has_create_date() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_res_partner::set_has_create_date() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void db_res_partner::clear_has_create_date() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void db_res_partner::clear_create_date() {
+  create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_create_date();
+}
+inline const ::std::string& db_res_partner::create_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.create_date)
+  return create_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_create_date(const ::std::string& value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.create_date)
+}
+inline void db_res_partner::set_create_date(const char* value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.create_date)
+}
+inline void db_res_partner::set_create_date(const char* value, size_t size) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.create_date)
+}
+inline ::std::string* db_res_partner::mutable_create_date() {
+  set_has_create_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.create_date)
+  return create_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_create_date() {
+  clear_has_create_date();
+  return create_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_create_date(::std::string* create_date) {
+  if (create_date != NULL) {
+    set_has_create_date();
+  } else {
+    clear_has_create_date();
+  }
+  create_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), create_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.create_date)
+}
+
+// optional string image_small = 13;
+inline bool db_res_partner::has_image_small() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_res_partner::set_has_image_small() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void db_res_partner::clear_has_image_small() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void db_res_partner::clear_image_small() {
+  image_small_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_image_small();
+}
+inline const ::std::string& db_res_partner::image_small() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.image_small)
+  return image_small_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_image_small(const ::std::string& value) {
+  set_has_image_small();
+  image_small_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.image_small)
+}
+inline void db_res_partner::set_image_small(const char* value) {
+  set_has_image_small();
+  image_small_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.image_small)
+}
+inline void db_res_partner::set_image_small(const char* value, size_t size) {
+  set_has_image_small();
+  image_small_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.image_small)
+}
+inline ::std::string* db_res_partner::mutable_image_small() {
+  set_has_image_small();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.image_small)
+  return image_small_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_image_small() {
+  clear_has_image_small();
+  return image_small_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_image_small(::std::string* image_small) {
+  if (image_small != NULL) {
+    set_has_image_small();
+  } else {
+    clear_has_image_small();
+  }
+  image_small_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), image_small);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.image_small)
+}
+
+// optional string image = 14;
+inline bool db_res_partner::has_image() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void db_res_partner::set_has_image() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void db_res_partner::clear_has_image() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void db_res_partner::clear_image() {
+  image_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_image();
+}
+inline const ::std::string& db_res_partner::image() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.image)
+  return image_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_image(const ::std::string& value) {
+  set_has_image();
+  image_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.image)
+}
+inline void db_res_partner::set_image(const char* value) {
+  set_has_image();
+  image_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.image)
+}
+inline void db_res_partner::set_image(const char* value, size_t size) {
+  set_has_image();
+  image_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.image)
+}
+inline ::std::string* db_res_partner::mutable_image() {
+  set_has_image();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.image)
+  return image_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_image() {
+  clear_has_image();
+  return image_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_image(::std::string* image) {
+  if (image != NULL) {
+    set_has_image();
+  } else {
+    clear_has_image();
+  }
+  image_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), image);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.image)
+}
+
+// optional string date = 15;
+inline bool db_res_partner::has_date() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void db_res_partner::set_has_date() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void db_res_partner::clear_has_date() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void db_res_partner::clear_date() {
+  date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date();
+}
+inline const ::std::string& db_res_partner::date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.date)
+  return date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_date(const ::std::string& value) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.date)
+}
+inline void db_res_partner::set_date(const char* value) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.date)
+}
+inline void db_res_partner::set_date(const char* value, size_t size) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.date)
+}
+inline ::std::string* db_res_partner::mutable_date() {
+  set_has_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.date)
+  return date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_date() {
+  clear_has_date();
+  return date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_date(::std::string* date) {
+  if (date != NULL) {
+    set_has_date();
+  } else {
+    clear_has_date();
+  }
+  date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.date)
+}
+
+// optional string street = 16;
+inline bool db_res_partner::has_street() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void db_res_partner::set_has_street() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void db_res_partner::clear_has_street() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void db_res_partner::clear_street() {
+  street_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_street();
+}
+inline const ::std::string& db_res_partner::street() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.street)
+  return street_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_street(const ::std::string& value) {
+  set_has_street();
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.street)
+}
+inline void db_res_partner::set_street(const char* value) {
+  set_has_street();
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.street)
+}
+inline void db_res_partner::set_street(const char* value, size_t size) {
+  set_has_street();
+  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.street)
+}
+inline ::std::string* db_res_partner::mutable_street() {
+  set_has_street();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.street)
+  return street_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_street() {
+  clear_has_street();
+  return street_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_street(::std::string* street) {
+  if (street != NULL) {
+    set_has_street();
+  } else {
+    clear_has_street();
+  }
+  street_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), street);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.street)
+}
+
+// optional string city = 17;
+inline bool db_res_partner::has_city() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void db_res_partner::set_has_city() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void db_res_partner::clear_has_city() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void db_res_partner::clear_city() {
+  city_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_city();
+}
+inline const ::std::string& db_res_partner::city() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.city)
+  return city_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_city(const ::std::string& value) {
+  set_has_city();
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.city)
+}
+inline void db_res_partner::set_city(const char* value) {
+  set_has_city();
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.city)
+}
+inline void db_res_partner::set_city(const char* value, size_t size) {
+  set_has_city();
+  city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.city)
+}
+inline ::std::string* db_res_partner::mutable_city() {
+  set_has_city();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.city)
+  return city_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_city() {
+  clear_has_city();
+  return city_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_city(::std::string* city) {
+  if (city != NULL) {
+    set_has_city();
+  } else {
+    clear_has_city();
+  }
+  city_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), city);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.city)
+}
+
+// optional string display_name = 18;
+inline bool db_res_partner::has_display_name() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void db_res_partner::set_has_display_name() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void db_res_partner::clear_has_display_name() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void db_res_partner::clear_display_name() {
+  display_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_display_name();
+}
+inline const ::std::string& db_res_partner::display_name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.display_name)
+  return display_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_display_name(const ::std::string& value) {
+  set_has_display_name();
+  display_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.display_name)
+}
+inline void db_res_partner::set_display_name(const char* value) {
+  set_has_display_name();
+  display_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.display_name)
+}
+inline void db_res_partner::set_display_name(const char* value, size_t size) {
+  set_has_display_name();
+  display_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.display_name)
+}
+inline ::std::string* db_res_partner::mutable_display_name() {
+  set_has_display_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.display_name)
+  return display_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_display_name() {
+  clear_has_display_name();
+  return display_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_display_name(::std::string* display_name) {
+  if (display_name != NULL) {
+    set_has_display_name();
+  } else {
+    clear_has_display_name();
+  }
+  display_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), display_name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.display_name)
+}
+
+// optional string zip = 19;
+inline bool db_res_partner::has_zip() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void db_res_partner::set_has_zip() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void db_res_partner::clear_has_zip() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void db_res_partner::clear_zip() {
+  zip_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_zip();
+}
+inline const ::std::string& db_res_partner::zip() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.zip)
+  return zip_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_zip(const ::std::string& value) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.zip)
+}
+inline void db_res_partner::set_zip(const char* value) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.zip)
+}
+inline void db_res_partner::set_zip(const char* value, size_t size) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.zip)
+}
+inline ::std::string* db_res_partner::mutable_zip() {
+  set_has_zip();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.zip)
+  return zip_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_zip() {
+  clear_has_zip();
+  return zip_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_zip(::std::string* zip) {
+  if (zip != NULL) {
+    set_has_zip();
+  } else {
+    clear_has_zip();
+  }
+  zip_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), zip);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.zip)
+}
+
+// optional int32 title = 20;
+inline bool db_res_partner::has_title() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void db_res_partner::set_has_title() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void db_res_partner::clear_has_title() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void db_res_partner::clear_title() {
+  title_ = 0;
+  clear_has_title();
+}
+inline ::google::protobuf::int32 db_res_partner::title() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.title)
+  return title_;
+}
+inline void db_res_partner::set_title(::google::protobuf::int32 value) {
+  set_has_title();
+  title_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.title)
+}
+
+// optional bool supplier = 21;
+inline bool db_res_partner::has_supplier() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void db_res_partner::set_has_supplier() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void db_res_partner::clear_has_supplier() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void db_res_partner::clear_supplier() {
+  supplier_ = false;
+  clear_has_supplier();
+}
+inline bool db_res_partner::supplier() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.supplier)
+  return supplier_;
+}
+inline void db_res_partner::set_supplier(bool value) {
+  set_has_supplier();
+  supplier_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.supplier)
+}
+
+// optional string email = 22;
+inline bool db_res_partner::has_email() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void db_res_partner::set_has_email() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void db_res_partner::clear_has_email() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void db_res_partner::clear_email() {
+  email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_email();
+}
+inline const ::std::string& db_res_partner::email() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.email)
+  return email_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_email(const ::std::string& value) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.email)
+}
+inline void db_res_partner::set_email(const char* value) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.email)
+}
+inline void db_res_partner::set_email(const char* value, size_t size) {
+  set_has_email();
+  email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.email)
+}
+inline ::std::string* db_res_partner::mutable_email() {
+  set_has_email();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.email)
+  return email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_email() {
+  clear_has_email();
+  return email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_email(::std::string* email) {
+  if (email != NULL) {
+    set_has_email();
+  } else {
+    clear_has_email();
+  }
+  email_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), email);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.email)
+}
+
+// optional bool is_company = 23;
+inline bool db_res_partner::has_is_company() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void db_res_partner::set_has_is_company() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void db_res_partner::clear_has_is_company() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void db_res_partner::clear_is_company() {
+  is_company_ = false;
+  clear_has_is_company();
+}
+inline bool db_res_partner::is_company() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.is_company)
+  return is_company_;
+}
+inline void db_res_partner::set_is_company(bool value) {
+  set_has_is_company();
+  is_company_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.is_company)
+}
+
+// optional string website = 24;
+inline bool db_res_partner::has_website() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void db_res_partner::set_has_website() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void db_res_partner::clear_has_website() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void db_res_partner::clear_website() {
+  website_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_website();
+}
+inline const ::std::string& db_res_partner::website() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.website)
+  return website_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_website(const ::std::string& value) {
+  set_has_website();
+  website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.website)
+}
+inline void db_res_partner::set_website(const char* value) {
+  set_has_website();
+  website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.website)
+}
+inline void db_res_partner::set_website(const char* value, size_t size) {
+  set_has_website();
+  website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.website)
+}
+inline ::std::string* db_res_partner::mutable_website() {
+  set_has_website();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.website)
+  return website_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_website() {
+  clear_has_website();
+  return website_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_website(::std::string* website) {
+  if (website != NULL) {
+    set_has_website();
+  } else {
+    clear_has_website();
+  }
+  website_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), website);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.website)
+}
+
+// optional bool customer = 25;
+inline bool db_res_partner::has_customer() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void db_res_partner::set_has_customer() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void db_res_partner::clear_has_customer() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void db_res_partner::clear_customer() {
+  customer_ = false;
+  clear_has_customer();
+}
+inline bool db_res_partner::customer() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.customer)
+  return customer_;
+}
+inline void db_res_partner::set_customer(bool value) {
+  set_has_customer();
+  customer_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.customer)
+}
+
+// optional string street2 = 26;
+inline bool db_res_partner::has_street2() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void db_res_partner::set_has_street2() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void db_res_partner::clear_has_street2() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void db_res_partner::clear_street2() {
+  street2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_street2();
+}
+inline const ::std::string& db_res_partner::street2() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.street2)
+  return street2_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_street2(const ::std::string& value) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.street2)
+}
+inline void db_res_partner::set_street2(const char* value) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.street2)
+}
+inline void db_res_partner::set_street2(const char* value, size_t size) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.street2)
+}
+inline ::std::string* db_res_partner::mutable_street2() {
+  set_has_street2();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.street2)
+  return street2_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_street2() {
+  clear_has_street2();
+  return street2_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_street2(::std::string* street2) {
+  if (street2 != NULL) {
+    set_has_street2();
+  } else {
+    clear_has_street2();
+  }
+  street2_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), street2);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.street2)
+}
+
+// optional string fax = 27;
+inline bool db_res_partner::has_fax() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void db_res_partner::set_has_fax() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void db_res_partner::clear_has_fax() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void db_res_partner::clear_fax() {
+  fax_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_fax();
+}
+inline const ::std::string& db_res_partner::fax() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.fax)
+  return fax_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_fax(const ::std::string& value) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.fax)
+}
+inline void db_res_partner::set_fax(const char* value) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.fax)
+}
+inline void db_res_partner::set_fax(const char* value, size_t size) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.fax)
+}
+inline ::std::string* db_res_partner::mutable_fax() {
+  set_has_fax();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.fax)
+  return fax_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_fax() {
+  clear_has_fax();
+  return fax_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_fax(::std::string* fax) {
+  if (fax != NULL) {
+    set_has_fax();
+  } else {
+    clear_has_fax();
+  }
+  fax_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), fax);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.fax)
+}
+
+// optional bool employee = 28;
+inline bool db_res_partner::has_employee() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+inline void db_res_partner::set_has_employee() {
+  _has_bits_[0] |= 0x00100000u;
+}
+inline void db_res_partner::clear_has_employee() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline void db_res_partner::clear_employee() {
+  employee_ = false;
+  clear_has_employee();
+}
+inline bool db_res_partner::employee() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.employee)
+  return employee_;
+}
+inline void db_res_partner::set_employee(bool value) {
+  set_has_employee();
+  employee_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.employee)
+}
+
+// optional string write_date = 29;
+inline bool db_res_partner::has_write_date() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void db_res_partner::set_has_write_date() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void db_res_partner::clear_has_write_date() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline void db_res_partner::clear_write_date() {
+  write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_write_date();
+}
+inline const ::std::string& db_res_partner::write_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.write_date)
+  return write_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_write_date(const ::std::string& value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.write_date)
+}
+inline void db_res_partner::set_write_date(const char* value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.write_date)
+}
+inline void db_res_partner::set_write_date(const char* value, size_t size) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.write_date)
+}
+inline ::std::string* db_res_partner::mutable_write_date() {
+  set_has_write_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.write_date)
+  return write_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_write_date() {
+  clear_has_write_date();
+  return write_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_write_date(::std::string* write_date) {
+  if (write_date != NULL) {
+    set_has_write_date();
+  } else {
+    clear_has_write_date();
+  }
+  write_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), write_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.write_date)
+}
+
+// optional bool active = 30;
+inline bool db_res_partner::has_active() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void db_res_partner::set_has_active() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void db_res_partner::clear_has_active() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void db_res_partner::clear_active() {
+  active_ = false;
+  clear_has_active();
+}
+inline bool db_res_partner::active() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.active)
+  return active_;
+}
+inline void db_res_partner::set_active(bool value) {
+  set_has_active();
+  active_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.active)
+}
+
+// optional string mobile = 31;
+inline bool db_res_partner::has_mobile() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void db_res_partner::set_has_mobile() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void db_res_partner::clear_has_mobile() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void db_res_partner::clear_mobile() {
+  mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_mobile();
+}
+inline const ::std::string& db_res_partner::mobile() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.mobile)
+  return mobile_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_mobile(const ::std::string& value) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.mobile)
+}
+inline void db_res_partner::set_mobile(const char* value) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.mobile)
+}
+inline void db_res_partner::set_mobile(const char* value, size_t size) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.mobile)
+}
+inline ::std::string* db_res_partner::mutable_mobile() {
+  set_has_mobile();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.mobile)
+  return mobile_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_mobile() {
+  clear_has_mobile();
+  return mobile_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_mobile(::std::string* mobile) {
+  if (mobile != NULL) {
+    set_has_mobile();
+  } else {
+    clear_has_mobile();
+  }
+  mobile_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mobile);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.mobile)
+}
+
+// optional string phone = 32;
+inline bool db_res_partner::has_phone() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void db_res_partner::set_has_phone() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void db_res_partner::clear_has_phone() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void db_res_partner::clear_phone() {
+  phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_phone();
+}
+inline const ::std::string& db_res_partner::phone() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.phone)
+  return phone_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_phone(const ::std::string& value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.phone)
+}
+inline void db_res_partner::set_phone(const char* value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.phone)
+}
+inline void db_res_partner::set_phone(const char* value, size_t size) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.phone)
+}
+inline ::std::string* db_res_partner::mutable_phone() {
+  set_has_phone();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.phone)
+  return phone_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_phone() {
+  clear_has_phone();
+  return phone_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_phone(::std::string* phone) {
+  if (phone != NULL) {
+    set_has_phone();
+  } else {
+    clear_has_phone();
+  }
+  phone_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), phone);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.phone)
+}
+
+// optional string birthdate = 33;
+inline bool db_res_partner::has_birthdate() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void db_res_partner::set_has_birthdate() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void db_res_partner::clear_has_birthdate() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void db_res_partner::clear_birthdate() {
+  birthdate_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_birthdate();
+}
+inline const ::std::string& db_res_partner::birthdate() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.birthdate)
+  return birthdate_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_birthdate(const ::std::string& value) {
+  set_has_birthdate();
+  birthdate_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.birthdate)
+}
+inline void db_res_partner::set_birthdate(const char* value) {
+  set_has_birthdate();
+  birthdate_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.birthdate)
+}
+inline void db_res_partner::set_birthdate(const char* value, size_t size) {
+  set_has_birthdate();
+  birthdate_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.birthdate)
+}
+inline ::std::string* db_res_partner::mutable_birthdate() {
+  set_has_birthdate();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.birthdate)
+  return birthdate_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_birthdate() {
+  clear_has_birthdate();
+  return birthdate_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_birthdate(::std::string* birthdate) {
+  if (birthdate != NULL) {
+    set_has_birthdate();
+  } else {
+    clear_has_birthdate();
+  }
+  birthdate_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), birthdate);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.birthdate)
+}
+
+// optional string notify_email = 34;
+inline bool db_res_partner::has_notify_email() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void db_res_partner::set_has_notify_email() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void db_res_partner::clear_has_notify_email() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void db_res_partner::clear_notify_email() {
+  notify_email_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_notify_email();
+}
+inline const ::std::string& db_res_partner::notify_email() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.notify_email)
+  return notify_email_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_notify_email(const ::std::string& value) {
+  set_has_notify_email();
+  notify_email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.notify_email)
+}
+inline void db_res_partner::set_notify_email(const char* value) {
+  set_has_notify_email();
+  notify_email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_res_partner.notify_email)
+}
+inline void db_res_partner::set_notify_email(const char* value, size_t size) {
+  set_has_notify_email();
+  notify_email_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_res_partner.notify_email)
+}
+inline ::std::string* db_res_partner::mutable_notify_email() {
+  set_has_notify_email();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_res_partner.notify_email)
+  return notify_email_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_res_partner::release_notify_email() {
+  clear_has_notify_email();
+  return notify_email_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_res_partner::set_allocated_notify_email(::std::string* notify_email) {
+  if (notify_email != NULL) {
+    set_has_notify_email();
+  } else {
+    clear_has_notify_email();
+  }
+  notify_email_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), notify_email);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_res_partner.notify_email)
+}
+
+// optional int32 color = 35;
+inline bool db_res_partner::has_color() const {
+  return (_has_bits_[0] & 0x08000000u) != 0;
+}
+inline void db_res_partner::set_has_color() {
+  _has_bits_[0] |= 0x08000000u;
+}
+inline void db_res_partner::clear_has_color() {
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline void db_res_partner::clear_color() {
+  color_ = 0;
+  clear_has_color();
+}
+inline ::google::protobuf::int32 db_res_partner::color() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_res_partner.color)
+  return color_;
+}
+inline void db_res_partner::set_color(::google::protobuf::int32 value) {
+  set_has_color();
+  color_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_res_partner.color)
 }
 
 // -------------------------------------------------------------------
@@ -2000,15 +4023,68 @@ inline void db_crm_lead::set_allocated_uuiduserid(::std::string* uuiduserid) {
   // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.uuiduserid)
 }
 
-// optional string uuidcompanyid = 5;
-inline bool db_crm_lead::has_uuidcompanyid() const {
+// required string uuidpartnerid = 5;
+inline bool db_crm_lead::has_uuidpartnerid() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void db_crm_lead::set_has_uuidcompanyid() {
+inline void db_crm_lead::set_has_uuidpartnerid() {
   _has_bits_[0] |= 0x00000010u;
 }
-inline void db_crm_lead::clear_has_uuidcompanyid() {
+inline void db_crm_lead::clear_has_uuidpartnerid() {
   _has_bits_[0] &= ~0x00000010u;
+}
+inline void db_crm_lead::clear_uuidpartnerid() {
+  uuidpartnerid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_uuidpartnerid();
+}
+inline const ::std::string& db_crm_lead::uuidpartnerid() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.uuidpartnerid)
+  return uuidpartnerid_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_uuidpartnerid(const ::std::string& value) {
+  set_has_uuidpartnerid();
+  uuidpartnerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.uuidpartnerid)
+}
+inline void db_crm_lead::set_uuidpartnerid(const char* value) {
+  set_has_uuidpartnerid();
+  uuidpartnerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.uuidpartnerid)
+}
+inline void db_crm_lead::set_uuidpartnerid(const char* value, size_t size) {
+  set_has_uuidpartnerid();
+  uuidpartnerid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.uuidpartnerid)
+}
+inline ::std::string* db_crm_lead::mutable_uuidpartnerid() {
+  set_has_uuidpartnerid();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.uuidpartnerid)
+  return uuidpartnerid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_uuidpartnerid() {
+  clear_has_uuidpartnerid();
+  return uuidpartnerid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_uuidpartnerid(::std::string* uuidpartnerid) {
+  if (uuidpartnerid != NULL) {
+    set_has_uuidpartnerid();
+  } else {
+    clear_has_uuidpartnerid();
+  }
+  uuidpartnerid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuidpartnerid);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.uuidpartnerid)
+}
+
+// optional string uuidcompanyid = 6;
+inline bool db_crm_lead::has_uuidcompanyid() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_crm_lead::set_has_uuidcompanyid() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void db_crm_lead::clear_has_uuidcompanyid() {
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void db_crm_lead::clear_uuidcompanyid() {
   uuidcompanyid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -2053,68 +4129,68 @@ inline void db_crm_lead::set_allocated_uuidcompanyid(::std::string* uuidcompanyi
   // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.uuidcompanyid)
 }
 
-// optional string leadname = 10;
-inline bool db_crm_lead::has_leadname() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+// optional string name = 10;
+inline bool db_crm_lead::has_name() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
-inline void db_crm_lead::set_has_leadname() {
-  _has_bits_[0] |= 0x00000020u;
+inline void db_crm_lead::set_has_name() {
+  _has_bits_[0] |= 0x00000040u;
 }
-inline void db_crm_lead::clear_has_leadname() {
-  _has_bits_[0] &= ~0x00000020u;
+inline void db_crm_lead::clear_has_name() {
+  _has_bits_[0] &= ~0x00000040u;
 }
-inline void db_crm_lead::clear_leadname() {
-  leadname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_leadname();
+inline void db_crm_lead::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
 }
-inline const ::std::string& db_crm_lead::leadname() const {
-  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.leadname)
-  return leadname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& db_crm_lead::name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_crm_lead::set_leadname(const ::std::string& value) {
-  set_has_leadname();
-  leadname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.leadname)
+inline void db_crm_lead::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.name)
 }
-inline void db_crm_lead::set_leadname(const char* value) {
-  set_has_leadname();
-  leadname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.leadname)
+inline void db_crm_lead::set_name(const char* value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.name)
 }
-inline void db_crm_lead::set_leadname(const char* value, size_t size) {
-  set_has_leadname();
-  leadname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+inline void db_crm_lead::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.leadname)
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.name)
 }
-inline ::std::string* db_crm_lead::mutable_leadname() {
-  set_has_leadname();
-  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.leadname)
-  return leadname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_crm_lead::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* db_crm_lead::release_leadname() {
-  clear_has_leadname();
-  return leadname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_crm_lead::release_name() {
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_crm_lead::set_allocated_leadname(::std::string* leadname) {
-  if (leadname != NULL) {
-    set_has_leadname();
+inline void db_crm_lead::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
   } else {
-    clear_has_leadname();
+    clear_has_name();
   }
-  leadname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), leadname);
-  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.leadname)
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.name)
 }
 
 // optional string createdate = 11;
 inline bool db_crm_lead::has_createdate() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void db_crm_lead::set_has_createdate() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void db_crm_lead::clear_has_createdate() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void db_crm_lead::clear_createdate() {
   createdate_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -2159,110 +4235,895 @@ inline void db_crm_lead::set_allocated_createdate(::std::string* createdate) {
   // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.createdate)
 }
 
-// optional string partnername = 12;
-inline bool db_crm_lead::has_partnername() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
-}
-inline void db_crm_lead::set_has_partnername() {
-  _has_bits_[0] |= 0x00000080u;
-}
-inline void db_crm_lead::clear_has_partnername() {
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline void db_crm_lead::clear_partnername() {
-  partnername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_partnername();
-}
-inline const ::std::string& db_crm_lead::partnername() const {
-  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.partnername)
-  return partnername_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void db_crm_lead::set_partnername(const ::std::string& value) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.partnername)
-}
-inline void db_crm_lead::set_partnername(const char* value) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.partnername)
-}
-inline void db_crm_lead::set_partnername(const char* value, size_t size) {
-  set_has_partnername();
-  partnername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.partnername)
-}
-inline ::std::string* db_crm_lead::mutable_partnername() {
-  set_has_partnername();
-  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.partnername)
-  return partnername_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* db_crm_lead::release_partnername() {
-  clear_has_partnername();
-  return partnername_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void db_crm_lead::set_allocated_partnername(::std::string* partnername) {
-  if (partnername != NULL) {
-    set_has_partnername();
-  } else {
-    clear_has_partnername();
-  }
-  partnername_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), partnername);
-  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.partnername)
-}
-
-// optional string street = 17;
-inline bool db_crm_lead::has_street() const {
+// optional string partner_name = 12;
+inline bool db_crm_lead::has_partner_name() const {
   return (_has_bits_[0] & 0x00000100u) != 0;
 }
-inline void db_crm_lead::set_has_street() {
+inline void db_crm_lead::set_has_partner_name() {
   _has_bits_[0] |= 0x00000100u;
 }
-inline void db_crm_lead::clear_has_street() {
+inline void db_crm_lead::clear_has_partner_name() {
   _has_bits_[0] &= ~0x00000100u;
 }
-inline void db_crm_lead::clear_street() {
-  street_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has_street();
+inline void db_crm_lead::clear_partner_name() {
+  partner_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_partner_name();
 }
-inline const ::std::string& db_crm_lead::street() const {
-  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.street)
-  return street_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& db_crm_lead::partner_name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.partner_name)
+  return partner_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_crm_lead::set_street(const ::std::string& value) {
-  set_has_street();
-  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.street)
+inline void db_crm_lead::set_partner_name(const ::std::string& value) {
+  set_has_partner_name();
+  partner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.partner_name)
 }
-inline void db_crm_lead::set_street(const char* value) {
-  set_has_street();
-  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.street)
+inline void db_crm_lead::set_partner_name(const char* value) {
+  set_has_partner_name();
+  partner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.partner_name)
 }
-inline void db_crm_lead::set_street(const char* value, size_t size) {
-  set_has_street();
-  street_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+inline void db_crm_lead::set_partner_name(const char* value, size_t size) {
+  set_has_partner_name();
+  partner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.street)
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.partner_name)
 }
-inline ::std::string* db_crm_lead::mutable_street() {
-  set_has_street();
-  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.street)
-  return street_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_crm_lead::mutable_partner_name() {
+  set_has_partner_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.partner_name)
+  return partner_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* db_crm_lead::release_street() {
-  clear_has_street();
-  return street_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* db_crm_lead::release_partner_name() {
+  clear_has_partner_name();
+  return partner_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void db_crm_lead::set_allocated_street(::std::string* street) {
-  if (street != NULL) {
-    set_has_street();
+inline void db_crm_lead::set_allocated_partner_name(::std::string* partner_name) {
+  if (partner_name != NULL) {
+    set_has_partner_name();
   } else {
-    clear_has_street();
+    clear_has_partner_name();
   }
-  street_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), street);
-  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.street)
+  partner_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), partner_name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.partner_name)
+}
+
+// optional string contact_name = 13;
+inline bool db_crm_lead::has_contact_name() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void db_crm_lead::set_has_contact_name() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void db_crm_lead::clear_has_contact_name() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void db_crm_lead::clear_contact_name() {
+  contact_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_contact_name();
+}
+inline const ::std::string& db_crm_lead::contact_name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.contact_name)
+  return contact_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_contact_name(const ::std::string& value) {
+  set_has_contact_name();
+  contact_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.contact_name)
+}
+inline void db_crm_lead::set_contact_name(const char* value) {
+  set_has_contact_name();
+  contact_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.contact_name)
+}
+inline void db_crm_lead::set_contact_name(const char* value, size_t size) {
+  set_has_contact_name();
+  contact_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.contact_name)
+}
+inline ::std::string* db_crm_lead::mutable_contact_name() {
+  set_has_contact_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.contact_name)
+  return contact_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_contact_name() {
+  clear_has_contact_name();
+  return contact_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_contact_name(::std::string* contact_name) {
+  if (contact_name != NULL) {
+    set_has_contact_name();
+  } else {
+    clear_has_contact_name();
+  }
+  contact_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), contact_name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.contact_name)
+}
+
+// optional string mobile = 14;
+inline bool db_crm_lead::has_mobile() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void db_crm_lead::set_has_mobile() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void db_crm_lead::clear_has_mobile() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void db_crm_lead::clear_mobile() {
+  mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_mobile();
+}
+inline const ::std::string& db_crm_lead::mobile() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.mobile)
+  return mobile_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_mobile(const ::std::string& value) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.mobile)
+}
+inline void db_crm_lead::set_mobile(const char* value) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.mobile)
+}
+inline void db_crm_lead::set_mobile(const char* value, size_t size) {
+  set_has_mobile();
+  mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.mobile)
+}
+inline ::std::string* db_crm_lead::mutable_mobile() {
+  set_has_mobile();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.mobile)
+  return mobile_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_mobile() {
+  clear_has_mobile();
+  return mobile_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_mobile(::std::string* mobile) {
+  if (mobile != NULL) {
+    set_has_mobile();
+  } else {
+    clear_has_mobile();
+  }
+  mobile_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mobile);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.mobile)
+}
+
+// optional string phone = 15;
+inline bool db_crm_lead::has_phone() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void db_crm_lead::set_has_phone() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void db_crm_lead::clear_has_phone() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void db_crm_lead::clear_phone() {
+  phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_phone();
+}
+inline const ::std::string& db_crm_lead::phone() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.phone)
+  return phone_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_phone(const ::std::string& value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.phone)
+}
+inline void db_crm_lead::set_phone(const char* value) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.phone)
+}
+inline void db_crm_lead::set_phone(const char* value, size_t size) {
+  set_has_phone();
+  phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.phone)
+}
+inline ::std::string* db_crm_lead::mutable_phone() {
+  set_has_phone();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.phone)
+  return phone_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_phone() {
+  clear_has_phone();
+  return phone_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_phone(::std::string* phone) {
+  if (phone != NULL) {
+    set_has_phone();
+  } else {
+    clear_has_phone();
+  }
+  phone_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), phone);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.phone)
+}
+
+// optional string title = 16;
+inline bool db_crm_lead::has_title() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void db_crm_lead::set_has_title() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void db_crm_lead::clear_has_title() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void db_crm_lead::clear_title() {
+  title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_title();
+}
+inline const ::std::string& db_crm_lead::title() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.title)
+  return title_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_title(const ::std::string& value) {
+  set_has_title();
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.title)
+}
+inline void db_crm_lead::set_title(const char* value) {
+  set_has_title();
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.title)
+}
+inline void db_crm_lead::set_title(const char* value, size_t size) {
+  set_has_title();
+  title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.title)
+}
+inline ::std::string* db_crm_lead::mutable_title() {
+  set_has_title();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.title)
+  return title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_title() {
+  clear_has_title();
+  return title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_title(::std::string* title) {
+  if (title != NULL) {
+    set_has_title();
+  } else {
+    clear_has_title();
+  }
+  title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.title)
+}
+
+// optional string street2 = 17;
+inline bool db_crm_lead::has_street2() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void db_crm_lead::set_has_street2() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void db_crm_lead::clear_has_street2() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void db_crm_lead::clear_street2() {
+  street2_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_street2();
+}
+inline const ::std::string& db_crm_lead::street2() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.street2)
+  return street2_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_street2(const ::std::string& value) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.street2)
+}
+inline void db_crm_lead::set_street2(const char* value) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.street2)
+}
+inline void db_crm_lead::set_street2(const char* value, size_t size) {
+  set_has_street2();
+  street2_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.street2)
+}
+inline ::std::string* db_crm_lead::mutable_street2() {
+  set_has_street2();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.street2)
+  return street2_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_street2() {
+  clear_has_street2();
+  return street2_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_street2(::std::string* street2) {
+  if (street2 != NULL) {
+    set_has_street2();
+  } else {
+    clear_has_street2();
+  }
+  street2_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), street2);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.street2)
+}
+
+// optional string zip = 18;
+inline bool db_crm_lead::has_zip() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void db_crm_lead::set_has_zip() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void db_crm_lead::clear_has_zip() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void db_crm_lead::clear_zip() {
+  zip_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_zip();
+}
+inline const ::std::string& db_crm_lead::zip() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.zip)
+  return zip_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_zip(const ::std::string& value) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.zip)
+}
+inline void db_crm_lead::set_zip(const char* value) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.zip)
+}
+inline void db_crm_lead::set_zip(const char* value, size_t size) {
+  set_has_zip();
+  zip_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.zip)
+}
+inline ::std::string* db_crm_lead::mutable_zip() {
+  set_has_zip();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.zip)
+  return zip_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_zip() {
+  clear_has_zip();
+  return zip_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_zip(::std::string* zip) {
+  if (zip != NULL) {
+    set_has_zip();
+  } else {
+    clear_has_zip();
+  }
+  zip_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), zip);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.zip)
+}
+
+// optional string fax = 19;
+inline bool db_crm_lead::has_fax() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void db_crm_lead::set_has_fax() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void db_crm_lead::clear_has_fax() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void db_crm_lead::clear_fax() {
+  fax_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_fax();
+}
+inline const ::std::string& db_crm_lead::fax() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.fax)
+  return fax_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_fax(const ::std::string& value) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.fax)
+}
+inline void db_crm_lead::set_fax(const char* value) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.fax)
+}
+inline void db_crm_lead::set_fax(const char* value, size_t size) {
+  set_has_fax();
+  fax_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.fax)
+}
+inline ::std::string* db_crm_lead::mutable_fax() {
+  set_has_fax();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.fax)
+  return fax_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_fax() {
+  clear_has_fax();
+  return fax_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_fax(::std::string* fax) {
+  if (fax != NULL) {
+    set_has_fax();
+  } else {
+    clear_has_fax();
+  }
+  fax_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), fax);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.fax)
+}
+
+// optional string email_cc = 20;
+inline bool db_crm_lead::has_email_cc() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void db_crm_lead::set_has_email_cc() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void db_crm_lead::clear_has_email_cc() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void db_crm_lead::clear_email_cc() {
+  email_cc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_email_cc();
+}
+inline const ::std::string& db_crm_lead::email_cc() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.email_cc)
+  return email_cc_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_email_cc(const ::std::string& value) {
+  set_has_email_cc();
+  email_cc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.email_cc)
+}
+inline void db_crm_lead::set_email_cc(const char* value) {
+  set_has_email_cc();
+  email_cc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.email_cc)
+}
+inline void db_crm_lead::set_email_cc(const char* value, size_t size) {
+  set_has_email_cc();
+  email_cc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.email_cc)
+}
+inline ::std::string* db_crm_lead::mutable_email_cc() {
+  set_has_email_cc();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.email_cc)
+  return email_cc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_email_cc() {
+  clear_has_email_cc();
+  return email_cc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_email_cc(::std::string* email_cc) {
+  if (email_cc != NULL) {
+    set_has_email_cc();
+  } else {
+    clear_has_email_cc();
+  }
+  email_cc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), email_cc);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.email_cc)
+}
+
+// optional int32 priority = 21;
+inline bool db_crm_lead::has_priority() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void db_crm_lead::set_has_priority() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void db_crm_lead::clear_has_priority() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void db_crm_lead::clear_priority() {
+  priority_ = 0;
+  clear_has_priority();
+}
+inline ::google::protobuf::int32 db_crm_lead::priority() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.priority)
+  return priority_;
+}
+inline void db_crm_lead::set_priority(::google::protobuf::int32 value) {
+  set_has_priority();
+  priority_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.priority)
+}
+
+// optional string message_last_post = 22;
+inline bool db_crm_lead::has_message_last_post() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void db_crm_lead::set_has_message_last_post() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void db_crm_lead::clear_has_message_last_post() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void db_crm_lead::clear_message_last_post() {
+  message_last_post_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_message_last_post();
+}
+inline const ::std::string& db_crm_lead::message_last_post() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.message_last_post)
+  return message_last_post_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_message_last_post(const ::std::string& value) {
+  set_has_message_last_post();
+  message_last_post_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.message_last_post)
+}
+inline void db_crm_lead::set_message_last_post(const char* value) {
+  set_has_message_last_post();
+  message_last_post_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.message_last_post)
+}
+inline void db_crm_lead::set_message_last_post(const char* value, size_t size) {
+  set_has_message_last_post();
+  message_last_post_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.message_last_post)
+}
+inline ::std::string* db_crm_lead::mutable_message_last_post() {
+  set_has_message_last_post();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.message_last_post)
+  return message_last_post_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_message_last_post() {
+  clear_has_message_last_post();
+  return message_last_post_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_message_last_post(::std::string* message_last_post) {
+  if (message_last_post != NULL) {
+    set_has_message_last_post();
+  } else {
+    clear_has_message_last_post();
+  }
+  message_last_post_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message_last_post);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.message_last_post)
+}
+
+// optional string create_date = 23;
+inline bool db_crm_lead::has_create_date() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void db_crm_lead::set_has_create_date() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void db_crm_lead::clear_has_create_date() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void db_crm_lead::clear_create_date() {
+  create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_create_date();
+}
+inline const ::std::string& db_crm_lead::create_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.create_date)
+  return create_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_create_date(const ::std::string& value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.create_date)
+}
+inline void db_crm_lead::set_create_date(const char* value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.create_date)
+}
+inline void db_crm_lead::set_create_date(const char* value, size_t size) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.create_date)
+}
+inline ::std::string* db_crm_lead::mutable_create_date() {
+  set_has_create_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.create_date)
+  return create_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_create_date() {
+  clear_has_create_date();
+  return create_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_create_date(::std::string* create_date) {
+  if (create_date != NULL) {
+    set_has_create_date();
+  } else {
+    clear_has_create_date();
+  }
+  create_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), create_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.create_date)
+}
+
+// optional string date_closed = 24;
+inline bool db_crm_lead::has_date_closed() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+inline void db_crm_lead::set_has_date_closed() {
+  _has_bits_[0] |= 0x00100000u;
+}
+inline void db_crm_lead::clear_has_date_closed() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline void db_crm_lead::clear_date_closed() {
+  date_closed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date_closed();
+}
+inline const ::std::string& db_crm_lead::date_closed() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.date_closed)
+  return date_closed_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_date_closed(const ::std::string& value) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.date_closed)
+}
+inline void db_crm_lead::set_date_closed(const char* value) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.date_closed)
+}
+inline void db_crm_lead::set_date_closed(const char* value, size_t size) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.date_closed)
+}
+inline ::std::string* db_crm_lead::mutable_date_closed() {
+  set_has_date_closed();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.date_closed)
+  return date_closed_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_date_closed() {
+  clear_has_date_closed();
+  return date_closed_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_date_closed(::std::string* date_closed) {
+  if (date_closed != NULL) {
+    set_has_date_closed();
+  } else {
+    clear_has_date_closed();
+  }
+  date_closed_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date_closed);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.date_closed)
+}
+
+// optional string date_deadline = 25;
+inline bool db_crm_lead::has_date_deadline() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void db_crm_lead::set_has_date_deadline() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void db_crm_lead::clear_has_date_deadline() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline void db_crm_lead::clear_date_deadline() {
+  date_deadline_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date_deadline();
+}
+inline const ::std::string& db_crm_lead::date_deadline() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.date_deadline)
+  return date_deadline_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_date_deadline(const ::std::string& value) {
+  set_has_date_deadline();
+  date_deadline_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.date_deadline)
+}
+inline void db_crm_lead::set_date_deadline(const char* value) {
+  set_has_date_deadline();
+  date_deadline_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.date_deadline)
+}
+inline void db_crm_lead::set_date_deadline(const char* value, size_t size) {
+  set_has_date_deadline();
+  date_deadline_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.date_deadline)
+}
+inline ::std::string* db_crm_lead::mutable_date_deadline() {
+  set_has_date_deadline();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.date_deadline)
+  return date_deadline_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_date_deadline() {
+  clear_has_date_deadline();
+  return date_deadline_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_date_deadline(::std::string* date_deadline) {
+  if (date_deadline != NULL) {
+    set_has_date_deadline();
+  } else {
+    clear_has_date_deadline();
+  }
+  date_deadline_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date_deadline);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.date_deadline)
+}
+
+// optional int32 color = 26;
+inline bool db_crm_lead::has_color() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void db_crm_lead::set_has_color() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void db_crm_lead::clear_has_color() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void db_crm_lead::clear_color() {
+  color_ = 0;
+  clear_has_color();
+}
+inline ::google::protobuf::int32 db_crm_lead::color() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.color)
+  return color_;
+}
+inline void db_crm_lead::set_color(::google::protobuf::int32 value) {
+  set_has_color();
+  color_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.color)
+}
+
+// optional bool active = 27;
+inline bool db_crm_lead::has_active() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void db_crm_lead::set_has_active() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void db_crm_lead::clear_has_active() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void db_crm_lead::clear_active() {
+  active_ = false;
+  clear_has_active();
+}
+inline bool db_crm_lead::active() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.active)
+  return active_;
+}
+inline void db_crm_lead::set_active(bool value) {
+  set_has_active();
+  active_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.active)
+}
+
+// optional string description = 28;
+inline bool db_crm_lead::has_description() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void db_crm_lead::set_has_description() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void db_crm_lead::clear_has_description() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void db_crm_lead::clear_description() {
+  description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_description();
+}
+inline const ::std::string& db_crm_lead::description() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.description)
+  return description_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_description(const ::std::string& value) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.description)
+}
+inline void db_crm_lead::set_description(const char* value) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.description)
+}
+inline void db_crm_lead::set_description(const char* value, size_t size) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.description)
+}
+inline ::std::string* db_crm_lead::mutable_description() {
+  set_has_description();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.description)
+  return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_description() {
+  clear_has_description();
+  return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_description(::std::string* description) {
+  if (description != NULL) {
+    set_has_description();
+  } else {
+    clear_has_description();
+  }
+  description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.description)
+}
+
+// optional string title_action = 29;
+inline bool db_crm_lead::has_title_action() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void db_crm_lead::set_has_title_action() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void db_crm_lead::clear_has_title_action() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void db_crm_lead::clear_title_action() {
+  title_action_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_title_action();
+}
+inline const ::std::string& db_crm_lead::title_action() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.title_action)
+  return title_action_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_title_action(const ::std::string& value) {
+  set_has_title_action();
+  title_action_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.title_action)
+}
+inline void db_crm_lead::set_title_action(const char* value) {
+  set_has_title_action();
+  title_action_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_lead.title_action)
+}
+inline void db_crm_lead::set_title_action(const char* value, size_t size) {
+  set_has_title_action();
+  title_action_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_lead.title_action)
+}
+inline ::std::string* db_crm_lead::mutable_title_action() {
+  set_has_title_action();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_lead.title_action)
+  return title_action_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_lead::release_title_action() {
+  clear_has_title_action();
+  return title_action_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_lead::set_allocated_title_action(::std::string* title_action) {
+  if (title_action != NULL) {
+    set_has_title_action();
+  } else {
+    clear_has_title_action();
+  }
+  title_action_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), title_action);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_lead.title_action)
+}
+
+// optional double probability = 30;
+inline bool db_crm_lead::has_probability() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void db_crm_lead::set_has_probability() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void db_crm_lead::clear_has_probability() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void db_crm_lead::clear_probability() {
+  probability_ = 0;
+  clear_has_probability();
+}
+inline double db_crm_lead::probability() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_lead.probability)
+  return probability_;
+}
+inline void db_crm_lead::set_probability(double value) {
+  set_has_probability();
+  probability_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_lead.probability)
 }
 
 // -------------------------------------------------------------------
@@ -2533,6 +5394,613 @@ inline void db_crm_phonecall::set_allocated_uuidpartner(::std::string* uuidpartn
   }
   uuidpartner_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuidpartner);
   // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.uuidpartner)
+}
+
+// optional string date_closed = 11;
+inline bool db_crm_phonecall::has_date_closed() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_crm_phonecall::set_has_date_closed() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void db_crm_phonecall::clear_has_date_closed() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void db_crm_phonecall::clear_date_closed() {
+  date_closed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date_closed();
+}
+inline const ::std::string& db_crm_phonecall::date_closed() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.date_closed)
+  return date_closed_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_date_closed(const ::std::string& value) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.date_closed)
+}
+inline void db_crm_phonecall::set_date_closed(const char* value) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.date_closed)
+}
+inline void db_crm_phonecall::set_date_closed(const char* value, size_t size) {
+  set_has_date_closed();
+  date_closed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.date_closed)
+}
+inline ::std::string* db_crm_phonecall::mutable_date_closed() {
+  set_has_date_closed();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.date_closed)
+  return date_closed_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_date_closed() {
+  clear_has_date_closed();
+  return date_closed_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_date_closed(::std::string* date_closed) {
+  if (date_closed != NULL) {
+    set_has_date_closed();
+  } else {
+    clear_has_date_closed();
+  }
+  date_closed_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date_closed);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.date_closed)
+}
+
+// optional string create_date = 12;
+inline bool db_crm_phonecall::has_create_date() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void db_crm_phonecall::set_has_create_date() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void db_crm_phonecall::clear_has_create_date() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void db_crm_phonecall::clear_create_date() {
+  create_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_create_date();
+}
+inline const ::std::string& db_crm_phonecall::create_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.create_date)
+  return create_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_create_date(const ::std::string& value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.create_date)
+}
+inline void db_crm_phonecall::set_create_date(const char* value) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.create_date)
+}
+inline void db_crm_phonecall::set_create_date(const char* value, size_t size) {
+  set_has_create_date();
+  create_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.create_date)
+}
+inline ::std::string* db_crm_phonecall::mutable_create_date() {
+  set_has_create_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.create_date)
+  return create_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_create_date() {
+  clear_has_create_date();
+  return create_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_create_date(::std::string* create_date) {
+  if (create_date != NULL) {
+    set_has_create_date();
+  } else {
+    clear_has_create_date();
+  }
+  create_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), create_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.create_date)
+}
+
+// optional string date = 13;
+inline bool db_crm_phonecall::has_date() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void db_crm_phonecall::set_has_date() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void db_crm_phonecall::clear_has_date() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void db_crm_phonecall::clear_date() {
+  date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date();
+}
+inline const ::std::string& db_crm_phonecall::date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.date)
+  return date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_date(const ::std::string& value) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.date)
+}
+inline void db_crm_phonecall::set_date(const char* value) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.date)
+}
+inline void db_crm_phonecall::set_date(const char* value, size_t size) {
+  set_has_date();
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.date)
+}
+inline ::std::string* db_crm_phonecall::mutable_date() {
+  set_has_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.date)
+  return date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_date() {
+  clear_has_date();
+  return date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_date(::std::string* date) {
+  if (date != NULL) {
+    set_has_date();
+  } else {
+    clear_has_date();
+  }
+  date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.date)
+}
+
+// optional int32 priority = 14;
+inline bool db_crm_phonecall::has_priority() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void db_crm_phonecall::set_has_priority() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void db_crm_phonecall::clear_has_priority() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void db_crm_phonecall::clear_priority() {
+  priority_ = 0;
+  clear_has_priority();
+}
+inline ::google::protobuf::int32 db_crm_phonecall::priority() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.priority)
+  return priority_;
+}
+inline void db_crm_phonecall::set_priority(::google::protobuf::int32 value) {
+  set_has_priority();
+  priority_ = value;
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.priority)
+}
+
+// optional string state = 15;
+inline bool db_crm_phonecall::has_state() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void db_crm_phonecall::set_has_state() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void db_crm_phonecall::clear_has_state() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void db_crm_phonecall::clear_state() {
+  state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_state();
+}
+inline const ::std::string& db_crm_phonecall::state() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.state)
+  return state_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_state(const ::std::string& value) {
+  set_has_state();
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.state)
+}
+inline void db_crm_phonecall::set_state(const char* value) {
+  set_has_state();
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.state)
+}
+inline void db_crm_phonecall::set_state(const char* value, size_t size) {
+  set_has_state();
+  state_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.state)
+}
+inline ::std::string* db_crm_phonecall::mutable_state() {
+  set_has_state();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.state)
+  return state_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_state() {
+  clear_has_state();
+  return state_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_state(::std::string* state) {
+  if (state != NULL) {
+    set_has_state();
+  } else {
+    clear_has_state();
+  }
+  state_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), state);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.state)
+}
+
+// optional string description = 16;
+inline bool db_crm_phonecall::has_description() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void db_crm_phonecall::set_has_description() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void db_crm_phonecall::clear_has_description() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void db_crm_phonecall::clear_description() {
+  description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_description();
+}
+inline const ::std::string& db_crm_phonecall::description() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.description)
+  return description_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_description(const ::std::string& value) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.description)
+}
+inline void db_crm_phonecall::set_description(const char* value) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.description)
+}
+inline void db_crm_phonecall::set_description(const char* value, size_t size) {
+  set_has_description();
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.description)
+}
+inline ::std::string* db_crm_phonecall::mutable_description() {
+  set_has_description();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.description)
+  return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_description() {
+  clear_has_description();
+  return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_description(::std::string* description) {
+  if (description != NULL) {
+    set_has_description();
+  } else {
+    clear_has_description();
+  }
+  description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.description)
+}
+
+// optional string name = 17;
+inline bool db_crm_phonecall::has_name() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void db_crm_phonecall::set_has_name() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void db_crm_phonecall::clear_has_name() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void db_crm_phonecall::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_name();
+}
+inline const ::std::string& db_crm_phonecall::name() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.name)
+  return name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_name(const ::std::string& value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.name)
+}
+inline void db_crm_phonecall::set_name(const char* value) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.name)
+}
+inline void db_crm_phonecall::set_name(const char* value, size_t size) {
+  set_has_name();
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.name)
+}
+inline ::std::string* db_crm_phonecall::mutable_name() {
+  set_has_name();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_name() {
+  clear_has_name();
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    set_has_name();
+  } else {
+    clear_has_name();
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.name)
+}
+
+// optional string partner_mobile = 18;
+inline bool db_crm_phonecall::has_partner_mobile() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void db_crm_phonecall::set_has_partner_mobile() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void db_crm_phonecall::clear_has_partner_mobile() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void db_crm_phonecall::clear_partner_mobile() {
+  partner_mobile_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_partner_mobile();
+}
+inline const ::std::string& db_crm_phonecall::partner_mobile() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.partner_mobile)
+  return partner_mobile_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_partner_mobile(const ::std::string& value) {
+  set_has_partner_mobile();
+  partner_mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.partner_mobile)
+}
+inline void db_crm_phonecall::set_partner_mobile(const char* value) {
+  set_has_partner_mobile();
+  partner_mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.partner_mobile)
+}
+inline void db_crm_phonecall::set_partner_mobile(const char* value, size_t size) {
+  set_has_partner_mobile();
+  partner_mobile_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.partner_mobile)
+}
+inline ::std::string* db_crm_phonecall::mutable_partner_mobile() {
+  set_has_partner_mobile();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.partner_mobile)
+  return partner_mobile_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_partner_mobile() {
+  clear_has_partner_mobile();
+  return partner_mobile_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_partner_mobile(::std::string* partner_mobile) {
+  if (partner_mobile != NULL) {
+    set_has_partner_mobile();
+  } else {
+    clear_has_partner_mobile();
+  }
+  partner_mobile_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), partner_mobile);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.partner_mobile)
+}
+
+// optional string write_date = 19;
+inline bool db_crm_phonecall::has_write_date() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void db_crm_phonecall::set_has_write_date() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void db_crm_phonecall::clear_has_write_date() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void db_crm_phonecall::clear_write_date() {
+  write_date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_write_date();
+}
+inline const ::std::string& db_crm_phonecall::write_date() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.write_date)
+  return write_date_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_write_date(const ::std::string& value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.write_date)
+}
+inline void db_crm_phonecall::set_write_date(const char* value) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.write_date)
+}
+inline void db_crm_phonecall::set_write_date(const char* value, size_t size) {
+  set_has_write_date();
+  write_date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.write_date)
+}
+inline ::std::string* db_crm_phonecall::mutable_write_date() {
+  set_has_write_date();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.write_date)
+  return write_date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_write_date() {
+  clear_has_write_date();
+  return write_date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_write_date(::std::string* write_date) {
+  if (write_date != NULL) {
+    set_has_write_date();
+  } else {
+    clear_has_write_date();
+  }
+  write_date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), write_date);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.write_date)
+}
+
+// optional string date_open = 20;
+inline bool db_crm_phonecall::has_date_open() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void db_crm_phonecall::set_has_date_open() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void db_crm_phonecall::clear_has_date_open() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void db_crm_phonecall::clear_date_open() {
+  date_open_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_date_open();
+}
+inline const ::std::string& db_crm_phonecall::date_open() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.date_open)
+  return date_open_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_date_open(const ::std::string& value) {
+  set_has_date_open();
+  date_open_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.date_open)
+}
+inline void db_crm_phonecall::set_date_open(const char* value) {
+  set_has_date_open();
+  date_open_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.date_open)
+}
+inline void db_crm_phonecall::set_date_open(const char* value, size_t size) {
+  set_has_date_open();
+  date_open_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.date_open)
+}
+inline ::std::string* db_crm_phonecall::mutable_date_open() {
+  set_has_date_open();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.date_open)
+  return date_open_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_date_open() {
+  clear_has_date_open();
+  return date_open_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_date_open(::std::string* date_open) {
+  if (date_open != NULL) {
+    set_has_date_open();
+  } else {
+    clear_has_date_open();
+  }
+  date_open_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date_open);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.date_open)
+}
+
+// optional string partner_phone = 21;
+inline bool db_crm_phonecall::has_partner_phone() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void db_crm_phonecall::set_has_partner_phone() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void db_crm_phonecall::clear_has_partner_phone() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void db_crm_phonecall::clear_partner_phone() {
+  partner_phone_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_partner_phone();
+}
+inline const ::std::string& db_crm_phonecall::partner_phone() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.partner_phone)
+  return partner_phone_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_partner_phone(const ::std::string& value) {
+  set_has_partner_phone();
+  partner_phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.partner_phone)
+}
+inline void db_crm_phonecall::set_partner_phone(const char* value) {
+  set_has_partner_phone();
+  partner_phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.partner_phone)
+}
+inline void db_crm_phonecall::set_partner_phone(const char* value, size_t size) {
+  set_has_partner_phone();
+  partner_phone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.partner_phone)
+}
+inline ::std::string* db_crm_phonecall::mutable_partner_phone() {
+  set_has_partner_phone();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.partner_phone)
+  return partner_phone_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_partner_phone() {
+  clear_has_partner_phone();
+  return partner_phone_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_partner_phone(::std::string* partner_phone) {
+  if (partner_phone != NULL) {
+    set_has_partner_phone();
+  } else {
+    clear_has_partner_phone();
+  }
+  partner_phone_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), partner_phone);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.partner_phone)
+}
+
+// optional string email_from = 22;
+inline bool db_crm_phonecall::has_email_from() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void db_crm_phonecall::set_has_email_from() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void db_crm_phonecall::clear_has_email_from() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void db_crm_phonecall::clear_email_from() {
+  email_from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_email_from();
+}
+inline const ::std::string& db_crm_phonecall::email_from() const {
+  // @@protoc_insertion_point(field_get:xkcrm.db_crm_phonecall.email_from)
+  return email_from_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_email_from(const ::std::string& value) {
+  set_has_email_from();
+  email_from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:xkcrm.db_crm_phonecall.email_from)
+}
+inline void db_crm_phonecall::set_email_from(const char* value) {
+  set_has_email_from();
+  email_from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:xkcrm.db_crm_phonecall.email_from)
+}
+inline void db_crm_phonecall::set_email_from(const char* value, size_t size) {
+  set_has_email_from();
+  email_from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:xkcrm.db_crm_phonecall.email_from)
+}
+inline ::std::string* db_crm_phonecall::mutable_email_from() {
+  set_has_email_from();
+  // @@protoc_insertion_point(field_mutable:xkcrm.db_crm_phonecall.email_from)
+  return email_from_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_crm_phonecall::release_email_from() {
+  clear_has_email_from();
+  return email_from_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_crm_phonecall::set_allocated_email_from(::std::string* email_from) {
+  if (email_from != NULL) {
+    set_has_email_from();
+  } else {
+    clear_has_email_from();
+  }
+  email_from_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), email_from);
+  // @@protoc_insertion_point(field_set_allocated:xkcrm.db_crm_phonecall.email_from)
 }
 
 
