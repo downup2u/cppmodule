@@ -1,0 +1,48 @@
+package xkcrm;
+
+//同步到本地(注册在外部)
+message db_res_users{
+	required string uuiduserid = 1;
+	required string type = 2 [default = "res_user"];
+	repeated string channel = 3;
+	optional string uuidcompanyid = 4;
+	optional string realname = 11;
+	optional string phonenumber = 12;
+	optional string emailaddress = 13;
+	optional string hashedpassword = 14;
+};
+
+message db_res_company{
+	required string uuidcompanyid = 1;
+	required string type = 2 [default = "res_company"];
+	repeated string channel = 3;
+	optional string companyname = 11;
+};
+
+message db_res_partner{
+	required string uuidpartner = 1;
+	required string type = 2 [default = "res_partner"];
+	repeated string channel = 3;
+	optional string partnername = 11;
+};
+
+message db_crm_lead{
+	required string uuidleadid = 1;
+	required string type = 2[default = "crm_lead"];//crm_opportunity
+	repeated string channel = 3;
+	required string uuiduserid = 4;
+	optional string uuidcompanyid = 5;
+	optional string leadname = 10;
+	optional string createdate = 11;
+	optional string partnername = 12;
+	optional string street = 17;
+};
+
+message db_crm_phonecall{
+	required string uuidphonecallid = 1;
+	required string type = 2[default = "crm_phonecall"];
+	repeated string channel = 3;
+	required string uuiduserid = 4;
+	optional string uuidpartner = 5;
+};
+

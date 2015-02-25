@@ -1,0 +1,63 @@
+package session;
+
+/*
+每个客户端登录，在服务器端保存一个PkgSessionUser
+第一次消息接收到时(通常是PkgConnectReq)，调用模块得到key
+接收到PkgConnectReq时，设置：apptype/appversion/applanguage
+接收到PkgUserLoginReq的返回后（如果成功），设置userid/companyid
+
+每次和node的wrap交互时，都需要附带PkgSessionUser（以前是userid)
+
+密码必须加密
+*/
+message PkgSessionUser
+{	
+	optional int32 userid = 1;
+    optional string apptype = 2;
+    optional string appversion = 3;
+    optional string applanguage = 4;
+	optional string clientsn = 5;
+	optional string serversn = 6;
+	optional string hashedserversn = 7;
+    optional string ostype = 10;
+    optional string osversion = 11;
+    optional string osrr = 12;
+ 	optional string encryptkey = 100;
+	optional PkgUser user = 200;
+	optional string loginsn = 1001;//唯一的登录字符串，当多个用户同时登录时，会以最新登录的用户为准
+}
+
+/*
+角色权限,用户使用,由于该数据结构限定C++Wrap中Comm中用户使用
+故不放在comm中了
+*/
+message PkgRoleUser
+{
+	optional int32 id = 1;
+	optional string rolename = 2;
+	optional string roledesc = 3;
+	optional int32 permission = 4;
+}
+
+/*
+用户信息,实际过程，一个用户的信息太长了
+*/
+message PkgUser
+{
+  optional int32 userid = 3;
+  optional string password = 4;
+  optional string username = 10;
+  optional string realname = 11;
+  optional string phonenumber = 12;
+  optional string emailaddress =13;
+  optional int32 permission = 15;
+  optional int32 companyid = 16 [default = 0];
+  optional string companyname = 17;
+  optional string createtime = 19;
+  optional int32 permissionroleid = 20;
+}
+
+enum EnAuthType{
+	EA_REGISTERAUTH = 0;
+	EA_FINDPASSWORD = 1;
+}

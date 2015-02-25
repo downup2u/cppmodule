@@ -1,0 +1,149 @@
+package admin;
+
+/*
+admin用户信息
+*/
+message PkgUserInfo{
+	optional int32 id = 1;
+	optional string username = 2;
+	optional string password = 3;
+	optional int32 permission = 10;
+}
+
+/*
+admin用户登录
+*/
+message PkgUserLoginReq {
+  optional string username = 1;
+  required string password = 2;
+}
+
+/*
+*登录回应，如果成功，返回userid；如果失败，返回失败原因
+*/
+message PkgUserLoginReply{
+    required bool issuccess = 1[default = true];
+    optional string err = 2;
+    optional int32 userid = 3;
+    optional int32 permission = 4;
+}
+
+/*
+admin用户操作
+*/
+message PkgUserOperationReq{
+	enum EnUserOperation{
+		TO_INSERT_INFO = 1;
+		TO_UPDATE_INFO = 16;	
+		TO_DELETE_INFO = 64;
+	}
+	required int32 useroperation = 1;
+	optional PkgUserInfo userinfo = 2;
+	optional int32 userid = 10;
+}
+
+/*
+*admin用户操作回复
+*/
+message PkgUserOperationReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional int32 userid = 5;
+}
+
+/*
+QT_ALL表示全部,在后台查询时使用
+QT_VAILDTIME查询一个广告信息
+*/
+message PkgAdvQueryReq{
+	enum EnQueryType{
+		QT_ALL = 0;
+		QT_ADVID = 4;
+		QT_KEYNAME = 8;
+	}
+	required int32 queryflag = 1[default = 1];
+	optional int32 advid = 3;
+	optional string keyname = 4;
+}
+
+message PkgAdvQueryReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated PkgAdvInfo advinfolist = 3; 
+}
+
+/*
+*广告资讯
+*/
+message PkgAdvInfo{
+	optional int32 id = 1[default = 0];
+	optional string name = 2;
+	optional string urlpic = 3;
+	optional string advtxt = 4;
+	optional string advdesc = 5;
+	optional string createtime = 6;
+	optional string expiretime = 7;
+	optional string picpath = 8;
+}
+
+
+/*
+广告设置请求
+*/
+message PkgAdvOperationReq{
+	enum EnAdvOperation{
+		TO_INSERT_INFO = 1;
+		TO_UPDATE_INFO = 16;	
+		TO_DELETE_INFO = 64;
+	}
+	required int32 advoperation = 1;
+	optional PkgAdvInfo advinfo = 2;
+	optional int32 advid = 10;
+}
+
+/*
+*广告设置回复
+*/
+message PkgAdvOperationReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional int32 advid = 5;
+}
+
+ /*
+ 设置的一些系统参数：邮件标题，邮件内容，短信内容，广告上传url路径,广告上传path路径
+emailcontentregister:新注册用户发送的邮件内容
+emailcontentinvition:新邀请用户发送的邮件内容
+emailcontentfindpassword:用户找回密码是的邮件内容
+emailtitleinvition:新邀请用户发送的邮件标题
+emailtitleregister:新注册用户接受到的邮件标题
+emailtitlefindpassword:用户找回密码时的邮件标题
+advpathbase:根路径
+advurlbase:根URL
+smsregister：新注册用户接受到的短信内容
+smsinvition:新邀请用户接受到的短信内容
+smsfindpassword:用户找回密码时的短信内容
+ */
+ message PkgSysInfoSetReq
+ {
+	optional string keystring = 10;
+    optional string valuestring = 11;
+ }
+
+ message PkgSysInfoSetReply
+ {
+   required bool issuccess = 1;
+   optional string err = 2; 
+ }
+ 
+  message PkgSysInfoGetReq
+ {
+	optional string keystring = 1;
+ }
+
+ message PkgSysInfoGetReply
+ {
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional string valuestring = 10;
+  }

@@ -1,0 +1,142 @@
+import "nosqldb.proto";
+
+
+package xkcrm;
+
+/*
+*登录请求，
+*支持手机/邮箱/用户id/用户名登录
+*gettype为标志类型，如果是手机
+*APP只支持手机登录
+*/
+enum EnGetType{
+	GT_PHONE = 0;
+	GT_EMAIL = 1;
+	GT_USERID = 2;
+	GT_USERNAME = 3;
+}
+
+message PkgUserLoginReq {
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional int32 userid = 2;
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+  optional string username = 5;
+  required string password = 10;
+  optional string hashedserversn = 100;
+}
+
+/*
+*登录回应，如果成功，返回userid；如果失败，返回失败原因
+*/
+message PkgUserLoginReply{
+    required bool issuccess = 1[default = true];
+    optional string err = 2;
+	optional db_res_users userinfo = 11;
+	optional db_res_company companyinfo = 12;
+}
+
+	enum EnOperation{
+		TO_INSERT = 1;
+		TO_UPDATE = 16;
+		TO_DELETE = 64;
+	}
+	
+message PkgOptPartnerReq{
+	required EnOperation opt = 1;
+	optional db_res_partner partner = 2;
+	optional string uuidpartner = 3;
+}
+
+message PkgOptPartnerReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+}
+
+message PkgOptLeadReq{
+	required EnOperation opt = 1;
+	optional db_crm_lead lead = 2;
+	optional string uuidleadid = 3;
+}
+
+message PkgOptLeadReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+}
+
+message PkgOptPhonecallReq{
+	required EnOperation opt = 1;
+	optional db_crm_phonecall phonecall = 2;
+	optional string uuidphonecallid = 3;
+}
+
+message PkgOptPhonecallReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+}
+
+message PkgQueryCondition{
+		optional string taskdatestart = 2;
+		optional string taskdateend = 3;
+		optional string keyforname = 4;
+		optional string keyforcontent = 5;
+		optional string partneruuid = 10;
+		optional string leaduuid = 11;
+		optional string selfuuid = 100;
+	}
+	enum EnQueryCondition{
+		TQC_DATESTART = 1;
+		TQC_DATEEND = 2;
+		TQC_KEYFORNAME = 4;
+		TQC_KEYFORCONTENT = 8;
+		TQC_PARTNERUUID = 16;
+		TQC_LEADUUID = 32;
+		TQC_SELFUUID = 64;
+	}
+	enum EnPageFlag{
+		P_ONLYNUM = 1;
+		P_RETURNALL = 2;
+		P_RETURNPAGE = 3;
+	}
+	
+message PkgPageQueryPartnerReq{
+	optional int32 enconditon = 2[default = 0];
+	optional PkgQueryCondition pkgquerycondition = 3;
+	optional EnPageFlag pageflag = 4 [default = P_RETURNALL];
+	optional int32 indexstart = 5;
+	optional int32 indexend = 6;
+}
+
+message PkgPageQueryPartnerReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated db_res_partner rows = 10;
+}
+  
+message PkgPageQueryLeadReq{
+	optional int32 enconditon = 2[default = 0];
+	optional PkgQueryCondition pkgquerycondition = 3;
+	optional EnPageFlag pageflag = 4 [default = P_RETURNALL];
+	optional int32 indexstart = 5;
+	optional int32 indexend = 6;
+}
+
+message PkgPageQueryLeadReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated db_crm_lead rows = 10;
+}
+
+message PkgPageQueryPhonecallReq{
+	optional int32 enconditon = 2[default = 0];
+	optional PkgQueryCondition pkgquerycondition = 3;
+	optional EnPageFlag pageflag = 4 [default = P_RETURNALL];
+	optional int32 indexstart = 5;
+	optional int32 indexend = 6;
+}
+
+message PkgPageQueryPhonecallReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated db_crm_phonecall rows = 10;
+}

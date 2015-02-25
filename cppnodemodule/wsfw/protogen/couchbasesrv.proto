@@ -1,0 +1,58 @@
+package couchbasesrv;
+
+enum EnLcbOperation{
+	lcb_store = 1;
+	lcb_get = 2;
+	lcb_remove = 3;
+	lcb_httprequest = 4;
+	lcb_userdefine = 100;
+};
+
+message DBOperationReq{
+	optional EnLcbOperation enlcboperation = 1;
+	optional string dockey = 11;
+	optional string doctxt = 12;
+	enum EnLcb_storage_t{
+       LCB_ADD = 0x01;
+       LCB_REPLACE = 0x02;
+       LCB_SET = 0x03;
+       LCB_APPEND = 0x04;
+       LCB_PREPEND = 0x05;
+	};
+	optional EnLcb_storage_t enlcbstorecmd = 13;
+	//for http
+	optional string path = 21;
+	optional string body = 22;
+	optional string contenttype = 23;
+	enum EnHttp_mothod{
+		LCB_HTTP_METHOD_GET = 0;
+		LCB_HTTP_METHOD_POST = 1;
+		LCB_HTTP_METHOD_PUT = 2;
+		LCB_HTTP_METHOD_DELETE = 3;
+		LCB_HTTP_METHOD_MAX = 4;
+	};
+	enum EnReq_type{
+	   LCB_HTTP_TYPE_VIEW = 0;
+	   LCB_HTTP_TYPE_MANAGEMENT = 1;
+	   LCB_HTTP_TYPE_RAW = 2;
+	   LCB_HTTP_TYPE_MAX = 3;
+	};
+	optional EnHttp_mothod enhttpmethod = 24;
+	optional EnReq_type enreqtype = 25;
+	
+	optional string uuidstring = 100;
+};
+
+message DBOperationReply{
+	optional EnLcbOperation enlcboperation = 1;
+	optional bool issuc = 2;
+	optional string err = 3;
+	optional string errdesc = 4;
+	optional string dockey = 11;
+	optional string doctxt = 12;
+	optional string httppath = 21;
+	optional string httpheaders = 22;
+	optional string httpjsonresult = 23;
+	optional string uuidstring = 100;
+};
+

@@ -1,0 +1,43 @@
+package comminternal;
+
+message PkgMsg {
+   enum EnMsgType{
+   		MSG_NONE = 0;//请求和回复数据都无效,一般是非通讯消息，比如连接断开，关闭等
+		MSG_REQ = 1;//请求数据有效
+		MSG_RES = 2;//回复数据有效
+		MSG_ALL = 3;//请求和回复数据都有效，一般是需要回调的情况(附带请求参数)
+  }
+  enum EnMsgDirection{
+		MSG_CS = 1;//客户端到服务端
+		MSG_SC = 2;//服务端到客户端
+		MSG_C2C = 3;//客户端自己产生给自己
+		MSG_S2S = 4;//服务端自己产生给自己
+  }
+  enum EnMsgReplyFlag{//请求时发送
+		MSG_ReplyNormal = 1;//需要正常回复
+		MSG_ReplyWithReq = 2;//回复时带请求数据
+ 		MSG_ReplyNO = 3;//不需要回复
+  }
+  enum EnMsgStatusCode{
+		MSG_STATUSNONE = 0;
+		MSG_CONNECTED = 1;//是否连接成功
+		MSG_CLOSED = 2;//是否关闭
+  }
+  optional EnMsgType msgtype = 1[default = MSG_REQ];
+  optional bool issuc = 2;//一般回复时使用，如果为false，则回复数据无效。
+  optional string err = 3;//呈现给界面的错误
+  optional string errdevdesc = 4;//可供调试的错误信息
+  optional EnMsgDirection msgdirection = 5[default = MSG_CS];
+  optional EnMsgReplyFlag msgreplyflag = 6[default = MSG_ReplyNormal];
+  optional string reqmsgtype = 11;
+  optional string reqmsgdata = 12;
+  optional string resmsgtype = 13;
+  optional string resmsgdata = 14;
+  optional string msguuid = 50;
+  optional EnMsgStatusCode enmsgstatuscode = 100[default = MSG_STATUSNONE];
+};
+
+message PkgSessionUser{
+	optional string useruuid = 1;
+	optional bool islogined = 10[default = false];
+};

@@ -1,0 +1,61 @@
+package iteasycomm;
+
+message PkgPing {
+  required int32 id = 1;
+}
+
+message PkgLoginReq {
+  required string username = 1;
+  required string password = 2; 
+  optional string policylastid = 3;
+  optional string policyinlinelastid = 4;
+}
+
+message PkgLoginReply{
+   required bool issuccess = 1;
+   optional string servertime = 2;
+   optional int32 reqpinginterval = 3;
+   optional string err = 4;
+}
+
+message PkgLogReq {
+	message StruLogReq{
+		required int32 id = 1;
+		required string logtime = 2;
+		required int32 logtype = 3;
+		required int32 loglevel = 4;
+		required string logcontent = 5;
+	}
+	repeated StruLogReq logreqlist = 1;
+}
+
+message PkgLogReply{
+	message StruLogReply{
+		required int32 id = 1;
+		required bool issuccess = 2;
+	}
+	repeated StruLogReply logreplylist = 1;
+}
+
+message PkgPolicyPush {
+    required string policylastid = 1;
+	required string policyprocessname = 2;
+    required string policyextfilename = 3;
+    required string policydisableprocessname = 4;	
+	required int32 policyofflinetime = 5;
+}
+
+message PkgPolicyEcho {
+    required string policylastid = 1;
+	required bool issuccess = 2;	
+}
+
+message PkgPolicyinlinePush {
+    required string policyinlinelastid = 1;
+	required string policyinlinefile = 2;
+}
+
+message PkgPolicyinlineEcho {
+    required string policylastid = 1;
+	required bool issuccess = 2;	
+}

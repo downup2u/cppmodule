@@ -1,0 +1,724 @@
+package comm;
+
+/*
+客户端第一次发送PkgConnectReq请求
+apptype填："web","pc","android","ios",注意全部小写
+appversion为客户端版本号，填:"1.0.0"
+osversion填操作系统版本号，填:"4.2","Win8 32"等
+applanguage填:"english","chinese"
+osrr为客户端分辨率，例:1026*768(中间用*隔开)
+sn为当前生成的sn
+*/
+message PkgConnectReq{
+  optional string apptype = 2;
+  optional string appversion = 3;
+  optional string applanguage = 4;
+  optional string ostype = 10;
+  optional string osversion = 11;
+  optional string osrr = 12;
+  optional string clientsn = 101;  
+}
+
+message PkgConnectReply{
+	required bool issuccess = 1[default = true];
+    optional string err = 2;
+    repeated string urllist = 10;
+	optional string encryptkey = 11;
+	optional string hashedclientsn = 100;
+	optional string serversn = 101;	
+}
+
+/*
+手机版只支持手机注册
+网页版只支持手机或者EMail注册
+用户名(登录名)不支持
+*/
+enum EnGetType{
+	GT_PHONE = 0;
+	GT_EMAIL = 1;
+	GT_USERID = 2;
+	GT_USERNAME = 3;
+}
+/*
+*登录请求，
+*gettype为标志类型，如果是手机
+*检查手机/EMAIL/用户名是否被占用(CreateUser前使用)
+*/
+message PkgUserCheckReq {
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+  optional string username = 5;
+}
+
+message PkgUserCheckReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+   optional int32 userid = 3;
+}
+
+/*
+验证邀请码是否合法
+*/
+message PkgUserCheckInvitionCodeReq {
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional string invitioncode = 2;
+}
+
+message PkgUserCheckInvitionCodeReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+   optional string phonenumber = 3;
+   optional string emailaddress = 4;
+}
+
+
+
+/*
+获取用户验证码
+界面上点击“发送验证码”时调用；后台会随机生成一个验证码，插入到数据库，并由后台服务发送到手机或邮箱。
+*/
+message PkgUserGetAuthReq{
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+}
+
+/*
+**/
+message PkgUserGetAuthReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+}
+
+/*
+*注册用户时使用，可以用手机号码或者EMAIL地址注册
+*只要有一个符合即可
+**特别注意：要么authcode不为空，要么invitioncode不为空；不可能同时有验证码和邀请码。另外要注意不能同时为空。
+*/
+message PkgUserCreateReq{
+	required EnGetType gettype = 1[default = GT_PHONE];
+	optional string phonenumber = 2;
+	optional string emailaddress = 3;
+	optional string authcode = 4;
+	optional string invitioncode = 5;
+}
+
+/*
+*注册用户时回复，
+*如果成功，issuccess为true，并返回userid(后面可以用userid登录);如果失败，issuccess为false.并且err会有提示信息
+*/
+message PkgUserCreateReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+   optional int32 userid = 3;
+   optional string realname = 11;//注：若通过邀请码注册,则邀请人会将真实姓名预先填入,此时可以获取到真实姓名
+}
+
+/*
+*登录请求，
+*支持手机/邮箱/用户id/用户名登录
+*gettype为标志类型，如果是手机
+*APP只支持手机登录
+*/
+message PkgUserLoginReq {
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional int32 userid = 2;
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+  optional string username = 5;
+  required string password = 10;
+  optional string hashedserversn = 100;
+}
+
+message PkgCompanyInfo{
+	optional int32 companyid = 16 [default = 0];
+	optional string companyname = 17;
+	optional int32 companyusernumber = 18;
+	optional string companycreatetime = 21;
+};
+/*
+*登录回应，如果成功，返回userid；如果失败，返回失败原因
+*/
+message PkgUserLoginReply{
+    required bool issuccess = 1[default = true];
+    optional string err = 2;
+    optional int32 userid = 3;
+	optional string username = 10;
+	optional string realname = 11;
+	optional string phonenumber = 12;
+	optional string emailaddress =13;
+	optional bool isloginsuccess = 14;
+	optional int32 permission = 15;
+	optional int32 companyid = 16 [default = 0];//废弃，放companyinfo里面
+	optional string companyname = 17;//废弃，放companyinfo里面
+	optional int32 companyusernumber = 18;//废弃，从PkgCompanyGroupQueryReply中的userlist中获取
+	optional string createtime = 19;
+	optional string rolename = 20;
+	optional string companycreatetime = 21;//废弃，放companyinfo里面
+	optional int32 permissionroleid = 22;//固定:1是普通用户，2是管理员；根据这个值判断
+	optional PkgCompanyInfo companyinfo = 100;//新增,修改以这个为准
+}
+
+ /*
+ * 找回密码功能，可以用手机或者email找回密码
+ */
+message PkgUserGetPasswordReq{
+	required EnGetType gettype = 1[default = GT_PHONE];
+	optional string phonenumber = 2;
+	optional string emailaddress = 3;
+}
+
+/*
+*找回密码功能回复，成功返回userid，失败返回错误原因
+*/
+message PkgUserGetPasswordReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;  
+}
+
+/*
+*重置密码
+*/
+message PkgUserResetPasswordReq{
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional int32 userid = 2;
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+  optional string username = 5;
+  required string authcode = 10;
+}
+
+/*
+*重置密码功能回复，失败返回错误原因
+*/
+message PkgUserResetPasswordReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+   optional string oldpassword = 3;
+}
+
+
+/*
+*登录请求，
+*gettype为标志类型，如果是手机
+*用userid和密码登录，修改手机/email/用户名
+*注册时，设置用户真实姓名和密码用：ST_REALNAME|ST_NEWPASSWORD
+*/
+message PkgUserSetReq {
+	enum EnSetType{
+		ST_PHONE = 1;
+		ST_EMAIL = 2;
+		ST_USERNAME = 4;
+		ST_NEWPASSWORD = 8;
+		ST_REALNAME = 16;
+	}
+  required EnGetType gettype = 1[default = GT_PHONE];	
+  required int32 settype = 2;
+  optional int32 userid = 3;
+  required string password = 4;
+  optional string phonenumber = 5;
+  optional string emailaddress = 6;
+  optional string username = 7;
+  required string newpassword = 8;
+  optional string realname = 9;
+}
+
+/*
+*修改手机号/email地址和用户名
+*/
+message PkgUserSetReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+}
+
+/*
+邀请用户注册
+注：一定是在该用户已经登录的情况下才能邀请
+*/
+message PkgUserInvitionUserReq{
+  required EnGetType gettype = 1[default = GT_PHONE];
+  optional string phonenumber = 3;
+  optional string emailaddress = 4;
+  optional string realname = 5;
+ }
+ 
+ message PkgUserInvitionUserReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;
+   optional string invitioncode = 3;
+}
+
+/*
+通过邀请码加入组织,在“我的"中
+如果没有组织信息，则加入时发送该消息
+发送后，同时更新自己的信息
+*注：触发该组织其他成员的PkgNotifyReq消息(COMPANYINFO)
+*/
+message PkgUserInvitionCheckReq{
+  optional string invitioncode = 1;
+}
+ 
+ message PkgUserInvitionCheckReply{
+   required bool issuccess = 1[default = true];
+   optional string err = 2;   
+   optional int32 permission = 15;
+   optional int32 companyid = 16 [default = 0];//废弃，放companyinfo里面
+   optional string companyname = 17;//废弃，放companyinfo里面
+   optional int32 companyusernumber = 18;//废弃，放companyinfo里面
+   optional string rolename = 20;
+   optional string companycreatetime = 21;//废弃，放companyinfo里面
+   optional int32 permissionroleid = 22;
+   optional PkgCompanyInfo companyinfo = 100;//新增,以这个为准
+}
+
+/*
+创建组织
+*/
+message PkgUserCreateCompanyReq{ 
+  optional string companyname = 1;
+}
+
+message PkgUserCreateCompanyReply{ 
+  required bool issuccess = 1[default = true];
+  optional string err = 2;   
+  optional int32 companyid = 16 [default = 0];//废弃，放companyinfo里面
+  optional string companyname = 17;//废弃，放companyinfo里面
+  optional int32 companyusernumber = 18;//废弃，放companyinfo里面
+  optional string rolename = 20;
+  optional string companycreatetime = 21;//废弃，放companyinfo里面
+  optional int32 permissionroleid = 22;
+  optional PkgCompanyInfo companyinfo = 100;//新增,以这个为准
+}
+
+/*
+转让管理员
+*/
+message PkgUserReassignAdminReq{
+	optional int32 adminuserid = 2;
+}
+
+message PkgUserReassignAdminReply{
+  required bool issuccess = 1[default = true];
+  optional string err = 2;
+  optional int32 permission = 15;
+  optional string rolename = 20;
+  optional int32 permissionroleid = 22;
+}
+
+/*
+从组织中删除成员（仅限管理员）
+*注：触发该组织其他成员的PkgNotifyReq消息(COMPANYINFO)
+*/
+message PkgUserDeleteFromCompanyReq{
+	repeated int32 useridlist = 1;
+}
+
+message PkgUserDeleteFromCompanyReply{
+  required bool issuccess = 1[default = true];
+  optional string err = 2;
+  optional int32 companyusernumber = 18;
+}
+
+/*
+个人退出组织或解散组织
+*注：触发该组织其他成员的PkgNotifyReq消息(COMPANYINFO)
+*/
+message PkgUserExitCompanyReq{
+	enum EnCmd{
+		CMD_EXIT = 1;
+		CMD_DISMISS = 2;
+	}
+   required EnCmd encmd = 1[default = CMD_EXIT];	
+}
+
+message PkgUserExitCompanyReply{
+  required bool issuccess = 1[default = true];
+  optional string err = 2;
+}
+/*
+*********************************************************************************************************************
+*任务信息
+协作任务：别人发送给自己或自己发送给别人的
+今日任务：今天所有的自己的任务（包括协作任务已经接受的）
+所有任务：所有自己的任务（包括协作任务已经接受的）
+*/
+message PkgTaskInfo{
+	enum EnTaskLevel{
+		TL_IMPORTANCE_ARGENCY = 3;
+		TL_IMPORTANCE_NOTARGENCY = 1;
+		TL_NOTIMPORTANCE_ARGENCY = 2;
+		TL_NOTIMPORTANCE_NOTARGENCY=0;
+	}
+	enum EnTaskStatus{
+		TS_NEW = 0;
+		TS_GOING = 1;
+		TS_FINISHED = 2;
+		TS_DENY = 3;
+		TS_DELETED = 4;
+	}
+	optional int32 id = 1[default = 0];
+	optional int32 parentid = 2[default = 0];
+	optional string name = 3;
+	optional string taskdate = 4;
+	optional string content = 5;
+	optional string remark = 6;
+	optional EnTaskLevel tasklevel = 7 [default = TL_IMPORTANCE_NOTARGENCY];
+	optional int32 createuserid = 8;
+	optional EnTaskStatus status = 9[default = TS_NEW];
+	optional string createtime = 10;
+	optional string finishtime = 11;	
+	optional int32 accepteduserid = 13[default = 0];
+	optional int32 coworkid = 14[default = 0];
+	optional string updatetime = 15;
+	optional int32 isreaded = 16[default = 0];
+	optional int32 sortflag = 17[default = 0];
+	optional string createdrealname = 30;
+	optional string acceptedrealname = 31;
+}
+
+/*
+*如果isowner为true,表示分配人；如果为false，表示接收人
+*任务信息
+TF_COWORKTASK/协作任务：别人发送给自己或自己发送给别人的
+TF_MYTASK/今日任务：今天所有的自己的任务（包括协作任务已经接受的）
+TF_TASKTABLE/服务端数据库表
+TF_USERDEFINED:自定义查询条件，此时根据查询条件判断
+
+*普通任务查询信息
+查询条件：
+如果指定分页，则indexstart/indexend有效，否则这两个参数忽略
+
+注意：查询状态时，可以同时查询多个状态
+例：如果查询所有已完成的，则设置TQC_TASKSTATUS外，还需要设置taskstatuslist为TS_FINISHED
+如果查询所有未完成的，则设置TQC_TASKSTATUS外，还需要设置taskstatuslist为TS_NEW和TS_GOING
+*/
+message PkgTaskPageQueryReq{
+	enum EnTaskFlag{
+		TF_MYTASK = 0;
+		TF_COWORKTASK = 1;		
+		TF_TASKTABLE = 2;
+		TF_USERDEFINED = 10;
+	}
+	message PkgTaskQueryCondition{
+		optional string taskdatestart = 2;
+		optional string taskdateend = 3;
+		optional string keyforname = 4;
+		optional string keyforcontent = 5;
+		repeated int32 taskstatuslist = 6;
+		enum EnReadedFlag{
+			PR_ALL = 1;
+			PR_READED = 2;
+			PR_NOTREADED = 3;
+		}
+		optional EnReadedFlag enreadedflag = 7[default = PR_ALL];
+		optional string lastupdatetime = 100;
+	}
+	enum EnTaskQueryCondition{
+		TQC_DATESTART = 1;
+		TQC_DATEEND = 2;
+		TQC_KEYFORNAME = 4;
+		TQC_KEYFORCONTENT = 8;
+		TQC_TASKSTATUS = 16;
+		TQC_TASKNOTSTATUS = 32;
+		TQC_ONLYSEND = 64;
+		TQC_ONLYRECV = 128;
+		TQC_READEDFLAG = 256;
+		TQC_LASTUPDATETIME = 1024;
+	}
+	enum EnPageFlag{
+		P_ONLYNUM = 1;
+		P_RETURNALL = 2;
+		P_RETURNPAGE = 3;
+	}
+	required EnTaskFlag taskflag = 1[default = TF_MYTASK];
+	optional int32 enconditon = 2[default = 0];
+	optional PkgTaskQueryCondition pkgtaskquerycondition = 3;
+	optional EnPageFlag pageflag = 4 [default = P_RETURNALL];
+	optional int32 indexstart = 5;
+	optional int32 indexend = 6;
+}
+
+/*
+*任务查询信息回复
+普通任务列表，或普通任务个数
+*/
+message PkgTaskPageQueryReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated PkgTaskInfo taskinfolist = 3;
+   optional int32 returnnum = 5;
+}
+
+/*
+若QF_TASKINFO，则taskid有效，根据taskid查任务信息
+若QF_TASKWITHSUBTASK，则返回该所有子任务的信息
+若QF_TASKWITHASSGIN，则返回所有分配人的信息
+*/
+message PkgTaskQueryReq{
+	enum EnQueryFlag{
+		QF_TASKINFO = 1;
+		QF_TASKWITHSUBTASK = 2;
+		QF_TASKWITHASSGIN = 4;
+	}
+	required EnQueryFlag queryflag = 1;
+	required int32 taskid = 2;
+}
+
+/*
+*任务查询回复
+*/
+message PkgTaskQueryReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional PkgTaskInfo taskinfo = 3;
+   repeated PkgTaskInfo taskinfolist = 4; 
+   repeated int32 accepteduseridlist = 5;
+}
+
+/*
+*任务排序
+*
+*客户端其实不用
+*/
+message PkgTaskSortFlag{
+	required int32 taskid = 1;
+	required int32 sortflag = 2;
+}
+
+/*
+*任务排序请求
+*/
+message PkgTaskSetSortFlagReq{
+	 repeated PkgTaskSortFlag tasksortflaglist = 1;
+}
+
+/*
+*任务排序回复
+*/
+message PkgTaskSetSortFlagReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+}
+
+/*
+*任务操作请求
+***如果是TO_INSERT_INFO，
+表示插入普通任务，taskinfo有效
+
+***如果是TO_INSERT_INFO_SUBTASKINFO，
+表示添加子任务(列表),taskid为父任务id（如果有）,本版本暂时不做
+
+***如果是TO_INSERT_INFO_COWORK，加入任务时，附带分配人列表。taskinfo和 accepteduseridlist有效
+注意：此时其实是插入任务，而非更新分配人;注意taskinfo一定要有效（要用里面的内容插入)
+
+***如果是TO_UPDATE_INFO，表示更新任务
+taskinfo有效，仅设置普通任务信息（字段包括：任务名、任务内容、时间、排序、紧急度、备注）
+
+***如果是TO_UPDATE_STATUS，表示更新状态。
+例：用户点击完成时，或拒绝时。更新taskinfo的状态.同时更新finishtime.
+
+
+***如果是TO_DELETE_INFO，表示删除一个任务
+删除任务。taskid必须有效。
+
+**注：子任务暂时不做**
+
+*注：根据一定条件，有可能会触发该任务关联的其他成员的PkgNotifyReq消息(UF_TASKCOWORK或UF_MYCOWORK)
+*/
+
+message PkgTaskOperationReq{
+	enum EnTaskOperation{
+		TO_INSERT_INFO = 1;
+		TO_INSERT_INFO_SUBTASKINFO = 2;
+		TO_INSERT_INFO_COWORK = 4;
+		TO_UPDATE_INFO = 16;
+		TO_UPDATE_STATUS = 32;
+		TO_DELETE_INFO = 64;
+		TO_UPDATE_READED = 128;
+	}
+	required int32 taskoperation = 1;
+	optional PkgTaskInfo taskinfo = 3;
+	repeated PkgTaskInfo taskinfolist = 4; 
+	repeated int32 accepteduseridlist = 5;
+	optional int32 taskid = 10;
+	optional string reason = 11;
+	optional int32 updatestatus = 12;
+	optional int32 updatereaded = 13;
+}
+
+/*
+*任务操作回复
+*/
+message PkgTaskOperationReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional int32 taskid = 5;
+}
+
+
+/*
+*群组信息
+*/
+message PkgCompanyGroup{
+	required int32 groupid = 1;
+	required int32 companyid = 2;
+	required string groupname = 3;
+}
+
+/*
+*群组用户
+*/
+message PkgGroupUser{
+	required int32 groupid = 1;
+	required int32 userid = 2;
+	optional string realname = 3;
+    optional string phonenumber = 12;
+    optional string emailaddress =13;
+    optional int32 permission = 15;
+    optional string createtime = 19;
+    optional string rolename = 20;
+    optional int32 permissionroleid = 22;
+}
+
+/*
+*群组功能：新增/修改/删除群组在后台做，前端只涉及到查询
+*如果是QT_ALL,则查询所有群组（需要权限）
+*如果是QT_MINE，仅查询属于自己的群组
+*/
+message PkgCompanyGroupQueryReq{
+	enum EnQueryType{
+		QT_ALL = 0;
+		QT_MINE = 1;
+	}
+	required EnQueryType querytype = 1[default = QT_ALL];
+}
+
+/*
+*群组查询回复
+*对客户端来说，就显示一个联系人列表
+*/
+message PkgCompanyGroupQueryReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated PkgCompanyGroup companygrouplist = 4;
+   repeated PkgGroupUser groupuserlist = 5;
+}
+
+/*
+*广告资讯
+*/
+message PkgAdvInfo{
+	optional int32 id = 1[default = 0];
+	optional string name = 2;
+	optional string urlpic = 3;
+	optional string advtxt = 4;
+	optional string advdesc = 5;
+	optional string createtime = 6;
+	optional string expiretime = 7;
+}
+
+/*
+QT_SPNUM表示只返回指定个数
+QT_VAILDTIME表示去除过期广告。客户端查询时根据需要应查询QT_SPNUM|QT_VAILDTIME
+*/
+message PkgAdvQueryReq{
+	enum EnQueryType{
+		QT_SPNUM = 1;
+		QT_VAILDTIME = 2;
+		QT_ADVID = 4;
+	}
+	required int32 queryflag = 1[default = 1];
+	optional int32 numreq = 2;
+	optional int32 advid = 3;
+}
+
+message PkgAdvQueryReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated PkgAdvInfo advinfolist = 3; 
+}
+
+/*
+platmform填："web","pc","android","ios",注意全部小写
+PkgQueryMyProfileReq/PkgQueryMyProfileReply消息废弃，可以用PkgNotifyReq/PkgNotifyReply代替，附带参数forceupdateflag
+*/
+message PkgQueryMyProfileReq{
+	optional string curversion = 1;
+	optional string platmform = 2;
+}
+
+message PkgQueryMyProfileReply{
+	optional string versionlastest = 51;
+	optional string versiondownloadurl = 52;
+	optional int32 tasknumbernotfinished = 100;
+	optional int32 tasknumberfinshed = 101;
+}
+
+message PkgLogoutReq{
+}
+
+message PkgLogoutReply{
+}
+
+/*
+=================================================================================================
+考虑到我们采用的是webservice架构，因此做法是手机客户端每隔20秒发送一次Notify请求,接着接收到Nofify回复
+Notify回复的数据是其他人员改变了信息，但自己不知道，所以需要通知自己的消息
+（如果自己改变了信息，则需要自己刷新）
+*/
+message PkgNotifyReq{
+	optional string curversion = 1;//建议设置,对后面查错等有参考作用
+	optional string platmform = 2;//对UF_VERSION有效,建议设置
+	optional string dataupatedtime = 3;
+	optional int32 forceupdateflag = 100[default = 0];//强制更新选项，仅对:UF_COMPANYINFO/UF_MYTASKFINISHEDNUMBERS/UF_VERSION有效，设置该标志后，不管后台是否更新，PkgNotifyReply都会返回相应的数据
+}
+
+enum EnUpdatedFlag{	
+	UF_COMPANYINFO = 1;//公司信息相关,支持强制刷新
+	UF_TASKCOWORK = 2;//协作任务更新,包括别人发送给自己,协作任务的状态改变(通知别人)等
+	UF_MYTASK = 4;//我的任务更新,指所有任务更新，别人接受任务(从我的任务转换为协作任务)
+	UF_MYTASKFINISHEDNUMBERS = 8;//数量更新,支持强制刷新
+	UF_USERROLE = 16;//角色包括权限
+	UF_ADVINFO = 1024;//广告信息更新,暂不支持
+	UF_VERSION = 2048;//版本更新,暂不支持主动更新,支持强制刷新
+}
+
+message PkgNotifyReply{
+   optional string dataupatedtime = 100;
+   optional int32 notifyupdatedflag = 101;//若公司信息发生变化时，则发送一次公司信息请求；若公司用户发生变化时，发送一次公司用户请求；若协作任务发生变化时，则刷新协作任务
+   optional PkgCompanyInfo companyinfo = 1000;//如果含UF_COMPNAYINFO标志，则用户信息有效
+   optional int32 tasknumbernotfinished = 1011;//如果含有UF_MYTASKFINISHEDNUMBERS标志，则有效
+   optional int32 tasknumberfinished = 1012;//如果含有UF_MYTASKFINISHEDNUMBERS标志，则有效
+   optional string versionlastest = 1030;//如果含有UF_VERSION标志，则有效
+   optional string versiondownloadurl = 1041;//如果含有UF_VERSION标志，则有效
+   optional int32 permission = 1051;//权限信息(保留),如果含有UF_USERROLE标志，则有效
+   optional string rolename = 1052;//角色名,如果含有UF_USERROLE标志，则有效
+   optional int32 permissionroleid = 1053;//角色ID,1和2固定(1为普通用户,2为管理员),如果含有UF_USERROLE标志，则有效
+}
+
+//注：下面方法包装给手机客户端使用，手机客户端接口
+message PkgPhoneCppWrapReq{
+	enum EnReqType{
+		PONEWRAP_LOGINSUCCESS = 0;
+		PONEWRAP_GETUSERTASKUPDATETIME = 1;
+		PONEWRAP_SETUSERTASKUPDATETIMEANDTASKS = 2;
+		PONEWRAP_QUERYPAGETASKS = 3;
+		PONEWRAP_QUERYTASKDETAIL = 4;
+	}
+	required int32 userid = 1;
+	required EnReqType enreqtype = 2;
+	optional string lasttaskupdatetime = 1000;
+	repeated PkgTaskInfo taskinfolist = 1001;
+	optional PkgTaskPageQueryReq taskpagequeryreq = 1011;
+    optional PkgTaskQueryReq taskqueryreq = 1021;
+
+}
+
+message PkgPhoneCppWrapReply{
+   required bool issuccess = 1;
+   optional string err = 2;
+   optional string lasttaskupdatetime = 1000;
+   optional PkgTaskPageQueryReply taskpagequeryreply = 1011;
+   optional PkgTaskQueryReply taskqueryreply = 1021;
+}

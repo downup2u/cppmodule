@@ -1,0 +1,212 @@
+package thirdinterface;
+
+/*
+获取信息
+starttime表示从x时间开始,程序中应设置失效时间。
+如果邮件设置失效时间为0.5小时，则从0.5小时以前开始查
+如果短信设置失效时间为2分钟，则从2分钟以前开始查
+
+若开始时间不设置，则忽略开始时间
+若状态不设置，则忽略状态条件
+若startid不设置，则忽略id条件，否则从该id往后查
+*/
+message PkgGetPasswordTableReq{
+  enum EnGetType{
+		GT_PHONE = 0;
+		GT_EMAIL = 1;	
+		GT_ALL = 2;
+   }
+   enum EnStatus{
+		ES_NEW = 0;
+		ES_SENDING = 1;	
+		ES_SENDOK = 2;
+ 		ES_SENDERROR = 3;
+  		ES_INVALID = 4;
+   }
+   enum EnGetCondition{
+		EGC_TIMELESS = 1;
+		EGC_TIMEGREATER = 2;
+   }
+  optional string createtime = 1;
+  optional EnStatus status = 2[default = ES_NEW]; 
+  optional EnGetType gettype = 3[default = GT_PHONE]; 
+  optional int32 startid = 4[default = 0];
+  optional EnGetCondition getcondition = 5;
+}
+
+/*
+数据库表getpassword信息
+*/
+message PkgGetPasswordTable{
+  optional int32 id = 1;
+  optional string time = 2; 
+  optional int32 authtype = 3; 
+  optional int32 type = 4;
+  optional string phonenumber = 5;
+  optional string emailaddress = 6;
+  optional int32 status = 7;
+  optional string authcode = 8;
+}
+
+/*
+如果成功，issuccess返回true;
+同时infolist附带列表数据。
+
+如果失败，issuccess返回false;
+同时err附带出错信息
+*/
+message PkgGetPasswordTableReply{
+   required bool issuccess = 1;
+   optional string err = 2;   
+   repeated PkgGetPasswordTable infolist = 3;
+}
+
+/*
+更新状态请求
+*/
+message PkgGetPasswordStatus{
+   enum EnStatus{
+		ES_NEW = 0;
+		ES_SENDING = 1;	
+		ES_SENDOK = 2;
+ 		ES_SENDERROR = 3;
+  		ES_INVALID = 4;
+   }
+	optional int32 id = 1;
+	optional EnStatus status = 2;
+}
+
+message PkgSetGetPasswordTableStatusReq{
+	repeated PkgGetPasswordStatus statuslist = 1;
+};
+
+message PkgSetGetPasswordTableStatusReply{
+   required bool issuccess = 1;
+   optional string err = 2;   
+ };
+ 
+ /*
+ 设置的一些系统参数：邮件标题，邮件内容，短信内容，广告上传url路径,广告上传path路径
+emailcontentregister:新注册用户发送的邮件内容
+emailcontentinvition:新邀请用户发送的邮件内容
+emailcontentfindpassword:用户找回密码是的邮件内容
+emailtitleinvition:新邀请用户发送的邮件标题
+emailtitleregister:新注册用户接受到的邮件标题
+emailtitlefindpassword:用户找回密码时的邮件标题
+advpathbase:根路径
+advurlbase:根URL
+smsregister：新注册用户接受到的短信内容
+smsinvition:新邀请用户接受到的短信内容
+smsfindpassword:用户找回密码时的短信内容
+ */
+ message PkgSysInfoListGetReq
+ {
+	repeated string keystring = 1;
+ }
+
+ message  PkgSysInfoValue
+ {
+	optional string keystring = 1;
+	optional string valuestring = 2;
+ }
+ 
+ message PkgSysInfoListGetReply
+ {
+   required bool issuccess = 1;
+   optional string err = 2;
+   repeated PkgSysInfoValue valuemaps = 10;
+}
+  
+
+/*
+邀请信息
+
+获取信息
+starttime表示从x时间开始,程序中应设置失效时间。
+如果邮件设置失效时间为7天，则从7天以前开始查
+如果短信设置失效时间为3天，则从3天以前开始查
+
+若开始时间不设置，则忽略开始时间
+若状态不设置，则忽略状态条件
+若startid不设置，则忽略id条件，否则从该id往后查
+*/
+message PkgRegisterInvitionReq{
+  enum EnGetType{
+		GT_PHONE = 0;
+		GT_EMAIL = 1;	
+		GT_ALL = 2;
+   }
+   enum EnStatus{
+		ES_NEW = 0;
+		ES_SENDING = 1;	
+		ES_SENDOK = 2;
+ 		ES_SENDERROR = 3;
+  		ES_INVALID = 4;
+   }
+   enum EnGetCondition{
+		EGC_TIMELESS = 1;
+		EGC_TIMEGREATER = 2;
+   }
+  optional string createtime = 1;
+  optional EnStatus status = 2[default = ES_NEW]; 
+  optional EnGetType gettype = 3[default = GT_PHONE]; 
+  optional int32 startid = 4[default = 0];
+  optional EnGetCondition getcondition = 5;
+}
+
+/*
+数据库RegisterInvition信息
+*/
+message PkgRegisterInvition{
+  optional int32 id = 1;
+  optional int32 companyid = 2;
+  optional int32 userid = 3; 
+  optional int32 type = 4;
+  optional string invitiontime = 5;
+  optional string phonenumber = 6;
+  optional string emailaddress = 7;
+  optional int32 status = 8;
+  optional string invitioncode = 9; 
+  optional string companyname = 10;
+  optional string sendrealname = 11;
+  optional string torealname = 12;
+
+}
+
+/*
+如果成功，issuccess返回true;
+同时infolist附带列表数据。
+
+如果失败，issuccess返回false;
+同时err附带出错信息
+*/
+message PkgRegisterInvitionReply{
+   required bool issuccess = 1;
+   optional string err = 2;   
+   repeated PkgRegisterInvition infolist = 3;
+}
+
+/*
+更新状态请求
+*/
+message PkgRegisterInvitionStatus{
+   enum EnStatus{
+		ES_NEW = 0;
+		ES_SENDING = 1;	
+		ES_SENDOK = 2;
+ 		ES_SENDERROR = 3;
+  		ES_INVALID = 4;
+   }
+	optional int32 id = 1;
+	optional EnStatus status = 2;
+}
+
+message PkgSetRegisterInvitionStatusReq{
+	repeated PkgRegisterInvitionStatus statuslist = 1;
+};
+
+message PkgSetRegisterInvitionStatusReply{
+   required bool issuccess = 1;
+   optional string err = 2;   
+ };
+ 

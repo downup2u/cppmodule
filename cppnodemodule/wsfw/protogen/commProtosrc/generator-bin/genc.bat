@@ -1,0 +1,1 @@
+protoc.exe --nanopb_out=. fileproto.proto
