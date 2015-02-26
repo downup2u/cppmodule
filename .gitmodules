@@ -34,3 +34,6 @@
 [submodule "cppnodemodule/deps/boost_1_57_0"]
 	path = cppnodemodule/deps/boost_1_57_0
 	url = https://github.com/lilinj2000/boost_1_57_0.git
+[submodule "cppnodemodule/deps/gflags"]
+	path = cppnodemodule/deps/gflags
+	url = https://github.com/downup2u/gflags.git
