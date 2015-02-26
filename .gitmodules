@@ -1,0 +1,30 @@
+[submodule "cppnodemodule/deps/websocketpp-master"]
+	path = cppnodemodule/deps/websocketpp-master
+	url = https://github.com/downup2u/websocketpp-master.git
+[submodule "cppnodemodule/deps/snappy"]
+	path = cppnodemodule/deps/snappy
+	url = https://github.com/downup2u/snappy.git
+[submodule "cppnodemodule/deps/protobuf3"]
+	path = cppnodemodule/deps/protobuf3
+	url = https://github.com/downup2u/protobuf3.git
+[submodule "cppnodemodule/deps/libuv"]
+	path = cppnodemodule/deps/libuv
+	url = https://github.com/downup2u/libuv.git
+[submodule "cppnodemodule/deps/leveldb"]
+	path = cppnodemodule/deps/leveldb
+	url = https://github.com/downup2u/leveldb.git
+[submodule "cppnodemodule/deps/json2pb-master"]
+	path = cppnodemodule/deps/json2pb-master
+	url = https://github.com/downup2u/json2pb-master.git
+[submodule "cppnodemodule/deps/jansson-2.6"]
+	path = cppnodemodule/deps/jansson-2.6
+	url = https://github.com/downup2u/jansson-2.6.git
+[submodule "cppnodemodule/deps/gtest"]
+	path = cppnodemodule/deps/gtest
+	url = https://github.com/downup2u/gtest.git
+[submodule "cppnodemodule/deps/glog"]
+	path = cppnodemodule/deps/glog
+	url = https://github.com/downup2u/glog.git
+[submodule "cppnodemodule/encryptstring"]
+	path = cppnodemodule/encryptstring
+	url = https://github.com/downup2u/encryptstring.git
