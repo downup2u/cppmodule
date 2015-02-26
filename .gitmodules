@@ -28,3 +28,6 @@
 [submodule "cppnodemodule/encryptstring"]
 	path = cppnodemodule/encryptstring
 	url = https://github.com/downup2u/encryptstring.git
+[submodule "cppnodemodule/deps/encryptstring"]
+	path = cppnodemodule/deps/encryptstring
+	url = https://github.com/downup2u/encryptstring.git
